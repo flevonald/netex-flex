@@ -1,0 +1,29 @@
+publication_timestamp;2026-04-03T00:00:00.000
+participant_ref;PFL
+description;Export flex-aanbod
+codespace;PFL
+version;1
+frame_key;FlexRRReis_FL
+valid_from;2026-06-01T00:00:00.000
+valid_to;2027-05-30T00:00:00.000
+organisation_name;Provincie Flevoland
+operator_code;WDK
+operator_name;Willemsen-De Koning
+operator_url;https://www.wdkgroep.nl
+zone_name;Flevoland
+zone_short_name;FL
+zone_description;Gemeenten Noordoostpolder Zeewolde Dronten en Lelystad
+line_code;FlexRRReis_FL
+line_name;FlexRRReis Flevoland
+maximumtraveldistance;35000
+safe_duration_factor;1.0
+safe_duration_offset;300
+booking_phone;088 123456
+booking_url;https://flexrrreisflevoland.rrreis.nl/
+booking_further_details;app FlexRRReis Flevoland
+booking_methods;callOffice online
+booking_access;public
+book_when;advanceAndDayOfTravel
+latest_booking_time;23:59:00
+minimum_booking_period;PT60M
+booking_note;Een rit met FlexRRReis kost hetzelfde als met regulier openbaar vervoer.
