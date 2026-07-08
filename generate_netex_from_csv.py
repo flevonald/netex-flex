@@ -7,7 +7,7 @@ This generator intentionally skips ScheduledStopPoints, as requested.
 from __future__ import annotations
 
 import itertools
-import csv
+import json
 import re
 import pandas as pd
 import xml.etree.ElementTree as ET
@@ -160,6 +160,7 @@ def read_config(config_path: Path) -> ExportConfig:
         safe_duration_factor=values["safe_duration_factor"],
         safe_duration_offset=values["safe_duration_offset"],
     )
+
 def read_bedieningstijden(csv_path: Path) -> pd.DataFrame:
     df = pd.read_csv(csv_path, encoding="utf-8-sig", sep=';', dtype=str)
     required = {"code", "dagen", "start_time", "end_time", "day_offset"}
@@ -170,7 +171,12 @@ def read_bedieningstijden(csv_path: Path) -> pd.DataFrame:
             )
     return df
 
-def build_xml(stops: list[StopRow], cfg: ExportConfig, bdt: pd.DataFrame) -> ET.ElementTree:
+def read_flex_area(csv_path: Path) -> dict:
+    with open(csv_path, 'r') as f:
+        area_dict = json.load(f)
+    return area_dict
+
+def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.ElementTree:
     root = ET.Element(n("PublicationDelivery"), {"version": "ntx:1.1"})
 
     add_text(root, "PublicationTimestamp", cfg.publication_timestamp)
@@ -497,6 +503,34 @@ def build_xml(stops: list[StopRow], cfg: ExportConfig, bdt: pd.DataFrame) -> ET.
     add_text(FSP_Ext, "SafeDurationOffset", f"{cfg.safe_duration_offset}")  
     return ET.ElementTree(root)
 
+def add_flexible_areas(tree: ET.ElementTree, flex_area: dict, cfg: ExportConfig) -> ET.ElementTree:
+    resource_frame = tree.find(f".//{n('ResourceFrame')}")
+    if resource_frame is None:
+        return tree
+
+    def remove_existing_flexible_area(area_id: str) -> None:
+        for parent in tree.getroot().iter():
+            for child in list(parent):
+                if child.tag == n("FlexibleArea") and child.get("id") == area_id:
+                    parent.remove(child)
+
+    for area_name, coordinates in flex_area.items():
+        area_id = f"NL:{cfg.codespace}:FlexibleArea:{area_name}"
+        remove_existing_flexible_area(area_id)
+
+        area = ET.Element(n("FlexibleArea"), {"id": area_id, "version": cfg.version})
+        add_text(area, "Name", area_name)
+        add_text(area, "ShortName", slugify(area_name))
+        polygon = ET.SubElement(area, g("Polygon"), {g("id"): f"NL_{cfg.codespace}_FlexibleArea_{slugify(area_name)}"})
+        exterior = ET.SubElement(polygon, g("exterior"))
+        linear_ring = ET.SubElement(exterior, g("LinearRing"))
+        pos_list = ET.SubElement(linear_ring, g("posList"))
+        pos_list.text = coordinates
+        add_text(area, "BoardingUse", "true")
+        add_text(area, "AlightingUse", "true")
+        resource_frame.append(area)
+
+    return tree
 
 def main() -> None:
     pass
@@ -505,15 +539,23 @@ def main() -> None:
 if __name__ == "__main__":
     csv_path = Path('stops_FlexRRReisFlevoland.csv')
     config_path = Path('config.csv')
+    flex_area_path = Path('flex_area.json')
     
     stops = read_stops(csv_path)
     cfg = read_config(config_path)
     bdt = read_bedieningstijden(Path('bedieningstijden.csv'))
+    flex_area = read_flex_area(flex_area_path)
+    
     print('Read input data: {} stops, config with frame key {}, and {} bedieningstijden'.format(len(stops), cfg.frame_key, len(bdt)))
     tree = build_xml(stops, cfg, bdt)
+    tree = add_flexible_areas(tree, flex_area, cfg)
 
     ET.indent(tree, space="    ")
     output_path = Path(f'NeTEx_PFL_FlexRRReisFlevoland_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
+    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+    
+    tree = add_flexible_areas(tree, flex_area, cfg)
+    output_path = Path(f'NeTEx_PFL_FlexRRReisFlevoland_area_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
     tree.write(output_path, encoding="utf-8", xml_declaration=True)
 
     print(f"Wrote {len(stops)} stops records to {output_path}")

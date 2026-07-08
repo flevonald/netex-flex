@@ -47,10 +47,10 @@ Zowel de gebieden als de hubs worden als FlexibleStopPlace genoemd.
 Voor de gebieden worden daar alle adressen als member toegevoegd. De hubs hebben maar 1 member.
 Zowel de adressen als de hubs zijn een ScheduledStopPoint.
 
-Er zijn timinglinks en service journeys:
-* de gebieden met zichzelf v.v..
-* de gebieden met elkaar v.v..
-* de gebieden met de hubs v.v.. 
+Er zijn timinglinks en service journeys voor:
+* de gebieden met zichzelf
+* de gebieden met elkaar v.v.
+* de gebieden met de hubs v.v. 
 
 ### Issues
 * No indication of assistance (wheelchair, scootmobiel, guide-dog)
