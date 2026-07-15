@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """Generate a NeTEx-like PublicationDelivery XML from CSV input.
-
-This generator intentionally skips ScheduledStopPoints, as requested.
 """
 
 from __future__ import annotations
@@ -77,16 +75,19 @@ def add_text(parent: ET.Element, tag: str, text: str) -> ET.Element:
 
 
 def read_stops(csv_path: Path) -> pd.DataFrame:
-    df = pd.read_csv(csv_path, encoding="utf-8-sig", sep=',', dtype=str)
-    required = {"stop_code", "name", "short_name", "x", "y"}
-    missing = required.difference(df.columns)
-    if missing:
-        raise ValueError(
-            "Stops CSV is missing required columns: " + ", ".join(sorted(missing))
-        )
-    return df
-
-
+    try:
+        df = pd.read_csv(csv_path, encoding="utf-8-sig", sep=',', dtype=str)
+        required = {"code", "name", "short_name", "x", "y", "halte", "gebied"}
+        missing = required.difference(df.columns)
+        if missing:
+            raise ValueError(
+                "Stops CSV is missing required columns: " + ", ".join(sorted(missing))
+            )
+        return df
+    except FileNotFoundError:
+        print(f"Stops/Adresses CSV file not found: {csv_path}")
+        return pd.DataFrame(columns=["code", "name", "short_name", "x", "y", "halte", "gebied"])
+    
 def read_config(config_path: Path) -> ExportConfig:
     required = {
         "publication_timestamp",
@@ -172,9 +173,12 @@ def read_bedieningstijden(csv_path: Path) -> pd.DataFrame:
     return df
 
 def read_flex_area(csv_path: Path) -> dict:
-    with open(csv_path, 'r') as f:
-        area_dict = json.load(f)
-    return area_dict
+    try:
+        with open(csv_path, 'r') as f:
+            area_dict = json.load(f)
+        return area_dict
+    except FileNotFoundError:
+        print(f"Flex area JSON file not found: {csv_path}")
 
 def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.ElementTree:
     root = ET.Element(n("PublicationDelivery"), {"version": "ntx:1.1"})
@@ -336,22 +340,26 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
 
         members = ET.SubElement(area, n("members"))
         for adress in stops[stops['gebied'] == gebied].itertuples():
-            sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{adress.stop_code}", "version": cfg.version})
+            sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{adress.code}", "version": cfg.version})
 
         add_text(area, "BoardingUse", "true")
         add_text(area, "AlightingUse", "true")
-    hubs = stops.loc[stops['gebied'] == 'hubs'].copy()
-    for row in hubs.itertuples(name='hub'):
-        
-        PSA = ET.SubElement(stop_assignments, n("PassengerStopAssignment"), {"id": f"NL:{cfg.codespace}:PassengerStopAssignment:{row.stop_code}", "version": cfg.version})
-        ET.SubElement(PSA, n("ScheduledStopPointRef"), {"version": cfg.version
-        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{row.stop_code}"})
-        ET.SubElement(PSA, n("StopPlaceRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:StopPlace:{row.stop_code}"})
 
+    haltes = stops.loc[stops['halte'] == True].copy()
+    for row in haltes.itertuples(name='halte'):
+        
+        PSA = ET.SubElement(stop_assignments, n("PassengerStopAssignment"), {"id": f"NL:{cfg.codespace}:PassengerStopAssignment:{row.code}", "version": cfg.version})
+        ET.SubElement(PSA, n("ScheduledStopPointRef"), {"version": cfg.version
+        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{row.code}"})
+        ET.SubElement(PSA, n("StopPlaceRef"), {"version": cfg.version, "ref": f"NL:CHB:StopPlace:{row.code}"})
+ 
+    hubs = stops.loc[stops['gebied'] == 'hubs'].copy()
+    for row in haltes.itertuples(name='hub'):
+        
         fsp = ET.SubElement(
             flexible_stop_places,
             n("FlexibleStopPlace"),
-            {"id": f"NL:{cfg.codespace}:FlexibleStopPlace:{row.stop_code}", "version": cfg.version},
+            {"id": f"NL:{cfg.codespace}:FlexibleStopPlace:{row.code}", "version": cfg.version},
         )
         add_text(fsp, "Name", row.name)
         add_text(fsp, "ShortName", slugify(row.name))
@@ -362,7 +370,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         add_text(area, "Name", row.name)
         add_text(area, "ShortName", slugify(row.name))
         members = ET.SubElement(area, n("members"))
-        sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{row.stop_code}", "version": cfg.version})
+        sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{row.code}", "version": cfg.version})
         add_text(area, "BoardingUse", "true")
         add_text(area, "AlightingUse", "true")
 
@@ -416,14 +424,14 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         ssp = ET.SubElement(
             scheduled_stop_points,
             n("ScheduledStopPoint"),
-            {"id": f"NL:{cfg.codespace}:ScheduledStopPoint:{stop.stop_code}", "version": cfg.version},
+            {"id": f"NL:{cfg.codespace}:ScheduledStopPoint:{stop.code}", "version": cfg.version},
         )
         pcs = ET.SubElement(ssp, n("privateCodes"))
         if stop.gebied == 'hubs':
             pc = ET.SubElement(pcs, n("PrivateCode"), {"type": "StopPlaceCode"})
-            pc.text = f"code:{stop.stop_code}"
+            pc.text = f"code:{stop.code}"
         pc = ET.SubElement(pcs, n("PrivateCode"), {"type": "UserStopCode"})
-        pc.text = f"code:{stop.stop_code}"
+        pc.text = f"code:{stop.code}"
 
         add_text(ssp, "Name", stop.name)
 
@@ -443,10 +451,10 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
     vehicle_journeys = ET.SubElement(timetable, n("vehicleJourneys"))
 
     gebiedscodes = [gebied for gebied in gebieden]
-    hubcodes = [hub.stop_code for hub in hubs.itertuples()]
+    hubcodes = [hub.code for hub in hubs.itertuples()]
     routes = list(itertools.product(gebiedscodes, repeat=2)) + [(g, h) for g in gebiedscodes for h in hubcodes] + [(h, g) for g in gebiedscodes for h in hubcodes]
     for route in routes:
-        print(route)
+        print(f'Route van {route[0]} naar {route[1]} toevoegen.')
         tl = ET.SubElement(timingLinks, n("TimingLink"), {"id": f"NL:{cfg.codespace}:TimingLink:{route[0]}_{route[1]}", "version": cfg.version})
         ET.SubElement(tl, n("FromPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[0]}"})
         ET.SubElement(tl, n("ToPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[1]}"})
@@ -537,25 +545,33 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    csv_path = Path('stops_FlexRRReisFlevoland.csv')
-    config_path = Path('config.csv')
-    flex_area_path = Path('flex_area.json')
+    project = 'FlexRRReisFlevoland'
+    config_path = Path(f'config_{project}.csv')
+    flex_area_path = Path(f'flex_area_{project}.json')
     
-    stops = read_stops(csv_path)
+    stops = read_stops(Path(f'stops_{project}.csv'))
+    adresses = read_stops(Path(f'adresses_{project}.csv'))
     cfg = read_config(config_path)
-    bdt = read_bedieningstijden(Path('bedieningstijden.csv'))
+    bdt = read_bedieningstijden(Path(f'bedieningstijden_{project}.csv'))
     flex_area = read_flex_area(flex_area_path)
     
     print('Read input data: {} stops, config with frame key {}, and {} bedieningstijden'.format(len(stops), cfg.frame_key, len(bdt)))
-    tree = build_xml(stops, cfg, bdt)
-    tree = add_flexible_areas(tree, flex_area, cfg)
-
-    ET.indent(tree, space="    ")
-    output_path = Path(f'NeTEx_PFL_FlexRRReisFlevoland_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+    tree_stops = build_xml(stops, cfg, bdt)
+    ET.indent(tree_stops, space="    ")
+    output_stops = Path(f'NeTEx_PFL_{project}_stops_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
+    tree_stops.write(output_stops, encoding="utf-8", xml_declaration=True)
+    print(f"Wrote {len(stops)} stops records to {output_stops}")
     
-    tree = add_flexible_areas(tree, flex_area, cfg)
-    output_path = Path(f'NeTEx_PFL_FlexRRReisFlevoland_area_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+    if not adresses.empty:
+        print(f"Adding adresses from {adresses}")
+        tree_adresses = build_xml(adresses, cfg, bdt)
+        output_adresses = Path(f'NeTEx_PFL_{project}_adresses_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
+        tree_adresses.write(output_adresses, encoding="utf-8", xml_declaration=True)
 
-    print(f"Wrote {len(stops)} stops records to {output_path}")
+    if flex_area:
+        print(f"Adding flexible areas from {flex_area_path}")
+        tree = add_flexible_areas(tree_stops, flex_area, cfg)
+        output_path = Path(f'NeTEx_PFL_{project}_area_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
+        tree.write(output_path, encoding="utf-8", xml_declaration=True)
+
+    

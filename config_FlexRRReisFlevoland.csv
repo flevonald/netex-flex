@@ -16,8 +16,8 @@ zone_description;Gemeenten Noordoostpolder Zeewolde Dronten en Lelystad
 line_code;FlexRRReis_FL
 line_name;FlexRRReis Flevoland
 maximumtraveldistance;35000
-safe_duration_factor;1.0
-safe_duration_offset;300
+safe_duration_factor;1.75
+safe_duration_offset;1800
 booking_phone;088 123456
 booking_url;https://flexrrreisflevoland.rrreis.nl/
 booking_further_details;app FlexRRReis Flevoland

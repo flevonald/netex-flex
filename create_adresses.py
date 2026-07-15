@@ -5,21 +5,21 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-import netex_paths
+import paths
 
 #%%
-stop_columns = ['stop_code', 'name', 'short_name', 'x', 'y', 'gebied']
+stop_columns = ['code', 'name', 'short_name', 'x', 'y', 'gebied']
     # Load the shapefile
 flevoland_gemeenten = ['Lelystad', 'Dronten'] 
 # ,'Noordoostpolder','Urk', 'Zeewolde'
     
-gdf_gemeenten = gpd.read_file(netex_paths.gemeenten_shapefile)
+gdf_gemeenten = gpd.read_file(paths.gemeenten_shapefile)
 gdf_flex = gdf_gemeenten[gdf_gemeenten['Gemeentena'].isin(flevoland_gemeenten)].copy()
 gdf_flex.plot()
 gdf_flex_wgs = gdf_flex.to_crs(epsg=4326)
 
 #%%
-bag_file = Path(netex_paths.bag_light)
+bag_file = Path(paths.bag_light)
 
 gdf_stops_bag = gpd.read_file(bag_file, layer='verblijfsobject', bbox=gdf_flex)
 gdf_stops_bag = gdf_stops_bag.loc[gdf_stops_bag['woonplaats_naam'].isin(flevoland_gemeenten)].head(500)
@@ -41,7 +41,7 @@ gdf_stops_bag['gebied'] = 'Flevoland'
 # Hubs
 df_hubs = pd.read_csv("hubs.csv", sep=';', encoding='latin-1', dtype=str)
 df_hubs['stopplacecode'] = 'NL:S:' + df_hubs['stop_code']
-df_chb_stopplaces = pd.read_csv(netex_paths.CHB_stopplaces, sep=';', encoding='latin-1', dtype=str,
+df_chb_stopplaces = pd.read_csv(paths.CHB / 'CHB_stopplaces.csv', sep=';', encoding='latin-1', dtype=str,
                                     usecols=['stopplacecode', 'stopplacename', 'rd-x', 'rd-y'])
 df_chb_stopplaces = df_chb_stopplaces.rename(columns={'stopplacename':'name'})
 df_hubs = df_hubs.merge(df_chb_stopplaces, on='stopplacecode', how='left')
@@ -65,6 +65,6 @@ plt.savefig('flex_stops.png', dpi=300)
 plt.show()
 
 #%%
-df_stops = pd.concat([gdf_stops_bag[stop_columns], gdf_hubs[stop_columns]], ignore_index=True)
-df_stops.to_csv(r"stops_FlexRRReisFlevoland.csv", index=False)
+df_adresses = pd.concat([gdf_stops_bag[stop_columns], gdf_hubs[stop_columns]], ignore_index=True)
+df_adresses.to_csv(r"adresses_FlexRRReisFlevoland.csv", index=False)
 # %%

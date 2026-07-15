@@ -1,518 +1,345 @@
-stop_code,name,short_name,x,y,gebied
-PFL_Adress11773,Knarweg 44 Lelystad,Knarweg_44_Lelystad,5.539922392758232,52.392298116090494,flex
-PFL_Adress47597,Meanderplein 1 Lelystad,Meanderplein_1_Lelystad,5.534476063801042,52.57524324279883,flex
-PFL_Adress47598,Visvijverweg 46 Lelystad,Visvijverweg_46_Lelystad,5.556453089924977,52.57795616445124,flex
-PFL_Adress47599,Klokbekerweg 4 Lelystad,Klokbekerweg_4_Lelystad,5.5666820973197995,52.573974386982556,flex
-PFL_Adress47600,IJsselmeerdijk 101 Lelystad,IJsselmeerdijk_101_Lelystad,5.529127478788504,52.575851202599765,flex
-PFL_Adress47601,Visvijverweg 52 Lelystad,Visvijverweg_52_Lelystad,5.54924393476078,52.57327808495659,flex
-PFL_Adress47602,Visvijverweg 48 Lelystad,Visvijverweg_48_Lelystad,5.555545285356628,52.57737609345302,flex
-PFL_Adress47608,Visvijverweg 57 Lelystad,Visvijverweg_57_Lelystad,5.533258259914344,52.561810064279726,flex
-PFL_Adress47609,Visvijverweg 64 Lelystad,Visvijverweg_64_Lelystad,5.534400306295798,52.56340199387096,flex
-PFL_Adress47610,Plavuizenweg 1 Lelystad,Plavuizenweg_1_Lelystad,5.540158593862153,52.56162377852311,flex
-PFL_Adress47611,Bijlweg 9 Lelystad,Bijlweg_9_Lelystad,5.559357620564742,52.55551087255816,flex
-PFL_Adress47612,Bijlweg 8 Lelystad,Bijlweg_8_Lelystad,5.559364350268954,52.55636525117037,flex
-PFL_Adress47613,Bijlweg 6 Lelystad,Bijlweg_6_Lelystad,5.56187039013713,52.55789602935852,flex
-PFL_Adress47614,Bijlweg 7 Lelystad,Bijlweg_7_Lelystad,5.563119229938677,52.55780311622283,flex
-PFL_Adress47615,Bijlweg 4 Lelystad,Bijlweg_4_Lelystad,5.5639715679314685,52.55921426242042,flex
-PFL_Adress47616,Bijlweg 3 Lelystad,Bijlweg_3_Lelystad,5.568574422306802,52.561338650004885,flex
-PFL_Adress47617,Bijlweg 2 Lelystad,Bijlweg_2_Lelystad,5.568937734311025,52.562469404342906,flex
-PFL_Adress47618,Klokbekerweg 10 Lelystad,Klokbekerweg_10_Lelystad,5.569537056739085,52.56728032523081,flex
-PFL_Adress47619,Klokbekerweg 17 Lelystad,Klokbekerweg_17_Lelystad,5.571052315967309,52.56691759983262,flex
-PFL_Adress47620,Klokbekerweg 21 Lelystad,Klokbekerweg_21_Lelystad,5.578420010344911,52.56178827628927,flex
-PFL_Adress47621,Swifterringweg 13 Lelystad,Swifterringweg_13_Lelystad,5.5842125789831085,52.557605581644275,flex
-PFL_Adress47622,Swifterringweg 11 Lelystad,Swifterringweg_11_Lelystad,5.584772221448355,52.55822297194973,flex
-PFL_Adress47660,Visvijverweg 56 Lelystad,Visvijverweg_56_Lelystad,5.543520085596869,52.569537838259954,flex
-PFL_Adress47661,Visvijverweg 49 Lelystad,Visvijverweg_49_Lelystad,5.545856032600089,52.5695866829387,flex
-PFL_Adress47662,Klokbekerweg 15 Lelystad,Klokbekerweg_15_Lelystad,5.570423785833741,52.57004701648125,flex
-PFL_Adress49206,Elburgerweg 36 Dronten,Elburgerweg_36_Dronten,5.804584697892263,52.46879853639847,flex
-PFL_Adress49272,Ellerweg 12 Dronten,Ellerweg_12_Dronten,5.789879888418415,52.47813347224362,flex
-PFL_Adress49273,Ellerweg 11 Dronten,Ellerweg_11_Dronten,5.7911612563555215,52.47821898640566,flex
-PFL_Adress49274,Ellerweg 9 Dronten,Ellerweg_9_Dronten,5.794600745183234,52.48088547653091,flex
-PFL_Adress49276,Ellerweg 10 Dronten,Ellerweg_10_Dronten,5.794297839203404,52.48156057652938,flex
-PFL_Adress49277,Ellerweg 6 Dronten,Ellerweg_6_Dronten,5.797959427340604,52.484316079877324,flex
-PFL_Adress49279,Ellerweg 3 Dronten,Ellerweg_3_Dronten,5.802383800431957,52.48672727732016,flex
-PFL_Adress49280,Olsterweg 11 Dronten,Olsterweg_11_Dronten,5.771296103692264,52.487466313165704,flex
-PFL_Adress49281,Olsterweg 11 Dronten,Olsterweg_11_Dronten,5.770753264481915,52.48759777753249,flex
-PFL_Adress49284,Stobbenweg 40 Dronten,Stobbenweg_40_Dronten,5.819158010441982,52.470732547401475,flex
-PFL_Adress49285,Stobbenweg 29 Dronten,Stobbenweg_29_Dronten,5.829197893335722,52.48574056930086,flex
-PFL_Adress49286,Stobbenweg 30 Dronten,Stobbenweg_30_Dronten,5.827361246940927,52.484623970235276,flex
-PFL_Adress49287,Stobbenweg 32 Dronten,Stobbenweg_32_Dronten,5.825964968387127,52.48188796891794,flex
-PFL_Adress49288,Stobbenweg 34 Dronten,Stobbenweg_34_Dronten,5.823501702870355,52.47691800053269,flex
-PFL_Adress49289,Stobbenweg 36 Dronten,Stobbenweg_36_Dronten,5.8230065095833,52.47595816200841,flex
-PFL_Adress49290,Stobbenweg 38 Dronten,Stobbenweg_38_Dronten,5.81993232734018,52.47165543391049,flex
-PFL_Adress49292,Olstertocht 3 Dronten,Olstertocht_3_Dronten,5.786225199734821,52.48640043765573,flex
-PFL_Adress49293,Olstertocht 4 Dronten,Olstertocht_4_Dronten,5.7810235199633535,52.48246203754027,flex
-PFL_Adress49297,Elburgerweg 30 Dronten,Elburgerweg_30_Dronten,5.805466638040974,52.47373207065246,flex
-PFL_Adress49298,Ellerweg 11 Dronten,Ellerweg_11_Dronten,5.7907551070474375,52.47789057513568,flex
-PFL_Adress49599,Abbertweg 8 Dronten,Abbertweg_8_Dronten,5.835694649032896,52.482633194261396,flex
-PFL_Adress49766,Vlotgrasweg 26 Lelystad,Vlotgrasweg_26_Lelystad,5.542343529076614,52.468481652386714,flex
-PFL_Adress50248,Rendierweg 11 Dronten,Rendierweg_11_Dronten,5.730056403365385,52.57242805673409,flex
-PFL_Adress50249,Rendierweg 18 Dronten,Rendierweg_18_Dronten,5.728742494486891,52.5727788332264,flex
-PFL_Adress50250,Rendierweg 18 Dronten,Rendierweg_18_Dronten,5.729276790814672,52.57270891065622,flex
-PFL_Adress50354,Boslaan 86 Dronten,Boslaan_86_Dronten,5.758458318834511,52.576710421737715,flex
-PFL_Adress50355,Boslaan 83 Dronten,Boslaan_83_Dronten,5.7595892147334915,52.57437019479896,flex
-PFL_Adress50356,Boslaan 62 Dronten,Boslaan_62_Dronten,5.7598300207008855,52.57493563587256,flex
-PFL_Adress50357,Beukenlaan 14 Dronten,Beukenlaan_14_Dronten,5.759901797846966,52.57644526823875,flex
-PFL_Adress50358,Boslaan 60 Dronten,Boslaan_60_Dronten,5.760095848014308,52.574970750087104,flex
-PFL_Adress50359,Boslaan 58 Dronten,Boslaan_58_Dronten,5.760288147535523,52.57503305658212,flex
-PFL_Adress50360,Beukenlaan 5 Dronten,Beukenlaan_5_Dronten,5.760345797662082,52.57661463105369,flex
-PFL_Adress50361,Boslaan 81 Dronten,Boslaan_81_Dronten,5.760357337112258,52.574493604069005,flex
-PFL_Adress50362,Boslaan 56 Dronten,Boslaan_56_Dronten,5.760539681397653,52.575122138227634,flex
-PFL_Adress50363,Boslaan 79 Dronten,Boslaan_79_Dronten,5.760726724948091,52.57456434026888,flex
-PFL_Adress50364,Beukenlaan 9 Dronten,Beukenlaan_9_Dronten,5.760771848378577,52.576406584332894,flex
-PFL_Adress50365,Boslaan 54 Dronten,Boslaan_54_Dronten,5.760819880695778,52.57511226937107,flex
-PFL_Adress50366,Eikenlaan 15 Dronten,Eikenlaan_15_Dronten,5.760887499497228,52.57612761564191,flex
-PFL_Adress50367,Eikenlaan 13 Dronten,Eikenlaan_13_Dronten,5.760945438867177,52.57600161175998,flex
-PFL_Adress50368,Eikenlaan 11 Dronten,Eikenlaan_11_Dronten,5.760988397570634,52.57584869327392,flex
-PFL_Adress50369,Beukenlaan 11 Dronten,Beukenlaan_11_Dronten,5.76102316229421,52.57646870389613,flex
-PFL_Adress50370,Boslaan 77 Dronten,Boslaan_77_Dronten,5.761037032995583,52.57462627415005,flex
-PFL_Adress50371,Eikenlaan 9 Dronten,Eikenlaan_9_Dronten,5.761149673368838,52.57573135108791,flex
-PFL_Adress50372,Eikenlaan 7 Dronten,Eikenlaan_7_Dronten,5.761178032178145,52.575596453012636,flex
-PFL_Adress50373,Beukenlaan 13 Dronten,Beukenlaan_13_Dronten,5.761245354795654,52.57657585093005,flex
-PFL_Adress50374,Eikenlaan 5 Dronten,Eikenlaan_5_Dronten,5.761280148092514,52.57546132251112,flex
-PFL_Adress50375,Eikenlaan 3 Dronten,Eikenlaan_3_Dronten,5.761323257741011,52.57532637790465,flex
-PFL_Adress50376,Eikenlaan 1 Dronten,Eikenlaan_1_Dronten,5.761322036717726,52.57518258575565,flex
-PFL_Adress50377,Eikenlaan 12 Dronten,Eikenlaan_12_Dronten,5.76140403723667,52.57615295017395,flex
-PFL_Adress50378,Eikenlaan 10 Dronten,Eikenlaan_10_Dronten,5.761519530980079,52.57585600683944,flex
-PFL_Adress50379,Eikenlaan 8 Dronten,Eikenlaan_8_Dronten,5.76160674215835,52.57570294856589,flex
-PFL_Adress50380,Eikenlaan 14 Dronten,Eikenlaan_14_Dronten,5.761655350592816,52.57621506840353,flex
-PFL_Adress50381,Boslaan 73 Dronten,Boslaan_73_Dronten,5.761687154134883,52.57475004640241,flex
-PFL_Adress50382,Beukenlaan 17 Dronten,Beukenlaan_17_Dronten,5.761718482856465,52.576700180599644,flex
-PFL_Adress50383,Eikenlaan 4 Dronten,Eikenlaan_4_Dronten,5.761766564077788,52.57541485237815,flex
-PFL_Adress50384,Eikenlaan 2 Dronten,Eikenlaan_2_Dronten,5.761824423585536,52.57527986104079,flex
-PFL_Adress50385,Beukenlaan 15 Dronten,Beukenlaan_15_Dronten,5.761835580749844,52.57659196412965,flex
-PFL_Adress50386,Eikenlaan 16 Dronten,Eikenlaan_16_Dronten,5.762024296179569,52.576231878482155,flex
-PFL_Adress50387,Boslaan 71 Dronten,Boslaan_71_Dronten,5.762071221018766,52.57481174486309,flex
-PFL_Adress50388,Beukenlaan 27 Dronten,Beukenlaan_27_Dronten,5.762352354047228,52.5766442555463,flex
-PFL_Adress50389,Eikenlaan 18 Dronten,Eikenlaan_18_Dronten,5.762290056535453,52.57625800075883,flex
-PFL_Adress50390,Eikenlaan 20 Dronten,Eikenlaan_20_Dronten,5.762391405227654,52.576032999256846,flex
-PFL_Adress50391,Eikenlaan 6 Dronten,Eikenlaan_6_Dronten,5.7616793540223,52.57556791077832,flex
-PFL_Adress50392,Beukenlaan 12 Dronten,Beukenlaan_12_Dronten,5.759650561615084,52.576392133308886,flex
-PFL_Adress50393,Boslaan 107 Dronten,Boslaan_107_Dronten,5.758101472549468,52.57462649583833,flex
-PFL_Adress50394,Boslaan 109 Dronten,Boslaan_109_Dronten,5.758397101878606,52.57469746972468,flex
-PFL_Adress50395,Boslaan 111 Dronten,Boslaan_111_Dronten,5.758810817774457,52.574777060498455,flex
-PFL_Adress50396,Boslaan 64 Dronten,Boslaan_64_Dronten,5.759386419382233,52.57481120610479,flex
-PFL_Adress50397,Boslaan 66 Dronten,Boslaan_66_Dronten,5.759284071466387,52.57491937396735,flex
-PFL_Adress50398,Boslaan 68 Dronten,Boslaan_68_Dronten,5.759255783182012,52.575063258628084,flex
-PFL_Adress50399,Boslaan 70 Dronten,Boslaan_70_Dronten,5.759138683000251,52.57517147259499,flex
-PFL_Adress50400,Esdoornlaan 2 Dronten,Esdoornlaan_2_Dronten,5.757345077942758,52.57528049535193,flex
-PFL_Adress50401,Boslaan 62 Dronten,Boslaan_62_Dronten,5.759497101736092,52.575406605793745,flex
-PFL_Adress50402,Boslaan 74 Dronten,Boslaan_74_Dronten,5.758979375630719,52.575522474352894,flex
-PFL_Adress50403,Boslaan 76 Dronten,Boslaan_76_Dronten,5.758892155679501,52.57567553071148,flex
-PFL_Adress50404,Boslaan 62 Dronten,Boslaan_62_Dronten,5.7597185784011184,52.57574072190534,flex
-PFL_Adress50405,Boslaan 121 Dronten,Boslaan_121_Dronten,5.757477217093567,52.57582374879551,flex
-PFL_Adress50406,Boslaan 119 Dronten,Boslaan_119_Dronten,5.757772702273255,52.575876750187646,flex
-PFL_Adress50407,Boslaan 117 Dronten,Boslaan_117_Dronten,5.758038776308914,52.575940699326054,flex
-PFL_Adress50408,Boslaan 78 Dronten,Boslaan_78_Dronten,5.758835565675496,52.575998871342236,flex
-PFL_Adress50409,Boslaan 80 Dronten,Boslaan_80_Dronten,5.758645622733343,52.57617958826217,flex
-PFL_Adress50410,Boslaan 123 Dronten,Boslaan_123_Dronten,5.757613079247019,52.57619180202617,flex
-PFL_Adress50411,Beukenlaan 8 Dronten,Beukenlaan_8_Dronten,5.759162766823453,52.576276828618056,flex
-PFL_Adress50412,Boslaan 125 Dronten,Boslaan_125_Dronten,5.7578795172981225,52.576298817268,flex
-PFL_Adress50413,Beukenlaan 10 Dronten,Beukenlaan_10_Dronten,5.759458105185831,52.576311851788645,flex
-PFL_Adress50414,Boslaan 127 Dronten,Boslaan_127_Dronten,5.75814527562422,52.5763249488216,flex
-PFL_Adress50415,Boslaan 82 Dronten,Boslaan_82_Dronten,5.758617634625209,52.57635942076832,flex
-PFL_Adress50416,Boslaan 84 Dronten,Boslaan_84_Dronten,5.758530487515716,52.57652146384303,flex
-PFL_Adress50417,Boslaan 129 Dronten,Boslaan_129_Dronten,5.757882239434377,52.57662234961492,flex
-PFL_Adress50418,Beukenlaan 6 Dronten,Beukenlaan_6_Dronten,5.759180705498487,52.57665423675143,flex
-PFL_Adress50419,Beukenlaan 4 Dronten,Beukenlaan_4_Dronten,5.759535053879865,52.57668907480162,flex
-PFL_Adress50420,Boslaan 2 Dronten,Boslaan_2_Dronten,5.758755402807449,52.57695214784076,flex
-PFL_Adress50421,Boslaan 4 Dronten,Boslaan_4_Dronten,5.7589331087739675,52.57703247668388,flex
-PFL_Adress50422,Boslaan 6 Dronten,Boslaan_6_Dronten,5.75911028431887,52.57704989620776,flex
-PFL_Adress50423,Boslaan 8 Dronten,Boslaan_8_Dronten,5.75925803190884,52.57707639495186,flex
-PFL_Adress50424,Boslaan 10 Dronten,Boslaan_10_Dronten,5.759434839420975,52.577086885979575,flex
-PFL_Adress50425,Boslaan 12 Dronten,Boslaan_12_Dronten,5.759592136195284,52.577115610162615,flex
-PFL_Adress50426,Boslaan 1 Dronten,Boslaan_1_Dronten,5.758271010439236,52.577241254856226,flex
-PFL_Adress50427,Boslaan 37 Dronten,Boslaan_37_Dronten,5.762553852281059,52.577784998845694,flex
-PFL_Adress50428,Boslaan 34 Dronten,Boslaan_34_Dronten,5.76255040663626,52.57738058369294,flex
-PFL_Adress50429,Boslaan 69 Dronten,Boslaan_69_Dronten,5.762770930314647,52.57488730873059,flex
-PFL_Adress50430,Boslaan 39 Dronten,Boslaan_39_Dronten,5.762804946697358,52.57782015360002,flex
-PFL_Adress50431,Boslaan 36 Dronten,Boslaan_36_Dronten,5.762816327475861,52.57742467878546,flex
-PFL_Adress50432,Boslaan 41 Dronten,Boslaan_41_Dronten,5.763026077001609,52.57780147922224,flex
-PFL_Adress50433,Boslaan 38 Dronten,Boslaan_38_Dronten,5.763260041481536,52.57755808263375,flex
-PFL_Adress50434,Boslaan 40 Dronten,Boslaan_40_Dronten,5.763347173233599,52.57739603614232,flex
-PFL_Adress50435,Boslaan 42 Dronten,Boslaan_42_Dronten,5.763434150848431,52.57721601557458,flex
-PFL_Adress50436,Boslaan 44 Dronten,Boslaan_44_Dronten,5.763536033272378,52.577053922176226,flex
-PFL_Adress50437,Boslaan 48 Dronten,Boslaan_48_Dronten,5.763573916750387,52.576307860495156,flex
-PFL_Adress50438,Boslaan 46 Dronten,Boslaan_46_Dronten,5.763623239803981,52.57690086246906,flex
-PFL_Adress50439,Boslaan 43 Dronten,Boslaan_43_Dronten,5.763778056903076,52.57775415986222,flex
-PFL_Adress50440,Boslaan 45 Dronten,Boslaan_45_Dronten,5.763820469669038,52.57753833140534,flex
-PFL_Adress50441,Boslaan 45 Dronten,Boslaan_45_Dronten,5.763907215092123,52.57733134949022,flex
-PFL_Adress50442,Boslaan 49 Dronten,Boslaan_49_Dronten,5.764270094227051,52.57663817930681,flex
-PFL_Adress50443,Boslaan 47 Dronten,Boslaan_47_Dronten,5.764271632595179,52.5768179193818,flex
-PFL_Adress50444,Boslaan 50 Dronten,Boslaan_50_Dronten,5.76358697937082,52.57611009960229,flex
-PFL_Adress50445,Boslaan 51 Dronten,Boslaan_51_Dronten,5.764283307658366,52.576458392364145,flex
-PFL_Adress50446,Boslaan 53 Dronten,Boslaan_53_Dronten,5.76419325890915,52.576278933405774,flex
-PFL_Adress50447,Boslaan 55 Dronten,Boslaan_55_Dronten,5.76408884362916,52.576144456234395,flex
-PFL_Adress50448,Buitenplaats 22 Dronten,Buitenplaats_22_Dronten,5.764553276908429,52.57525324295885,flex
-PFL_Adress50449,Boslaan 59 Dronten,Boslaan_59_Dronten,5.7641602183017335,52.57586562486158,flex
-PFL_Adress50450,Buitenplaats 23 Dronten,Buitenplaats_23_Dronten,5.764640863911799,52.57529523153313,flex
-PFL_Adress50451,Buitenplaats 24 Dronten,Buitenplaats_24_Dronten,5.764730601516631,52.57528862812263,flex
-PFL_Adress50452,Boslaan 61 Dronten,Boslaan_61_Dronten,5.763996951657424,52.575749308974686,flex
-PFL_Adress50453,Buitenplaats 25 Dronten,Buitenplaats_25_Dronten,5.764818680598437,52.575336366841725,flex
-PFL_Adress50454,Buitenplaats 26 Dronten,Buitenplaats_26_Dronten,5.764907926408942,52.57532401302108,flex
-PFL_Adress50455,Boslaan 63 Dronten,Boslaan_63_Dronten,5.763966142042852,52.57559662351568,flex
-PFL_Adress50456,Buitenplaats 27 Dronten,Buitenplaats_27_Dronten,5.764981368349092,52.57538681589025,flex
-PFL_Adress50457,Boslaan 65 Dronten,Boslaan_65_Dronten,5.763802800088097,52.57547132034644,flex
-PFL_Adress50458,Boslaan 67 Dronten,Boslaan_67_Dronten,5.763995988204173,52.57508468686877,flex
-PFL_Adress50459,Boslaan 67 Dronten,Boslaan_67_Dronten,5.763370634151602,52.574960417367606,flex
-PFL_Adress50460,Boslaan 69 Dronten,Boslaan_69_Dronten,5.762440231554009,52.5748375406754,flex
-PFL_Adress50461,Eikenlaan 22 Dronten,Eikenlaan_22_Dronten,5.762478537174266,52.57587095334483,flex
-PFL_Adress50462,Eikenlaan 24 Dronten,Eikenlaan_24_Dronten,5.76253608884603,52.57570001364716,flex
-PFL_Adress50463,Eikenlaan 26 Dronten,Eikenlaan_26_Dronten,5.762594022942045,52.57557400895326,flex
-PFL_Adress50464,Eikenlaan 28 Dronten,Eikenlaan_28_Dronten,5.7627108859063245,52.575438830573184,flex
-PFL_Adress50465,Eikenlaan 30 Dronten,Eikenlaan_30_Dronten,5.763287956718841,52.57564371039304,flex
-PFL_Adress50466,Eikenlaan 32 Dronten,Eikenlaan_32_Dronten,5.76296495640301,52.57582447830464,flex
-PFL_Adress50467,Eikenlaan 36 Dronten,Eikenlaan_36_Dronten,5.762850008874567,52.57618433208082,flex
-PFL_Adress50468,Eikenlaan 38 Dronten,Eikenlaan_38_Dronten,5.762704330267924,52.57640048696146,flex
-PFL_Adress50469,Eikenlaan 40 Dronten,Eikenlaan_40_Dronten,5.7630440042554545,52.57644434821253,flex
-PFL_Adress50470,Eikenlaan 42 Dronten,Eikenlaan_42_Dronten,5.763354328786118,52.576506275995726,flex
-PFL_Adress50471,Eikenlaan 44 Dronten,Eikenlaan_44_Dronten,5.763723815090145,52.57658598982402,flex
-PFL_Adress50472,Lindenlaan 39 Dronten,Lindenlaan_39_Dronten,5.763661267890232,52.5778983262239,flex
-PFL_Adress50473,Boslaan 57 Dronten,Boslaan_57_Dronten,5.764058110289988,52.576000757819365,flex
-PFL_Adress50474,Buitenplaats 21 Dronten,Buitenplaats_21_Dronten,5.764761455083962,52.57546165140886,flex
-PFL_Adress50475,Buitenplaats 29 Dronten,Buitenplaats_29_Dronten,5.76512176440841,52.5755006598606,flex
-PFL_Adress50476,Buitenplaats 20 Dronten,Buitenplaats_20_Dronten,5.76482118961356,52.57553099575595,flex
-PFL_Adress50477,Buitenplaats 30 Dronten,Buitenplaats_30_Dronten,5.765190053552443,52.57553880900062,flex
-PFL_Adress50478,Buitenplaats 34 Dronten,Buitenplaats_34_Dronten,5.7655739006414874,52.57557353509464,flex
-PFL_Adress50479,Buitenplaats 37 Dronten,Buitenplaats_37_Dronten,5.7658551937409825,52.57558945327385,flex
-PFL_Adress50480,Buitenplaats 31 Dronten,Buitenplaats_31_Dronten,5.76526458071344,52.57559905585824,flex
-PFL_Adress50481,Buitenplaats 33 Dronten,Buitenplaats_33_Dronten,5.765459840265202,52.575604608049225,flex
-PFL_Adress50482,Buitenplaats 32 Dronten,Buitenplaats_32_Dronten,5.765338185377302,52.57561023521768,flex
-PFL_Adress50483,Buitenplaats 19 Dronten,Buitenplaats_19_Dronten,5.764955433297669,52.575615489155744,flex
-PFL_Adress50484,Buitenplaats 39 Dronten,Buitenplaats_39_Dronten,5.7660254540540485,52.5756367851233,flex
-PFL_Adress50485,Buitenplaats 40 Dronten,Buitenplaats_40_Dronten,5.765619390155094,52.575717186101485,flex
-PFL_Adress50486,Buitenplaats 41 Dronten,Buitenplaats_41_Dronten,5.7655525254382,52.57577111603972,flex
-PFL_Adress50487,Buitenplaats 42 Dronten,Buitenplaats_42_Dronten,5.765472723575519,52.57581651332954,flex
-PFL_Adress50488,Buitenplaats 16 Dronten,Buitenplaats_16_Dronten,5.765118685920223,52.575817641006935,flex
-PFL_Adress50489,Buitenplaats 44 Dronten,Buitenplaats_44_Dronten,5.765384985598934,52.57590666539414,flex
-PFL_Adress50490,Buitenplaats 45 Dronten,Buitenplaats_45_Dronten,5.765384346513401,52.57596626188663,flex
-PFL_Adress50491,Buitenplaats 13 Dronten,Buitenplaats_13_Dronten,5.765054954272772,52.57598584255973,flex
-PFL_Adress50492,Buitenplaats 46 Dronten,Buitenplaats_46_Dronten,5.765400817255327,52.57603243645704,flex
-PFL_Adress50493,Buitenplaats 47 Dronten,Buitenplaats_47_Dronten,5.765365111771369,52.576086788265286,flex
-PFL_Adress50494,Buitenplaats 12 Dronten,Buitenplaats_12_Dronten,5.765106478215156,52.576114259123976,flex
-PFL_Adress50495,Buitenplaats 11 Dronten,Buitenplaats_11_Dronten,5.765059000082794,52.576163444699255,flex
-PFL_Adress50496,Buitenplaats 48 Dronten,Buitenplaats_48_Dronten,5.765402283059091,52.576203189534546,flex
-PFL_Adress50497,Buitenplaats 49 Dronten,Buitenplaats_49_Dronten,5.7653462996916085,52.57625828897054,flex
-PFL_Adress50498,Buitenplaats 9 Dronten,Buitenplaats_9_Dronten,5.765072706540328,52.57628232934103,flex
-PFL_Adress50499,Buitenplaats 50 Dronten,Buitenplaats_50_Dronten,5.765285117838069,52.57630242251807,flex
-PFL_Adress50500,Buitenplaats 8 Dronten,Buitenplaats_8_Dronten,5.765108482499621,52.57634792123031,flex
-PFL_Adress50501,Buitenplaats 51 Dronten,Buitenplaats_51_Dronten,5.765339695270065,52.5763756924742,flex
-PFL_Adress50502,Buitenplaats 7 Dronten,Buitenplaats_7_Dronten,5.765154965702362,52.576414890015016,flex
-PFL_Adress50503,Buitenplaats 52 Dronten,Buitenplaats_52_Dronten,5.765374785364395,52.57643694562631,flex
-PFL_Adress50504,Buitenplaats 6 Dronten,Buitenplaats_6_Dronten,5.765212901371873,52.576482397495376,flex
-PFL_Adress50505,Buitenplaats 53 Dronten,Buitenplaats_53_Dronten,5.7653965587394795,52.576502150648665,flex
-PFL_Adress50506,Buitenplaats 5 Dronten,Buitenplaats_5_Dronten,5.765250455291337,52.576610732649165,flex
-PFL_Adress50507,Buitenplaats 3 Dronten,Buitenplaats_3_Dronten,5.765330191547035,52.57674484703572,flex
-PFL_Adress50508,Buitenplaats 2 Dronten,Buitenplaats_2_Dronten,5.765363196351316,52.576805459747256,flex
-PFL_Adress50509,Rendierweg 14 Dronten,Rendierweg_14_Dronten,5.732264953341486,52.57567503736343,flex
-PFL_Adress50510,Rendierweg 16 Dronten,Rendierweg_16_Dronten,5.7312117601375885,52.57530904250666,flex
-PFL_Adress50511,Rendierweg 16 Dronten,Rendierweg_16_Dronten,5.731804280589021,52.57524498831115,flex
-PFL_Adress50512,Buitenplaats 53 Dronten,Buitenplaats_53_Dronten,5.765464420540638,52.576589973512554,flex
-PFL_Adress50513,Buitenplaats 80 Dronten,Buitenplaats_80_Dronten,5.767405644076166,52.57586426150491,flex
-PFL_Adress50514,Buitenplaats 79 Dronten,Buitenplaats_79_Dronten,5.767290662224605,52.57595090734237,flex
-PFL_Adress50515,Buitenplaats 88 Dronten,Buitenplaats_88_Dronten,5.768144000184252,52.575951766803286,flex
-PFL_Adress50516,Buitenplaats 81 Dronten,Buitenplaats_81_Dronten,5.767475761130267,52.57595494294893,flex
-PFL_Adress50517,Buitenplaats 87 Dronten,Buitenplaats_87_Dronten,5.76806138396083,52.57595461124513,flex
-PFL_Adress50518,Buitenplaats 78 Dronten,Buitenplaats_78_Dronten,5.7671704713467555,52.575963874282124,flex
-PFL_Adress50519,Buitenplaats 86 Dronten,Buitenplaats_86_Dronten,5.767952384584562,52.575970356078265,flex
-PFL_Adress50520,Buitenplaats 76 Dronten,Buitenplaats_76_Dronten,5.766964103657832,52.575982509181465,flex
-PFL_Adress50521,Buitenplaats 77 Dronten,Buitenplaats_77_Dronten,5.767073060940414,52.57599947898438,flex
-PFL_Adress50522,Buitenplaats 89 Dronten,Buitenplaats_89_Dronten,5.768234131929224,52.57599575770913,flex
-PFL_Adress50523,Buitenplaats 85 Dronten,Buitenplaats_85_Dronten,5.76784119288943,52.575997018364085,flex
-PFL_Adress50524,Buitenplaats 84 Dronten,Buitenplaats_84_Dronten,5.767731343198566,52.57599802662844,flex
-PFL_Adress50525,Buitenplaats 82 Dronten,Buitenplaats_82_Dronten,5.767539649638783,52.57600762823522,flex
-PFL_Adress50526,Buitenplaats 92 Dronten,Buitenplaats_92_Dronten,5.768498661045519,52.576022526119644,flex
-PFL_Adress50527,Buitenplaats 90 Dronten,Buitenplaats_90_Dronten,5.768306889809796,52.576023141963134,flex
-PFL_Adress50528,Buitenplaats 91 Dronten,Buitenplaats_91_Dronten,5.768399228328591,52.57603230005953,flex
-PFL_Adress50529,Buitenplaats 83 Dronten,Buitenplaats_83_Dronten,5.767623605334282,52.57604713677833,flex
-PFL_Adress50530,Buitenplaats 73 Dronten,Buitenplaats_73_Dronten,5.767180923525951,52.57615976289215,flex
-PFL_Adress50531,Buitenplaats 94 Dronten,Buitenplaats_94_Dronten,5.7675708598709186,52.57620524775077,flex
-PFL_Adress50532,Buitenplaats 72 Dronten,Buitenplaats_72_Dronten,5.7672022224962305,52.57622440291513,flex
-PFL_Adress50533,Buitenplaats 95 Dronten,Buitenplaats_95_Dronten,5.767541760650046,52.57625899487687,flex
-PFL_Adress50534,Buitenplaats 71 Dronten,Buitenplaats_71_Dronten,5.767237790577718,52.57628776599818,flex
-PFL_Adress50535,Buitenplaats 96 Dronten,Buitenplaats_96_Dronten,5.767557116810176,52.57632212604453,flex
-PFL_Adress50536,Buitenplaats 70 Dronten,Buitenplaats_70_Dronten,5.7672918957106525,52.57635892457289,flex
-PFL_Adress50537,Buitenplaats 97 Dronten,Buitenplaats_97_Dronten,5.767591019860261,52.57638393956242,flex
-PFL_Adress50538,Buitenplaats 69 Dronten,Buitenplaats_69_Dronten,5.767256602809486,52.57641127147249,flex
-PFL_Adress50539,Buitenplaats 68 Dronten,Buitenplaats_68_Dronten,5.767145153269895,52.57644926684815,flex
-PFL_Adress50540,Buitenplaats 98 Dronten,Buitenplaats_98_Dronten,5.7676467137005325,52.57644766042848,flex
-PFL_Adress50541,Buitenplaats 67 Dronten,Buitenplaats_67_Dronten,5.767044286908064,52.57648454106638,flex
-PFL_Adress50542,Buitenplaats 99 Dronten,Buitenplaats_99_Dronten,5.767427480922365,52.57652964354667,flex
-PFL_Adress50543,Buitenplaats 100 Dronten,Buitenplaats_100_Dronten,5.767278927175171,52.57656567284734,flex
-PFL_Adress50544,Buitenplaats 101 Dronten,Buitenplaats_101_Dronten,5.767220264613601,52.57660753453871,flex
-PFL_Adress50545,Ketelweg 1 Dronten,Ketelweg_1_Dronten,5.7704952132997915,52.57660026747498,flex
-PFL_Adress50546,Buitenplaats 102 Dronten,Buitenplaats_102_Dronten,5.7671616877148795,52.57665592066937,flex
-PFL_Adress50572,Buitenplaats 54 Dronten,Buitenplaats_54_Dronten,5.765806989034637,52.57694784109967,flex
-PFL_Adress50573,Buitenplaats 55 Dronten,Buitenplaats_55_Dronten,5.765915079879979,52.57695303244642,flex
-PFL_Adress50574,Buitenplaats 57 Dronten,Buitenplaats_57_Dronten,5.76609038039955,52.57699571968669,flex
-PFL_Adress50575,Buitenplaats 58 Dronten,Buitenplaats_58_Dronten,5.76616165418103,52.5770186073749,flex
-PFL_Adress50576,Buitenplaats 59 Dronten,Buitenplaats_59_Dronten,5.766240654780646,52.577077095800405,flex
-PFL_Adress50577,Buitenplaats 60 Dronten,Buitenplaats_60_Dronten,5.766309869891881,52.57709901935035,flex
-PFL_Adress50578,Lindenlaan 16 Dronten,Lindenlaan_16_Dronten,5.7657671349696775,52.57746024132763,flex
-PFL_Adress50579,Lindenlaan 20 Dronten,Lindenlaan_20_Dronten,5.766357451708232,52.57748531903802,flex
-PFL_Adress50580,Lindenlaan 18 Dronten,Lindenlaan_18_Dronten,5.766047734339863,52.57749529513274,flex
-PFL_Adress50581,Lindenlaan 24 Dronten,Lindenlaan_24_Dronten,5.766830758790872,52.577627602290754,flex
-PFL_Adress50582,Lindenlaan 15 Dronten,Lindenlaan_15_Dronten,5.765371064952774,52.57772213392077,flex
-PFL_Adress50583,Lindenlaan 17 Dronten,Lindenlaan_17_Dronten,5.765681710572836,52.57782000359421,flex
-PFL_Adress50584,Lindenlaan 21 Dronten,Lindenlaan_21_Dronten,5.76630192325114,52.5778899225002,flex
-PFL_Adress50585,Lindenlaan 23 Dronten,Lindenlaan_23_Dronten,5.766744568500789,52.577897495309244,flex
-PFL_Adress50586,Lindenlaan 31 Dronten,Lindenlaan_31_Dronten,5.766569630864963,52.57814071015898,flex
-PFL_Adress50587,Lindenlaan 33 Dronten,Lindenlaan_33_Dronten,5.766065364817633,52.578145591978426,flex
-PFL_Adress50588,Lindenlaan 35 Dronten,Lindenlaan_35_Dronten,5.765404349808583,52.578162402936094,flex
-PFL_Adress50589,Lindenlaan 46 Dronten,Lindenlaan_46_Dronten,5.766527617903523,52.57840147454683,flex
-PFL_Adress50590,Lindenlaan 48 Dronten,Lindenlaan_48_Dronten,5.766291733651218,52.57842020255535,flex
-PFL_Adress50591,Lindenlaan 50 Dronten,Lindenlaan_50_Dronten,5.76598200969834,52.57843017848276,flex
-PFL_Adress50592,Lindenlaan 52 Dronten,Lindenlaan_52_Dronten,5.765701636067855,52.578422085532644,flex
-PFL_Adress50593,Lindenlaan 54 Dronten,Lindenlaan_54_Dronten,5.765450767414559,52.578413897910934,flex
-PFL_Adress50594,Lindenlaan 56 Dronten,Lindenlaan_56_Dronten,5.765155718649035,52.578414837676725,flex
-PFL_Adress50595,Lindenlaan 58 Dronten,Lindenlaan_58_Dronten,5.764846302627575,52.5784607586403,flex
-PFL_Adress50596,Lindenlaan 60 Dronten,Lindenlaan_60_Dronten,5.764595587885494,52.57847054321159,flex
-PFL_Adress50597,Lindenlaan 62 Dronten,Lindenlaan_62_Dronten,5.764226238030107,52.57840880614773,flex
-PFL_Adress50598,Lindenlaan 64 Dronten,Lindenlaan_64_Dronten,5.763975062271124,52.578364667406944,flex
-PFL_Adress50599,Lindenlaan 66 Dronten,Lindenlaan_66_Dronten,5.763679322581163,52.57828472049826,flex
-PFL_Adress50600,Lindenlaan 68 Dronten,Lindenlaan_68_Dronten,5.763428148074458,52.578240580598305,flex
-PFL_Adress50601,Lindenlaan 1 Dronten,Lindenlaan_1_Dronten,5.764498298731653,52.577446306470634,flex
-PFL_Adress50602,Lindenlaan 2 Dronten,Lindenlaan_2_Dronten,5.763993344801189,52.57705247147672,flex
-PFL_Adress50603,Lindenlaan 3 Dronten,Lindenlaan_3_Dronten,5.7644850858914864,52.57762609339514,flex
-PFL_Adress50604,Lindenlaan 4 Dronten,Lindenlaan_4_Dronten,5.764259418929471,52.57711453734809,flex
-PFL_Adress50605,Lindenlaan 5 Dronten,Lindenlaan_5_Dronten,5.764353547307414,52.577770307325,flex
-PFL_Adress50606,Lindenlaan 6 Dronten,Lindenlaan_6_Dronten,5.764525416834499,52.57716761561909,flex
-PFL_Adress50607,Lindenlaan 7 Dronten,Lindenlaan_7_Dronten,5.764280940029775,52.57790534667386,flex
-PFL_Adress50608,Lindenlaan 8 Dronten,Lindenlaan_8_Dronten,5.7647914924045205,52.5772296802953,flex
-PFL_Adress50609,Lindenlaan 9 Dronten,Lindenlaan_9_Dronten,5.764797423490408,52.577921679412945,flex
-PFL_Adress50610,Lindenlaan 10 Dronten,Lindenlaan_10_Dronten,5.764983731342822,52.57728299213604,flex
-PFL_Adress50611,Lindenlaan 11 Dronten,Lindenlaan_11_Dronten,5.76489922547332,52.57775059787392,flex
-PFL_Adress50612,Lindenlaan 12 Dronten,Lindenlaan_12_Dronten,5.765264560332956,52.5773450088002,flex
-PFL_Adress50613,Lindenlaan 13 Dronten,Lindenlaan_13_Dronten,5.764927497033351,52.57760671197531,flex
-PFL_Adress50614,Lindenlaan 14 Dronten,Lindenlaan_14_Dronten,5.765530560834328,52.57739808481454,flex
-PFL_Adress50615,Lindenlaan 19 Dronten,Lindenlaan_19_Dronten,5.765962080369376,52.57782809659616,flex
-PFL_Adress50616,Lindenlaan 37 Dronten,Lindenlaan_37_Dronten,5.764770152608808,52.57818239627577,flex
-PFL_Adress50617,Lindenlaan 22 Dronten,Lindenlaan_22_Dronten,5.766549771034901,52.57754761533793,flex
-PFL_Adress50785,Visvijverweg 42 Lelystad,Visvijverweg_42_Lelystad,5.564940681593915,52.583560574692704,flex
-PFL_Adress50786,Visvijverweg 36 Lelystad,Visvijverweg_36_Lelystad,5.565450184640215,52.588309525601325,flex
-PFL_Adress50787,Visvijverweg 38 Lelystad,Visvijverweg_38_Lelystad,5.566337089985193,52.58785460827872,flex
-PFL_Adress50788,Klokbekerweg 7 Lelystad,Klokbekerweg_7_Lelystad,5.566548734125884,52.57872009063475,flex
-PFL_Adress50807,Visvijverweg 40 Lelystad,Visvijverweg_40_Lelystad,5.5659258259174065,52.588068403759436,flex
-PFL_Adress50808,Visvijverweg 41 Lelystad,Visvijverweg_41_Lelystad,5.569919566405393,52.5845012486745,flex
-PFL_Adress50809,Visvijverweg 39 Lelystad,Visvijverweg_39_Lelystad,5.570489251349813,52.58466860089453,flex
-PFL_Adress50831,Ketelweg 2 Dronten,Ketelweg_2_Dronten,5.768350513150518,52.57676507918677,flex
-PFL_Adress50832,Buitenplaats 104 Dronten,Buitenplaats_104_Dronten,5.7672366097949395,52.576790489572346,flex
-PFL_Adress50833,Buitenplaats 62 Dronten,Buitenplaats_62_Dronten,5.766971385608634,52.57682728738382,flex
-PFL_Adress50834,Buitenplaats 61 Dronten,Buitenplaats_61_Dronten,5.766905683276904,52.57687573212931,flex
-PFL_Adress50835,Buitenplaats 107 Dronten,Buitenplaats_107_Dronten,5.767198424421086,52.57701380115908,flex
-PFL_Adress50836,Buitenplaats 108 Dronten,Buitenplaats_108_Dronten,5.76720958658124,52.5770781680514,flex
-PFL_Adress50837,Buitenplaats 109 Dronten,Buitenplaats_109_Dronten,5.767229935422966,52.5771403485921,flex
-PFL_Adress50838,Buitenplaats 110 Dronten,Buitenplaats_110_Dronten,5.767107175134717,52.57717735558492,flex
-PFL_Adress50839,Buitenplaats 111 Dronten,Buitenplaats_111_Dronten,5.767053229156447,52.577227398461154,flex
-PFL_Adress50840,Buitenplaats 112 Dronten,Buitenplaats_112_Dronten,5.766930848027746,52.57725880500119,flex
-PFL_Adress50841,Lindenlaan 26 Dronten,Lindenlaan_26_Dronten,5.767126189753249,52.57767159336537,flex
-PFL_Adress50842,Lindenlaan 28 Dronten,Lindenlaan_28_Dronten,5.767362534946488,52.57770678569518,flex
-PFL_Adress50843,Lindenlaan 30 Dronten,Lindenlaan_30_Dronten,5.7675991133141,52.57776893855031,flex
-PFL_Adress50844,Lindenlaan 32 Dronten,Lindenlaan_32_Dronten,5.767894390666768,52.577794953713564,flex
-PFL_Adress50845,Lindenlaan 34 Dronten,Lindenlaan_34_Dronten,5.768175149281489,52.57784797648233,flex
-PFL_Adress50846,Lindenlaan 27 Dronten,Lindenlaan_27_Dronten,5.76735142754512,52.5781292218747,flex
-PFL_Adress50847,Lindenlaan 38 Dronten,Lindenlaan_38_Dronten,5.767663477466267,52.57838885230787,flex
-PFL_Adress50848,Lindenlaan 36 Dronten,Lindenlaan_36_Dronten,5.767958525988185,52.578387906311974,flex
-PFL_Adress50849,Lindenlaan 40 Dronten,Lindenlaan_40_Dronten,5.7673979337841015,52.57838970307747,flex
-PFL_Adress50850,Lindenlaan 42 Dronten,Lindenlaan_42_Dronten,5.767102962734221,52.5783996346785,flex
-PFL_Adress50851,Lindenlaan 44 Dronten,Lindenlaan_44_Dronten,5.766807914109986,52.578400578548916,flex
-PFL_Adress50852,Lindenlaan 29 Dronten,Lindenlaan_29_Dronten,5.766982619034011,52.57813040236773,flex
-PFL_Adress50853,Buitenplaats 106 Dronten,Buitenplaats_106_Dronten,5.767164245488065,52.57695249170733,flex
-PFL_Adress50854,Lindenlaan 25 Dronten,Lindenlaan_25_Dronten,5.7676611490640175,52.578119242377525,flex
-PFL_Adress50855,Rendierweg 7 Dronten,Rendierweg_7_Dronten,5.734829596219393,52.57726728209075,flex
-PFL_Adress50856,Rendierweg 5 Dronten,Rendierweg_5_Dronten,5.735692113637782,52.578136514668145,flex
-PFL_Adress50857,Rendierweg 10 Dronten,Rendierweg_10_Dronten,5.737189057548121,52.58086422855533,flex
-PFL_Adress50858,Vossemeerdijk 11 Dronten,Vossemeerdijk_11_Dronten,5.759805369801464,52.57899794824789,flex
-PFL_Adress50859,Beukenlaan 2 Dronten,Beukenlaan_2_Dronten,5.759786215662607,52.57673322296321,flex
-PFL_Adress50860,Boslaan 15 Dronten,Boslaan_15_Dronten,5.759866892958025,52.57755080902522,flex
-PFL_Adress50861,Boslaan 14 Dronten,Boslaan_14_Dronten,5.759945224710696,52.577184144128594,flex
-PFL_Adress50862,Boslaan 17 Dronten,Boslaan_17_Dronten,5.760058899176381,52.57757716782143,flex
-PFL_Adress50863,Vossemeerdijk 13 Dronten,Vossemeerdijk_13_Dronten,5.760129395345359,52.5789340200653,flex
-PFL_Adress50864,Boslaan 16 Dronten,Boslaan_16_Dronten,5.760174101356195,52.57724427785774,flex
-PFL_Adress50865,Beukenlaan 1 Dronten,Beukenlaan_1_Dronten,5.760230141843344,52.576893599189866,flex
-PFL_Adress50866,Beukenlaan 3 Dronten,Beukenlaan_3_Dronten,5.760229000424213,52.57675879408604,flex
-PFL_Adress50867,Boslaan 19 Dronten,Boslaan_19_Dronten,5.760322602484788,52.577650484002476,flex
-PFL_Adress50868,Vossemeerdijk 15 Dronten,Vossemeerdijk_15_Dronten,5.760394028893445,52.57882534151516,flex
-PFL_Adress50869,Vossemeerdijk 17 Dronten,Vossemeerdijk_17_Dronten,5.760408324662871,52.57877137311988,flex
-PFL_Adress50870,Boslaan 18 Dronten,Boslaan_18_Dronten,5.760484199065492,52.57727925211004,flex
-PFL_Adress50871,Boslaan 21 Dronten,Boslaan_21_Dronten,5.760561615234934,52.577710396392135,flex
-PFL_Adress50872,Boslaan 20 Dronten,Boslaan_20_Dronten,5.760676280653854,52.57731459691616,flex
-PFL_Adress50873,Boslaan 23 Dronten,Boslaan_23_Dronten,5.760768374779113,52.57773670763923,flex
-PFL_Adress50874,Boslaan 25 Dronten,Boslaan_25_Dronten,5.76106311405932,52.57769983075995,flex
-PFL_Adress50875,Boslaan 24 Dronten,Boslaan_24_Dronten,5.761193137355851,52.57737588036698,flex
-PFL_Adress50876,Boslaan 27 Dronten,Boslaan_27_Dronten,5.761343253299471,52.57768097365482,flex
-PFL_Adress50877,Boslaan 26 Dronten,Boslaan_26_Dronten,5.761561328814093,52.577302821820886,flex
-PFL_Adress50878,Beukenlaan 21 Dronten,Beukenlaan_21_Dronten,5.761583012286304,52.577014334739076,flex
-PFL_Adress50879,Boslaan 29 Dronten,Boslaan_29_Dronten,5.761608563729019,52.57765317541502,flex
-PFL_Adress50880,Beukenlaan 19 Dronten,Beukenlaan_19_Dronten,5.761690506962611,52.57688001379657,flex
-PFL_Adress50881,Boslaan 31 Dronten,Boslaan_31_Dronten,5.7618439873366665,52.57758053468337,flex
-PFL_Adress50882,Boslaan 28 Dronten,Boslaan_28_Dronten,5.762003049909392,52.577202568252126,flex
-PFL_Adress50883,Boslaan 33 Dronten,Boslaan_33_Dronten,5.762109755720883,52.577606657347765,flex
-PFL_Adress50884,Beukenlaan 23 Dronten,Beukenlaan_23_Dronten,5.76213344725179,52.576923551826226,flex
-PFL_Adress50885,Boslaan 30 Dronten,Boslaan_30_Dronten,5.762151182178098,52.577273998416395,flex
-PFL_Adress50886,Beukenlaan 25 Dronten,Beukenlaan_25_Dronten,5.762293109629307,52.576798538105805,flex
-PFL_Adress50887,Boslaan 35 Dronten,Boslaan_35_Dronten,5.762361078362147,52.577668774054025,flex
-PFL_Adress50888,Boslaan 32 Dronten,Boslaan_32_Dronten,5.762358170205399,52.57732726791215,flex
-PFL_Adress50889,Vossemeerdijk 19 Dronten,Vossemeerdijk_19_Dronten,5.759573277758228,52.579466013027066,flex
-PFL_Adress50890,Vossemeerdijk 21 Dronten,Vossemeerdijk_21_Dronten,5.760494195858776,52.580200074372485,flex
-PFL_Adress50891,Vossemeerdijk 23 Dronten,Vossemeerdijk_23_Dronten,5.76081155563259,52.58108881259047,flex
-PFL_Adress50892,Vossemeerdijk 27 Dronten,Vossemeerdijk_27_Dronten,5.762284042569363,52.5790171040604,flex
-PFL_Adress50893,Vossemeerdijk 31 Dronten,Vossemeerdijk_31_Dronten,5.762726621878934,52.57901570483277,flex
-PFL_Adress50894,Vossemeerdijk 33 Dronten,Vossemeerdijk_33_Dronten,5.762859395665507,52.57901528474288,flex
-PFL_Adress50895,Boslaan 22 Dronten,Boslaan_22_Dronten,5.76092775209245,52.57739469067405,flex
-PFL_Adress50896,Vossemeerdijk 25 Dronten,Vossemeerdijk_25_Dronten,5.761029161685894,52.581290861647375,flex
-PFL_Adress50897,Vossemeerdijk 1 Dronten,Vossemeerdijk_1_Dronten,5.759069940755905,52.579449993820845,flex
-PFL_Adress50898,Vossemeerdijk 1 Dronten,Vossemeerdijk_1_Dronten,5.758369064779753,52.57913172928484,flex
-PFL_Adress51122,Boslaan 5 Dronten,Boslaan_5_Dronten,5.758714329946993,52.577329740671786,flex
-PFL_Adress51123,Boslaan 3 Dronten,Boslaan_3_Dronten,5.7584783723327515,52.57733946615643,flex
-PFL_Adress51124,Boslaan 7 Dronten,Boslaan_7_Dronten,5.758950818300856,52.57738292376653,flex
-PFL_Adress51125,Boslaan 9 Dronten,Boslaan_9_Dronten,5.759172555105169,52.57743615261652,flex
-PFL_Adress51126,Boslaan 11 Dronten,Boslaan_11_Dronten,5.759423492990787,52.57745334051467,flex
-PFL_Adress51127,Boslaan 13 Dronten,Boslaan_13_Dronten,5.759645154741239,52.57749758147441,flex
-PFL_Adress51128,Rendierweg 4 Dronten,Rendierweg_4_Dronten,5.7459715899575015,52.57774640186523,flex
-PFL_Adress51129,Vossemeerdijk 9 Dronten,Vossemeerdijk_9_Dronten,5.759672748001373,52.579016338929016,flex
-PFL_Adress51130,Vossemeerdijk 7 Dronten,Vossemeerdijk_7_Dronten,5.759495944078524,52.57904385527447,flex
-PFL_Adress51131,Vossemeerdijk 5 Dronten,Vossemeerdijk_5_Dronten,5.759378074673627,52.57906219935853,flex
-PFL_Adress51132,Vossemeerdijk 1 Dronten,Vossemeerdijk_1_Dronten,5.757339958966359,52.57909601878923,flex
-PFL_Adress51133,IJsseloog 1 Dronten,IJsseloog_1_Dronten,5.739835724211784,52.59250889718927,flex
-PFL_Adress51134,IJsseloog 2 Dronten,IJsseloog_2_Dronten,5.741520157883694,52.59421183750393,flex
-PFL_Adress51217,Sint Lambertusgilde 4 Dronten,Sint_Lambertusgilde_4_Dronten,5.686661128606638,52.5311104971247,flex
-PFL_Adress51218,Sint Margarethagilde 39 Dronten,Sint_Margarethagilde_39_Dronten,5.686673469213611,52.53038633131882,flex
-PFL_Adress51219,Sint Lambertusgilde 6 Dronten,Sint_Lambertusgilde_6_Dronten,5.686699624981529,52.530972085206656,flex
-PFL_Adress51220,Sint Lambertusgilde 8 Dronten,Sint_Lambertusgilde_8_Dronten,5.686723074883969,52.530794625453204,flex
-PFL_Adress51221,Sint Lambertusgilde 10 Dronten,Sint_Lambertusgilde_10_Dronten,5.686746687911101,52.5306412153219,flex
-PFL_Adress51222,Sint Margarethagilde 37 Dronten,Sint_Margarethagilde_37_Dronten,5.687133861060644,52.53042124301884,flex
-PFL_Adress51223,Sint Josephgilde 9 Dronten,Sint_Josephgilde_9_Dronten,5.687274513796861,52.530681977648676,flex
-PFL_Adress51224,Sint Margarethagilde 35 Dronten,Sint_Margarethagilde_35_Dronten,5.6874955573485595,52.530440378484265,flex
-PFL_Adress51225,Sint Josephgilde 8 Dronten,Sint_Josephgilde_8_Dronten,5.687684886533031,52.530852326720044,flex
-PFL_Adress51226,Sint Josephgilde 10 Dronten,Sint_Josephgilde_10_Dronten,5.687752888611335,52.53070181466676,flex
-PFL_Adress51227,Sint Margarethagilde 33 Dronten,Sint_Margarethagilde_33_Dronten,5.68779804477705,52.5304556455957,flex
-PFL_Adress51228,Sint Margarethagilde 31 Dronten,Sint_Margarethagilde_31_Dronten,5.688061112258608,52.53047101193821,flex
-PFL_Adress51229,Sint Hubertusgilde 3 Dronten,Sint_Hubertusgilde_3_Dronten,5.688145699640458,52.531187921911666,flex
-PFL_Adress51230,Sint Margarethagilde 29 Dronten,Sint_Margarethagilde_29_Dronten,5.688363572785738,52.53048227832285,flex
-PFL_Adress51231,Sint Hubertusgilde 4 Dronten,Sint_Hubertusgilde_4_Dronten,5.688589704826761,52.531225880300966,flex
-PFL_Adress51232,Sint Margarethagilde 27 Dronten,Sint_Margarethagilde_27_Dronten,5.688646358077049,52.53049759329914,flex
-PFL_Adress51233,Sint Margarethagilde 25 Dronten,Sint_Margarethagilde_25_Dronten,5.688712207256905,52.53051345928463,flex
-PFL_Adress51234,Sint Hubertusgilde 5 Dronten,Sint_Hubertusgilde_5_Dronten,5.688124935742547,52.53103462410313,flex
-PFL_Adress51235,Sint Hubertusgilde 6 Dronten,Sint_Hubertusgilde_6_Dronten,5.688593640793185,52.531081543066435,flex
-PFL_Adress51236,Sint Hubertusgilde 7 Dronten,Sint_Hubertusgilde_7_Dronten,5.6881092171318075,52.530899360007766,flex
-PFL_Adress51237,Sint Hubertusgilde 8 Dronten,Sint_Hubertusgilde_8_Dronten,5.688612304914664,52.530925143376145,flex
-PFL_Adress51238,Sint Hubertusgilde 9 Dronten,Sint_Hubertusgilde_9_Dronten,5.688147621001453,52.53074592105394,flex
-PFL_Adress51239,Sint Hubertusgilde 10 Dronten,Sint_Hubertusgilde_10_Dronten,5.688616055879043,52.53075374580416,flex
-PFL_Adress51240,Sint Josephgilde 3 Dronten,Sint_Josephgilde_3_Dronten,5.687144383244559,52.53112130102062,flex
-PFL_Adress51241,Sint Josephgilde 5 Dronten,Sint_Josephgilde_5_Dronten,5.687168041602116,52.53097691396034,flex
-PFL_Adress51242,Sint Josephgilde 6 Dronten,Sint_Josephgilde_6_Dronten,5.687616986389929,52.53101787424197,flex
-PFL_Adress51243,Sint Josephgilde 7 Dronten,Sint_Josephgilde_7_Dronten,5.687226207309197,52.53082943784298,flex
-PFL_Adress51244,Oker 3 Dronten,Oker_3_Dronten,5.683869402185274,52.53119838076875,flex
-PFL_Adress51245,Kobalt 6 Dronten,Kobalt_6_Dronten,5.684234346716547,52.53082594994356,flex
-PFL_Adress51246,Kobalt 4 Dronten,Kobalt_4_Dronten,5.684176878157583,52.530995279969474,flex
-PFL_Adress51247,Kobalt 8 Dronten,Kobalt_8_Dronten,5.684296761538145,52.53067996551328,flex
-PFL_Adress51248,Kobalt 10 Dronten,Kobalt_10_Dronten,5.684416786620179,52.530534663522594,flex
-PFL_Adress51250,De Amstel 24 Dronten,De_Amstel_24_Dronten,5.701982934332591,52.54314444810571,flex
-PFL_Adress51251,De Amstel 14 Dronten,De_Amstel_14_Dronten,5.702339088093627,52.54347603232647,flex
-PFL_Adress51252,De Amstel 10 Dronten,De_Amstel_10_Dronten,5.702546616626178,52.54363725210108,flex
-PFL_Adress51253,De Amstel 20 Dronten,De_Amstel_20_Dronten,5.702645945420519,52.54309775053135,flex
-PFL_Adress51254,De Amstel 6 Dronten,De_Amstel_6_Dronten,5.702739341424843,52.543789523594654,flex
-PFL_Adress51255,De Amstel 16 Dronten,De_Amstel_16_Dronten,5.702823991768974,52.54325904822385,flex
-PFL_Adress51256,De Amstel 2 Dronten,De_Amstel_2_Dronten,5.702887973267819,52.5439598866945,flex
-PFL_Adress51257,De Amstel 12 Dronten,De_Amstel_12_Dronten,5.70301684460023,52.54342929352132,flex
-PFL_Adress51258,De Amstel 8 Dronten,De_Amstel_8_Dronten,5.703209634515398,52.543590551377854,flex
-PFL_Adress51259,De Amstel 4 Dronten,De_Amstel_4_Dronten,5.703372815113063,52.54373391325206,flex
-PFL_Adress51260,De Amstel 1 Dronten,De_Amstel_1_Dronten,5.703516743035778,52.543248215828584,flex
-PFL_Adress51261,De Linge 36 Dronten,De_Linge_36_Dronten,5.706847951109892,52.54305481368745,flex
-PFL_Adress51262,De Aar 59 Dronten,De_Aar_59_Dronten,5.707290461645959,52.54407442424282,flex
-PFL_Adress51263,De Aar 79 Dronten,De_Aar_79_Dronten,5.707460721850821,52.543520041949314,flex
-PFL_Adress51264,De Aar 77 Dronten,De_Aar_77_Dronten,5.707507587155529,52.543571223879745,flex
-PFL_Adress51265,De Aar 75 Dronten,De_Aar_75_Dronten,5.70756270649098,52.54363239534637,flex
-PFL_Adress51266,De Aar 73 Dronten,De_Aar_73_Dronten,5.707614720768559,52.5436821073876,flex
-PFL_Adress51267,De Aar 81 Dronten,De_Aar_81_Dronten,5.707650819240214,52.543464688150884,flex
-PFL_Adress51268,De Aar 83 Dronten,De_Aar_83_Dronten,5.707706752392054,52.543520186372014,flex
-PFL_Adress51269,De Aar 69 Dronten,De_Aar_69_Dronten,5.707709329873485,52.543791649578914,flex
-PFL_Adress51270,De Aar 67 Dronten,De_Aar_67_Dronten,5.707767204419856,52.54384646847634,flex
-PFL_Adress51271,De Aar 85 Dronten,De_Aar_85_Dronten,5.7077847544149565,52.543604240472746,flex
-PFL_Adress51272,De Aar 65 Dronten,De_Aar_65_Dronten,5.707799791068063,52.543898326968815,flex
-PFL_Adress51273,De Aar 87 Dronten,De_Aar_87_Dronten,5.707841182175703,52.54365878463974,flex
-PFL_Adress51274,De Aar 63 Dronten,De_Aar_63_Dronten,5.707859942339349,52.5439600958318,flex
-PFL_Adress51275,De Aar 89 Dronten,De_Aar_89_Dronten,5.707896569811609,52.54371420335865,flex
-PFL_Adress51276,De Aar 61 Dronten,De_Aar_61_Dronten,5.70795027216141,52.54405469453861,flex
-PFL_Adress51277,De Aar 91 Dronten,De_Aar_91_Dronten,5.707951003088008,52.54377418118898,flex
-PFL_Adress51278,De Aar 93 Dronten,De_Aar_93_Dronten,5.70800771423259,52.543833173219205,flex
-PFL_Adress51279,De Aar 95 Dronten,De_Aar_95_Dronten,5.708047407119773,52.54387296945554,flex
-PFL_Adress51280,De Aar 97 Dronten,De_Aar_97_Dronten,5.7080721684836515,52.543900790054636,flex
-PFL_Adress51281,De Aar 99 Dronten,De_Aar_99_Dronten,5.708154934723343,52.54398503772922,flex
-PFL_Adress51282,Elandpad 1 Dronten,Elandpad_1_Dronten,5.670723458730356,52.543368358567996,flex
-PFL_Adress51290,De Eem 4 Dronten,De_Eem_4_Dronten,5.703853237361065,52.54467089601665,flex
-PFL_Adress51291,Dijkpoort 9 Dronten,Dijkpoort_9_Dronten,5.696637869350598,52.54376938560432,flex
-PFL_Adress51292,Cellebroederspoort 7 Dronten,Cellebroederspoort_7_Dronten,5.700103478718118,52.544136413434664,flex
-PFL_Adress51293,Cellebroederspoort 7 Dronten,Cellebroederspoort_7_Dronten,5.700588631882428,52.54393330526085,flex
-PFL_Adress51294,Cellebroederspoort 7 Dronten,Cellebroederspoort_7_Dronten,5.700826868343329,52.543836295985365,flex
-PFL_Adress51295,Cellebroederspoort 7 Dronten,Cellebroederspoort_7_Dronten,5.700352514848857,52.544032069968175,flex
-PFL_Adress51296,Cellebroederspoort 10 Dronten,Cellebroederspoort_10_Dronten,5.698870797304693,52.5436864293256,flex
-PFL_Adress51297,Cellebroederspoort 10 Dronten,Cellebroederspoort_10_Dronten,5.698641738464396,52.54346998784297,flex
-PFL_Adress51298,Dijkpoort 5 Dronten,Dijkpoort_5_Dronten,5.697507950548352,52.543400152904645,flex
-PFL_Adress51299,De Amstel 18 Dronten,De_Amstel_18_Dronten,5.702175783419423,52.54331469477713,flex
-PFL_Adress51300,Waterpas 10 Dronten,Waterpas_10_Dronten,5.682038758040737,52.54200823007868,flex
-PFL_Adress51301,Waterpas 9 Dronten,Waterpas_9_Dronten,5.68208475848004,52.54205377115455,flex
-PFL_Adress51302,Waterpas 8 Dronten,Waterpas_8_Dronten,5.682133818839207,52.54209617702889,flex
-PFL_Adress51303,Waterpas 7 Dronten,Waterpas_7_Dronten,5.682180918878352,52.542138596744586,flex
-PFL_Adress51304,Waterpas 6 Dronten,Waterpas_6_Dronten,5.682220244061232,52.5421822310866,flex
-PFL_Adress51305,Waterpas 5 Dronten,Waterpas_5_Dronten,5.682275110094,52.54221986818854,flex
-PFL_Adress51306,Waterpas 4 Dronten,Waterpas_4_Dronten,5.682320272661276,52.54226348797662,flex
-PFL_Adress51307,Waterpas 3 Dronten,Waterpas_3_Dronten,5.68237713798584,52.54230468800978,flex
-PFL_Adress51308,Waterpas 2 Dronten,Waterpas_2_Dronten,5.682428905135296,52.542343986411645,flex
-PFL_Adress51309,Waterpas 1 Dronten,Waterpas_1_Dronten,5.682468708042194,52.542390657183816,flex
-PFL_Adress51310,Baksteen 20 Dronten,Baksteen_20_Dronten,5.682675592380806,52.54186899625749,flex
-PFL_Adress51311,Baksteen 18 Dronten,Baksteen_18_Dronten,5.68270251497324,52.54190953375891,flex
-PFL_Adress51312,Baksteen 16 Dronten,Baksteen_16_Dronten,5.682746309950687,52.541949229350394,flex
-PFL_Adress51313,Baksteen 14 Dronten,Baksteen_14_Dronten,5.682780401448853,52.54199488970088,flex
-PFL_Adress51314,Baksteen 12 Dronten,Baksteen_12_Dronten,5.68281250061645,52.54203579174394,flex
-PFL_Adress51315,Baksteen 10 Dronten,Baksteen_10_Dronten,5.682850467805676,52.542079069771674,flex
-PFL_Adress51316,Baksteen 8 Dronten,Baksteen_8_Dronten,5.682878675693529,52.5421199904817,flex
-PFL_Adress51317,Baksteen 6 Dronten,Baksteen_6_Dronten,5.6829284026624105,52.542171552412086,flex
-PFL_Adress51318,Baksteen 4 Dronten,Baksteen_4_Dronten,5.682970213694754,52.54220768491241,flex
-PFL_Adress51319,Baksteen 2 Dronten,Baksteen_2_Dronten,5.683020545768544,52.542250536614084,flex
-PFL_Adress51320,Baksteen 53 Dronten,Baksteen_53_Dronten,5.6837883217268095,52.542010492354606,flex
-PFL_Adress51321,Baksteen 51 Dronten,Baksteen_51_Dronten,5.683853944275313,52.541990376489146,flex
-PFL_Adress51322,Baksteen 51 Dronten,Baksteen_51_Dronten,5.683938092680334,52.54197200271725,flex
-PFL_Adress51323,Baksteen 49 Dronten,Baksteen_49_Dronten,5.684035797269071,52.54193754366917,flex
-PFL_Adress51324,Baksteen 53 Dronten,Baksteen_53_Dronten,5.683711019253977,52.542034205331696,flex
-PFL_Adress51325,Baksteen 55 Dronten,Baksteen_55_Dronten,5.683630722161884,52.54204662872122,flex
-PFL_Adress51326,Baksteen 55 Dronten,Baksteen_55_Dronten,5.683567065090864,52.542069705357044,flex
-PFL_Adress51327,Baksteen 57 Dronten,Baksteen_57_Dronten,5.683495598328761,52.542091021982365,flex
-PFL_Adress51328,Baksteen 57 Dronten,Baksteen_57_Dronten,5.683419271150169,52.542112943862314,flex
-PFL_Adress51329,Waterpas 11 Dronten,Waterpas_11_Dronten,5.681899516728882,52.541869048445854,flex
-PFL_Adress51330,Waterpas 13 Dronten,Waterpas_13_Dronten,5.681783960191992,52.541793240105484,flex
-PFL_Adress51331,Waterpas 15 Dronten,Waterpas_15_Dronten,5.681707265059008,52.54169831807831,flex
-PFL_Adress51332,Waterpas 14 Dronten,Waterpas_14_Dronten,5.681756281131749,52.54173862119552,flex
-PFL_Adress51333,Waterpas 12 Dronten,Waterpas_12_Dronten,5.681825172063139,52.54183475788292,flex
-PFL_Adress51334,Waterpas 16 Dronten,Waterpas_16_Dronten,5.68166991426828,52.54165441803068,flex
-PFL_Adress51335,Waterpas 17 Dronten,Waterpas_17_Dronten,5.6816286721301985,52.54161052762945,flex
-PFL_Adress51336,Waterpas 18 Dronten,Waterpas_18_Dronten,5.681573804448933,52.54157023898,flex
-PFL_Adress51339,Smederij 59 Dronten,Smederij_59_Dronten,5.6796363719675735,52.53933119250593,flex
-PFL_Adress51340,Smederij 51 Dronten,Smederij_51_Dronten,5.679764841429096,52.53883322239876,flex
-PFL_Adress51341,Smederij 102 Dronten,Smederij_102_Dronten,5.6801136953475675,52.53916583494538,flex
-PFL_Adress51342,Smederij 102 Dronten,Smederij_102_Dronten,5.6801240062444505,52.53910932435354,flex
-PFL_Adress51343,Smederij 100 Dronten,Smederij_100_Dronten,5.680169838627031,52.538988323097115,flex
-PFL_Adress51344,Smederij 98 Dronten,Smederij_98_Dronten,5.680177571236213,52.538936438334304,flex
-PFL_Adress51345,Smederij 96 Dronten,Smederij_96_Dronten,5.68018780328218,52.538814832968,flex
-PFL_Adress51346,Smederij 94 Dronten,Smederij_94_Dronten,5.680203005800344,52.53876471822185,flex
-PFL_Adress51347,Smederij 92 Dronten,Smederij_92_Dronten,5.680221396481245,52.53864428800459,flex
-PFL_Adress51348,Smederij 90 Dronten,Smederij_90_Dronten,5.680224865392511,52.538591820605525,flex
-PFL_Adress51349,Smederij 88 Dronten,Smederij_88_Dronten,5.68025299066201,52.53847018000778,flex
-24620010,Busstation,Busstation,5.721318701932558,52.8476868045349,hubs
-16301010,Station,Station,6.118057372556778,52.79051963069029,hubs
-25005010,Busstation,Busstation,5.751492635162635,52.710136492287305,hubs
-25170211,Busstation,Busstation,5.867480328091104,52.71220519798756,hubs
-25250010,Singel,Singel,5.603280425513811,52.66101590406528,hubs
-25230030,Ens,Ens,5.823426517745924,52.63471762849783,hubs
-47335000,Station,Station,5.922036557013836,52.56005271698296,hubs
-49430390,Station,Station,5.7214914840747415,52.534238581030024,hubs
-49005010,Station Centrum,Station_Centrum,5.473619477254221,52.507276051991454,hubs
-47418005,Centrum,Centrum,5.836807965543552,52.44656236553774,hubs
-47561001,Station,Station,5.893026714804398,52.40936062143838,hubs
-49613001,Station,Station,5.620838170472398,52.33796842520916,hubs
-50637007,Station,Station,5.493157848126697,52.2221202402464,hubs
-59600100,Blaricum P+R,Blaricum_P+R,5.271154293176471,52.283030232087995,hubs
-58655000,Station Centrum,Station_Centrum,5.218003427725558,52.375143587588255,hubs
-58750370,Station Oostvaarders,Station_Oostvaarders,5.301302383964623,52.40270812960724,hubs
-49790210,Mast,Mast,5.523696649700141,52.340169701391,hubs
+code,name,short_name,gebied,x,y,halte
+25000010,Kettingstraat,Kettingstraat,Flevoland,5.7586565921984505,52.710392934205395,True
+25000600,Antonius Ziekenhuis,Antonius_Ziekenhuis,Flevoland,5.735926955340721,52.70465616652002,True
+25180130,Steenwijkerweg 2,Steenwijkerweg_2,Flevoland,5.876975418212177,52.71174410044001,True
+25270190,Paardenweg,Paardenweg,Flevoland,5.920603788486243,52.66463489679612,True
+49000001,Station Centrum,Station_Centrum,Flevoland,5.469850120873488,52.5079438040496,True
+49000130,Zwembad De Koploper,Zwembad_De_Koploper,Flevoland,5.493121192156429,52.519788510202574,True
+49000340,Botterbrug,Botterbrug,Flevoland,5.461393836875658,52.50690687812746,True
+49000370,Reygersbeek,Reygersbeek,Flevoland,5.4418353703363245,52.51990416547631,True
+49000480,Golfpark,Golfpark,Flevoland,5.445112711861031,52.52490851957012,True
+49000850,Kwikstraat,Kwikstraat,Flevoland,5.519772197848233,52.534087406322286,True
+49000950,Bronsweg,Bronsweg,Flevoland,5.488574904661967,52.54172141098036,True
+49005500,Runderweg,Runderweg,Flevoland,5.556787026476269,52.5208289308349,True
+49005650,Kempenaarbrug,Kempenaarbrug,Flevoland,5.460326216337289,52.52035253630434,True
+49006460,Gondel Zuid,Gondel_Zuid,Flevoland,5.45449128641442,52.5103531416535,True
+49007850,Tjalk/Groenhorst,Tjalk/Groenhorst,Flevoland,5.468687225337898,52.50035931617633,True
+49140010,Steenstraat,Steenstraat,Flevoland,5.521322217182982,52.539765608153715,True
+49140050,Edelhertweg,Edelhertweg,Flevoland,5.542046661596879,52.53984819801008,True
+49430160,Golfresidentie,Golfresidentie,Flevoland,5.7092533198011175,52.50117204342479,True
+49430430,Dukaat,Dukaat,Flevoland,5.703680099218365,52.53314605205761,True
+49430490,Beiersgulden,Beiersgulden,Flevoland,5.705749104419251,52.53598050377201,True
+49790530,Omloop,Omloop,Flevoland,5.53487418039823,52.35228955385929,True
+25060090,Oosterringweg,Oosterringweg,Flevoland,5.826508535350281,52.76279815460001,True
+25140300,Johannes Postweg,Johannes_Postweg,Flevoland,5.7335916894644985,52.659961624382746,True
+25150200,Tollebeek,Tollebeek,Flevoland,5.679802231616727,52.67704673838126,True
+25150400,Urkerdwarspad,Urkerdwarspad,Flevoland,5.655310806487534,52.666374017587785,True
+25270110,Vollenhoverweg/NOP,Vollenhoverweg/NOP,Flevoland,5.94447365522985,52.685384552719995,True
+25270150,Voorsterweg,Voorsterweg,Flevoland,5.929282315841514,52.674346689490875,True
+49000010,Bouwweg,Bouwweg,Flevoland,5.4321974402977355,52.503101978687766,True
+49000310,Rijnland,Rijnland,Flevoland,5.467736595478426,52.495911239852084,True
+49000380,Eaglelaan,Eaglelaan,Flevoland,5.458087881784183,52.53936195738538,True
+49000470,Oostrandbrug,Oostrandbrug,Flevoland,5.510267771065072,52.513516783289205,True
+49000620,Monnickendamstraat,Monnickendamstraat,Flevoland,5.4129454319741885,52.497796240235644,True
+49000630,Lemmerkade,Lemmerkade,Flevoland,5.419205768640151,52.50038305632325,True
+49000760,Boterbloemhof,Boterbloemhof,Flevoland,5.447023609919453,52.48896732572861,True
+49008250,Stuwweg,Stuwweg,Flevoland,5.4473193675555756,52.500713618532835,True
+49330010,Roodbeenweg,Roodbeenweg,Flevoland,5.673498435573316,52.51741405176132,True
+49340140,Het Blazoen,Het_Blazoen,Flevoland,5.6508024330412345,52.565368867750394,True
+49430840,Cobra,Cobra,Flevoland,5.684181697020041,52.53526355508654,True
+49510020,Harderhaven,Harderhaven,Flevoland,5.608156949033254,52.36662739242081,True
+49700010,De Eemhof,De_Eemhof,Flevoland,5.39616847840766,52.263017068587175,True
+49790060,Naarderweg,Naarderweg,Flevoland,5.526648157515981,52.33152014501008,True
+49790070,Centrum,Centrum,Flevoland,5.544516688608039,52.33144378073456,True
+49810001,Lowlands,Lowlands,Flevoland,5.76159698485723,52.43387292826501,True
+25000030,Lange Dreef,Lange_Dreef,Flevoland,5.763807719482295,52.71059242546988,True
+25000500,Medisch Centrum,Medisch_Centrum,Flevoland,5.743902255832257,52.70838007813389,True
+25060050,Lindeweg,Lindeweg,Flevoland,5.843509790321394,52.75223753228527,True
+25070030,H.D. Louwes Hoeve,H.D._Louwes_Hoeve,Flevoland,5.818868996735028,52.70915618808336,True
+25180110,Steenwijkerweg 8,Steenwijkerweg_8,Flevoland,5.891166884520729,52.71564810832442,True
+25240800,Nagele,Nagele,Flevoland,5.722060513493315,52.6440965464282,True
+49000280,Gooisebrug,Gooisebrug,Flevoland,5.477641638297901,52.52220094480246,True
+49000320,Bongerd,Bongerd,Flevoland,5.501357732879789,52.51437949704898,True
+49000550,Langezand,Langezand,Flevoland,5.494887931183115,52.525314095289275,True
+49000600,Werkeiland,Werkeiland,Flevoland,5.4188387608906075,52.50199188514574,True
+49001020,Hondsdraf,Hondsdraf,Flevoland,5.527757986547803,52.51954577849209,True
+49001650,Agora,Agora,Flevoland,5.476736897975086,52.512010045437634,True
+49008150,Schoener,Schoener,Flevoland,5.4545239129278125,52.502785808905244,True
+49110030,Aviodrome,Aviodrome,Flevoland,5.52919170236398,52.45690220661681,True
+49111010,Natuurpark,Natuurpark,Flevoland,5.5128213018536165,52.4739158773335,True
+49430760,Centrum,Centrum,Flevoland,5.714246508727811,52.525127656550275,True
+49431150,De Reiger,De_Reiger,Flevoland,5.729964233382303,52.51695871026704,True
+49790040,Kwartiermakerslaan,Kwartiermakerslaan,Flevoland,5.5292530186219455,52.34322793474822,True
+49790310,Industrieweg,Industrieweg,Flevoland,5.505006379171366,52.3526107030128,True
+24720010,Lemsterpoort,Lemsterpoort,Flevoland,5.6979509552771574,52.80537792797848,True
+24720090,Noordermeerweg,Noordermeerweg,Flevoland,5.698079482575129,52.825552691913835,True
+24820090,Creil,Creil,Flevoland,5.6595793341295675,52.763521726967205,True
+25000100,Diemenlaan,Diemenlaan,Flevoland,5.76088114212871,52.70228871337687,True
+25000410,Begraafplaats,Begraafplaats,Flevoland,5.746871606694172,52.716827850478936,True
+25230030,Ens,Ens,Flevoland,5.823426517745924,52.63471762849783,True
+49000060,Rotondebrug,Rotondebrug,Flevoland,5.474750616123949,52.520603381115954,True
+49000590,Deko Marina,Deko_Marina,Flevoland,5.442173978140775,52.53149758625882,True
+49001840,Hanzepark,Hanzepark,Flevoland,5.467455996334344,52.51163923301253,True
+49007550,Bedrijvenbrug,Bedrijvenbrug,Flevoland,5.448343395009099,52.50639307650457,True
+49340010,Bloemenwijk,Bloemenwijk,Flevoland,5.645000549023646,52.5643840323055,True
+49430400,De Lichtboei,De_Lichtboei,Flevoland,5.720338895146955,52.51822639544188,True
+49430470,Rendierweg,Rendierweg,Flevoland,5.705149859141005,52.5469016767546,True
+49430800,Wkc Dronten-West,Wkc_Dronten-West,Flevoland,5.695325663305846,52.53762575241168,True
+49430860,Het Tussendek,Het_Tussendek,Flevoland,5.720910121209276,52.52557643551873,True
+49790131,De Verbeelding,De_Verbeelding,Flevoland,5.544256434780238,52.32009271040968,True
+49790410,Schollevaar,Schollevaar,Flevoland,5.475401537033109,52.35988950440186,True
+25000060,Het Waterland,Het_Waterland,Flevoland,5.753689362585906,52.72689037384978,True
+25000430,Dr. W.M. Verhaarlaan,Dr._W.M._Verhaarlaan,Flevoland,5.7440534176456195,52.721509538676365,True
+25180090,Steenwijkerweg 23,Steenwijkerweg_23,Flevoland,5.925198238950286,52.721151941742995,True
+25250300,Rotholm,Rotholm,Flevoland,5.611841170208324,52.66157519790571,True
+25251530,Griend,Griend,Flevoland,5.631795274347194,52.65630535711512,True
+49000150,Oostkaap,Oostkaap,Flevoland,5.493423462259061,52.51683142132953,True
+49000360,Flevo Marina,Flevo_Marina,Flevoland,5.461363461514238,52.55011766813919,True
+49000830,Golfparkbrug,Golfparkbrug,Flevoland,5.4451037223953,52.52927633566924,True
+49001680,Salland,Salland,Flevoland,5.463434525806774,52.494565989089594,True
+49002900,Winkelcentrum Kempenaar,Winkelcentrum_Kempenaar,Flevoland,5.460512439491432,52.5171619349609,True
+49003700,Horst,Horst,Flevoland,5.493506084146021,52.50221798577144,True
+49006800,Pekstraat,Pekstraat,Flevoland,5.519233155299656,52.53125701982765,True
+49110010,Airport Plaza,Airport_Plaza,Flevoland,5.525273391280024,52.45534303053256,True
+49110280,Larserpoort,Larserpoort,Flevoland,5.5036320209695875,52.47746629622084,True
+49110300,Giant/Pascallaan,Giant/Pascallaan,Flevoland,5.49728036501828,52.47435375302706,True
+49430030,Sint Antoniusgilde,Sint_Antoniusgilde,Flevoland,5.689199422747721,52.53193456958863,True
+49430170,Lijzijde,Lijzijde,Flevoland,5.724086787388723,52.52284429104001,True
+49430250,De Boeg,De_Boeg,Flevoland,5.716595997022453,52.51812001551793,True
+49430390,Station,Station,Flevoland,5.7214914840747415,52.534238581030024,True
+49430780,Het Ruim,Het_Ruim,Flevoland,5.720003093684682,52.524491516532585,True
+49560030,Garnaalweg,Garnaalweg,Flevoland,5.715874224811044,52.490440900435374,True
+24820050,IJzerpad,IJzerpad,Flevoland,5.686728530388368,52.79069541260476,True
+24920030,Weg van Ongenade,Weg_van_Ongenade,Flevoland,5.690863416275579,52.724281356515334,True
+24920130,Klutenpad,Klutenpad,Flevoland,5.649410205471402,52.752616609701,True
+25000050,Bunschotenlaan,Bunschotenlaan,Flevoland,5.765370162101856,52.703020444977675,True
+25000700,Urkerweg 18,Urkerweg_18,Flevoland,5.718100336190069,52.693095939547824,True
+25060030,Luttelgeesterweg,Luttelgeesterweg,Flevoland,5.858721708776233,52.73715211683001,True
+25231010,Museum Schokland,Museum_Schokland,Flevoland,5.776811232041602,52.6368747642217,True
+25250100,Urkerweg 60,Urkerweg_60,Flevoland,5.640092194748052,52.659909761249295,True
+25251510,Marsdiep,Marsdiep,Flevoland,5.61837013892427,52.65518189337182,True
+49001010,Buitenhof,Buitenhof,Flevoland,5.5261551565673,52.515844902889555,True
+49004240,Oostzeestraat,Oostzeestraat,Flevoland,5.491218994233154,52.49412243260599,True
+49008810,Palazzo,Palazzo,Flevoland,5.486927146756288,52.49102549260669,True
+49110340,Omroep Flevoland,Omroep_Flevoland,Flevoland,5.5099536318503874,52.4747457238798,True
+49240050,Vuursteenweg,Vuursteenweg,Flevoland,5.60175090209002,52.56570136806698,True
+49330030,Lisdoddeweg,Lisdoddeweg,Flevoland,5.6412405073754845,52.51589679521723,True
+49340080,De Lange Streek,De_Lange_Streek,Flevoland,5.639071530191016,52.56949252003895,True
+49340150,De Poort,De_Poort,Flevoland,5.645784038886482,52.57223715801841,True
+49430020,Melisse,Melisse,Flevoland,5.726873700064518,52.50780947891921,True
+49431130,De Lepelaar,De_Lepelaar,Flevoland,5.730425552671646,52.51944687298184,True
+49440010,Elandweg,Elandweg,Flevoland,5.679920787620287,52.55723905268411,True
+49510080,Camping Flevostrand,Camping_Flevostrand,Flevoland,5.627602232637542,52.38667673064858,True
+49580010,Dodaarsweg,Dodaarsweg,Flevoland,5.4044732051106195,52.37335763119305,True
+49790111,Fluitekruid,Fluitekruid,Flevoland,5.540781020458614,52.324510223762,True
+25000130,Ecopark,Ecopark,Flevoland,5.788832811185286,52.70929733091979,True
+25000160,Ondernemersweg,Ondernemersweg,Flevoland,5.7596862512101525,52.693979503413644,True
+25060070,Pantropica,Pantropica,Flevoland,5.833879864877931,52.757800988531415,True
+25070050,Lindeweg,Lindeweg,Flevoland,5.804735289733999,52.70886512735659,True
+25150100,Urkerweg 34,Urkerweg_34,Flevoland,5.691189942419342,52.68169140329904,True
+25180050,Steenwijkerdwarsweg,Steenwijkerdwarsweg,Flevoland,5.899929808669201,52.71707555355683,True
+25251000,Gemeentehuis,Gemeentehuis,Flevoland,5.601296074615152,52.66327523425188,True
+25270030,Kraggenburg,Kraggenburg,Flevoland,5.898250207645924,52.66434664035038,True
+25270130,Repelweg,Repelweg,Flevoland,5.9399111665156035,52.68126278350665,True
+47430300,Oudebosweg,Oudebosweg,Flevoland,5.814804369917732,52.54551462444723,True
+49000440,Val van Urk,Val_van_Urk,Flevoland,5.488905072145515,52.52511267492729,True
+49002300,Jol West,Jol_West,Flevoland,5.444222217330842,52.50858803749412,True
+49002500,Punter Zuid,Punter_Zuid,Flevoland,5.44691127085076,52.51471604817777,True
+49003500,Wold,Wold,Flevoland,5.488933297114023,52.50542148730632,True
+49240030,Klokbekerweg,Klokbekerweg,Flevoland,5.580709359584853,52.560021685229216,True
+49330050,Rietweg,Rietweg,Flevoland,5.690418942692796,52.51639237118188,True
+49340060,Rivierduinweg,Rivierduinweg,Flevoland,5.628973620699377,52.57321625348131,True
+49430450,Het Spaarne,Het_Spaarne,Flevoland,5.706699948982125,52.53906059214148,True
+49430510,Eurosingel,Eurosingel,Flevoland,5.695949277422078,52.53196212771097,True
+49430620,De Morgen,De_Morgen,Flevoland,5.695023413802186,52.51754886218211,True
+49430830,Wijnvat,Wijnvat,Flevoland,5.6872316821146285,52.53947092224067,True
+49490010,Slingerpad,Slingerpad,Flevoland,5.462158526213999,52.28086117615375,True
+49510040,Harderbroek,Harderbroek,Flevoland,5.562393569571783,52.36691974367228,True
+49790050,Oostergo,Oostergo,Flevoland,5.542185172598464,52.335958660513356,True
+49790490,Horsterweg,Horsterweg,Flevoland,5.5389767059047905,52.3287637180393,True
+24920110,Espel,Espel,Flevoland,5.645557507231335,52.72468493383358,True
+25000210,Zuyderzee College,Zuyderzee_College,Flevoland,5.755814555868925,52.70499162570873,True
+49003000,Kempenaar Midden,Kempenaar_Midden,Flevoland,5.464311857756343,52.51630572873851,True
+49005920,Batavia Stad,Batavia_Stad,Flevoland,5.4381100171677765,52.52174821970805,True
+49560010,Palingweg,Palingweg,Flevoland,5.710462120467851,52.48322990738725,True
+25170211,Busstation,Busstation,Flevoland,5.867480328091104,52.71220519798756,True
+25250270,Vlaak,Vlaak,Flevoland,5.6200486187428425,52.665154202965304,True
+49000530,Schroefstraat,Schroefstraat,Flevoland,5.496104823868478,52.52284148153542,True
+49430150,Baskenstraat,Baskenstraat,Flevoland,5.715501009437189,52.52143938215758,True
+49790110,Speenkruid,Speenkruid,Flevoland,5.539976717710351,52.32948144168478,True
+49790250,Bolwerk,Bolwerk,Flevoland,5.5141493756867765,52.34709182771736,True
+49810010,Walibi Holland,Walibi_Holland,Flevoland,5.767401438675116,52.43855491534889,True
+24980010,Rotonde,Rotonde,Flevoland,5.749414731811687,52.766724261559865,True
+49000170,Centrumbrug,Centrumbrug,Flevoland,5.477781551194395,52.51858794996181,True
+49003300,De Hoven,De_Hoven,Flevoland,5.473789145699471,52.50367201551953,True
+49004510,Penitentiaire Inrichting,Penitentiaire_Inrichting,Flevoland,5.471045614410679,52.49373400741157,True
+49007870,Winkelcentrum Tjalk,Winkelcentrum_Tjalk,Flevoland,5.472269971148764,52.50252274017077,True
+49110370,Meerkoetenweg,Meerkoetenweg,Flevoland,5.507779398930155,52.47083844681213,True
+49430590,Aeres Hogeschool,Aeres_Hogeschool,Flevoland,5.694402575846196,52.5278319784439,True
+49431110,Het Korhoen,Het_Korhoen,Flevoland,5.731987942003118,52.52141955784744,True
+49790020,Overloop,Overloop,Flevoland,5.51877542959604,52.333335691291495,True
+49790100,NCC,NCC,Flevoland,5.5269107478323924,52.30776542517192,True
+24620110,Lemsterweg,Lemsterweg,Flevoland,5.7122800372462015,52.83386340326328,True
+25000470,Nieuwlandenlaan,Nieuwlandenlaan,Flevoland,5.7373674913775785,52.723874988405484,True
+25240010,Domineesweg,Domineesweg,Flevoland,5.674856227653072,52.64654784611492,True
+49000050,Lelycentre,Lelycentre,Flevoland,5.4851822352353405,52.52077495670943,True
+49000220,Bingerden,Bingerden,Flevoland,5.515618018448986,52.49932911983894,True
+49000570,Parkhaven,Parkhaven,Flevoland,5.4471299446436925,52.53467666842673,True
+49000900,Parlaan,Parlaan,Flevoland,5.4560168291169555,52.54399160662904,True
+49000970,Beginweg,Beginweg,Flevoland,5.487365911316164,52.53511681194668,True
+49002700,Gondel Noord,Gondel_Noord,Flevoland,5.455646645105258,52.51448663588818,True
+49005010,Station Centrum,Station_Centrum,Flevoland,5.473619477254221,52.507276051991454,True
+49007530,Galjoenbrug,Galjoenbrug,Flevoland,5.440728386304508,52.506145122863224,True
+24920070,Noordermiddenweg,Noordermiddenweg,Flevoland,5.666693545250783,52.724511341133024,True
+25170030,Zwembad Voorst,Zwembad_Voorst,Flevoland,5.885786824325402,52.670654595706466,True
+25251570,Keteldiep,Keteldiep,Flevoland,5.624167854466097,52.6560242403415,True
+49000520,Houtribhoogte,Houtribhoogte,Flevoland,5.4388264202005585,52.52957582080184,True
+49003600,Winkelcentrum Kamp,Winkelcentrum_Kamp,Flevoland,5.489441140558692,52.50212270420987,True
+49340110,De Poort,De_Poort,Flevoland,5.644603052794696,52.57207795561862,True
+49410010,Sternweg,Sternweg,Flevoland,5.581461579169671,52.38602451157779,True
+49430050,De Haflinger,De_Haflinger,Flevoland,5.709697572503665,52.511587196792085,True
+49430410,De Oeverloper,De_Oeverloper,Flevoland,5.726542338964921,52.52793311086362,True
+49730010,Alikruikweg,Alikruikweg,Flevoland,5.707271984090728,52.43505678532819,True
+25000180,Produktieweg,Produktieweg,Flevoland,5.757441506258497,52.69966628613703,True
+25170070,Mammouthweg,Mammouthweg,Flevoland,5.8699312528593985,52.686141861386936,True
+25170230,Breestraat,Breestraat,Flevoland,5.862907565348738,52.70808954592947,True
+25250230,Winkelcentrum,Winkelcentrum,Flevoland,5.624785232438734,52.6636080501768,True
+49000040,Ziekenhuis,Ziekenhuis,Flevoland,5.477444470271562,52.50506231983376,True
+49001440,Geulbrug,Geulbrug,Flevoland,5.49439659339137,52.511105635708844,True
+49007200,Vaartweg,Vaartweg,Flevoland,5.438587145520857,52.501346847247945,True
+49009090,Duinbeek,Duinbeek,Flevoland,5.507988846155476,52.49360322499967,True
+49230010,Lisdoddepad,Lisdoddepad,Flevoland,5.619547626297496,52.51445838342539,True
+24920050,Onderduikerspad,Onderduikerspad,Flevoland,5.645419990680706,52.73903724890809,True
+25140100,Schaftweg/Nagelerweg,Schaftweg/Nagelerweg,Flevoland,5.752208058644161,52.67517490677507,True
+49000080,Politiebrug,Politiebrug,Flevoland,5.480835858241639,52.49996387637507,True
+49000180,Oostvaardersbrug,Oostvaardersbrug,Flevoland,5.435386388859857,52.510227656607775,True
+49002400,Winkelcentrum Jol,Winkelcentrum_Jol,Flevoland,5.444771597680696,52.51194902192011,True
+49003900,Nienoord,Nienoord,Flevoland,5.501864931851772,52.499819559940796,True
+49008310,Klaproos,Klaproos,Flevoland,5.445829865599489,52.4880691891002,True
+49430310,De Ketting,De_Ketting,Flevoland,5.728763531129181,52.51981116555035,True
+49430920,Langstraat,Langstraat,Flevoland,5.725035652702562,52.51398905096331,True
+49790270,Trekkersveld,Trekkersveld,Flevoland,5.49858888315887,52.35125979802471,True
+25150300,Urkerweg 46,Urkerweg_46,Flevoland,5.668547278305413,52.67197827876012,True
+25170090,Leemringweg/Sloefweg,Leemringweg/Sloefweg,Flevoland,5.863711496106164,52.69218827201262,True
+25170250,Netl,Netl,Flevoland,5.873267208374335,52.68289292818803,True
+25180070,Steenwijkerweg 20a,Steenwijkerweg_20a,Flevoland,5.915914830914254,52.71965677082366,True
+25250010,Singel,Singel,Flevoland,5.603280425513811,52.66101590406528,True
+25270170,Voorstersluis,Voorstersluis,Flevoland,5.929667925567662,52.66965364693703,True
+49000290,Schouwbrug,Schouwbrug,Flevoland,5.466946902447139,52.50707402631485,True
+49000750,Vlieterbrug,Vlieterbrug,Flevoland,5.491386086578896,52.521228014409196,True
+49210040,Eendenweg,Eendenweg,Flevoland,5.535477455202852,52.45799096617189,True
+49340100,Tarpanweg,Tarpanweg,Flevoland,5.655277043806506,52.56632946403447,True
+49430230,Vermiljoen,Vermiljoen,Flevoland,5.684677952317346,52.5323594121771,True
+49430660,De Wissel,De_Wissel,Flevoland,5.729905141134395,52.5245262284855,True
+49660050,Dreef,Dreef,Flevoland,5.698664410982168,52.4510325297442,True
+49790200,Klein Hoefblad,Klein_Hoefblad,Flevoland,5.518348560418316,52.33782099811741,True
+49110330,Inditex/Mac3,Inditex/Mac3,Flevoland,5.494303197833411,52.472648881912875,True
+49430090,De Killick,De_Killick,Flevoland,5.725776452010693,52.518381755194945,True
+49560050,Botweg,Botweg,Flevoland,5.7005148951451705,52.46929016214442,True
+49790030,Langezand,Langezand,Flevoland,5.534457229443873,52.33723580040602,True
+25170050,Picknickplaats,Picknickplaats,Flevoland,5.878796769757932,52.677504909440586,True
+25170110,Boslaan,Boslaan,Flevoland,5.854470198479318,52.70777249109091,True
+49004130,Voorstraatbrug,Voorstraatbrug,Flevoland,5.481987293224891,52.49439980267774,True
+49005950,Crematorium,Crematorium,Flevoland,5.509134986800506,52.52471611783265,True
+49430210,Langstraat,Langstraat,Flevoland,5.728445035811544,52.514824100519746,True
+49590010,Nulderpad,Nulderpad,Flevoland,5.508247318792717,52.29247098785596,True
+49790181,RCN-Eikenlaan,RCN-Eikenlaan,Flevoland,5.535385936211953,52.31658100166977,True
+25000450,Schaftweg/Espelerweg,Schaftweg/Espelerweg,Flevoland,5.723572962398391,52.7239597199919,True
+25180030,Uiterdijkenweg,Uiterdijkenweg,Flevoland,5.938309412598962,52.72331173875766,True
+47430200,Roggebotsluis,Roggebotsluis,Flevoland,5.849949952616943,52.54419642982022,True
+49000240,Vecht,Vecht,Flevoland,5.480610256575423,52.525550895049626,True
+49004410,Kempenaar Oost,Kempenaar_Oost,Flevoland,5.467019782122555,52.514785081776786,True
+49005550,Karveelbrug,Karveelbrug,Flevoland,5.468061354652803,52.52043737918584,True
+49530020,Hanzeweg 17,Hanzeweg_17,Flevoland,5.757227131733607,52.53726008059261,True
+49630020,Bremerbergweg,Bremerbergweg,Flevoland,5.720596268701194,52.417701055120936,True
+49790141,Kastanjelaan,Kastanjelaan,Flevoland,5.533299940899184,52.31998094018911,True
+49790210,Mast,Mast,Flevoland,5.523696649700141,52.340169701391,True
+49790540,Duinoord,Duinoord,Flevoland,5.532505109074219,52.34598318217311,True
+25001400,Smeden,Smeden,Flevoland,5.754393296592181,52.708420053097335,True
+25130100,Sloefweg,Sloefweg,Flevoland,5.7912930282078845,52.66793973151204,True
+25130300,Kleiweg,Kleiweg,Flevoland,5.777828691404456,52.699852714132476,True
+47530020,Ketelweg,Ketelweg,Flevoland,5.787548667856435,52.54086441137614,True
+49000670,Ringdijk,Ringdijk,Flevoland,5.421295375275063,52.49835133659741,True
+49000730,H. Bekiusschool - De Rede,H._Bekiusschool_-_De_Rede,Flevoland,5.475442910049903,52.52787357307632,True
+49000990,Jagersveld,Jagersveld,Flevoland,5.486441798204221,52.530525100151515,True
+49004400,Kempenaar Oost,Kempenaar_Oost,Flevoland,5.463837825413105,52.514805158809665,True
+49005250,Schansbrug,Schansbrug,Flevoland,5.472646488944416,52.51442166331922,True
+49008330,Hollandse Hout,Hollandse_Hout,Flevoland,5.430810734559455,52.48590074599396,True
+49008850,Larserpoortweg,Larserpoortweg,Flevoland,5.505725565741586,52.47874941315654,True
+49430370,De Morinel,De_Morinel,Flevoland,5.7209251099091265,52.53145410656066,True
+49790160,RCN-Dasselaarweg,RCN-Dasselaarweg,Flevoland,5.5314584985492266,52.31298180390547,True
+25130200,Bomenweg,Bomenweg,Flevoland,5.778227385275335,52.69146653724947,True
+25250350,Pampus,Pampus,Flevoland,5.630996894768462,52.65358392770745,True
+49001210,Houtribweg,Houtribweg,Flevoland,5.489784784000583,52.54855066787559,True
+49004340,Zwartezeestraat,Zwartezeestraat,Flevoland,5.497962262534957,52.49389163403488,True
+49005150,Vestebrug,Vestebrug,Flevoland,5.472300087283499,52.51812467671839,True
+49008300,Haagwinde,Haagwinde,Flevoland,5.44059065077103,52.48972534188853,True
+49110320,Mac3Park,Mac3Park,Flevoland,5.49331858127621,52.473251923082096,True
+49110390,Anthony Fokkerweg,Anthony_Fokkerweg,Flevoland,5.5160635498998545,52.46531146155451,True
+49210010,Vogelweg,Vogelweg,Flevoland,5.552465655620317,52.4449097365329,True
+49430070,Langstraat Zuid,Langstraat_Zuid,Flevoland,5.728726643998737,52.511237331736254,True
+49430130,De Ark,De_Ark,Flevoland,5.725415113177902,52.52313709264691,True
+49430640,De Barrage,De_Barrage,Flevoland,5.703894560865684,52.51375081574031,True
+49480010,Reigerweg,Reigerweg,Flevoland,5.4399101575044,52.38854505304866,True
+24680010,Uiterdijkenweg,Uiterdijkenweg,Flevoland,5.842706194924297,52.77894957956041,True
+25005010,Busstation,Busstation,Flevoland,5.751492635162635,52.710136492287305,True
+25240150,Professor Brandsmaweg,Professor_Brandsmaweg,Flevoland,5.699016433941712,52.64475239811244,True
+25250370,Michiel de Ruyterallee,Michiel_de_Ruyterallee,Flevoland,5.637343321984458,52.65475702580059,True
+25250950,De Noord,De_Noord,Flevoland,5.603799059470763,52.667278900219586,True
+49003360,'t Laar,'t_Laar,Flevoland,5.4812912287493525,52.506326536883186,True
+49004500,De Rietlanden,De_Rietlanden,Flevoland,5.474734296451653,52.49755095368022,True
+49008830,Palazzo,Palazzo,Flevoland,5.482775198189705,52.49106486636288,True
+49430900,Oud-Dronten,Oud-Dronten,Flevoland,5.719457609672232,52.52053861607661,True
+49680010,Gruttoweg,Gruttoweg,Flevoland,5.3581678720449375,52.35899324939699,True
+49790090,Kluunpad,Kluunpad,Flevoland,5.531768522914122,52.32711902870785,True
+25250310,Meep,Meep,Flevoland,5.615384865081122,52.6551786765904,True
+49000110,Plantagebrug,Plantagebrug,Flevoland,5.504485765979839,52.51071860952479,True
+49000400,Albatroslaan,Albatroslaan,Flevoland,5.459125558446563,52.54297420183768,True
+49000870,Houtribsluis,Houtribsluis,Flevoland,5.435551824883148,52.526737229220686,True
+49001540,Gorsbrug,Gorsbrug,Flevoland,5.4845874174147164,52.51162638333056,True
+49002600,Punter,Punter,Flevoland,5.449092668355964,52.51553277078148,True
+49004270,Westhoven,Westhoven,Flevoland,5.510232359401509,52.4955421810948,True
+49005850,Bataviahaven,Bataviahaven,Flevoland,5.4381072102401316,52.51932165539348,True
+49130010,Zeeasterpad,Zeeasterpad,Flevoland,5.571405018890241,52.510813230368036,True
+49240010,Proefstation,Proefstation,Flevoland,5.565573407555283,52.54033640071988,True
+49340040,Industrieweg,Industrieweg,Flevoland,5.650169438723221,52.563096502993126,True
+49430940,Wkc Dronten-Zuid,Wkc_Dronten-Zuid,Flevoland,5.720460366712788,52.5128516157549,True
+49490030,Nijkerkersluis,Nijkerkersluis,Flevoland,5.469646934756726,52.2652354844739,True
+24820030,Wrakkenpad,Wrakkenpad,Flevoland,5.674048156364191,52.778522624668675,True
+25060110,Schansweg,Schansweg,Flevoland,5.834446323300384,52.76976038226983,True
+25070010,Luttelgeesterweg,Luttelgeesterweg,Flevoland,5.83504655498485,52.70816174121322,True
+25330300,Zwartemeerweg,Zwartemeerweg,Flevoland,5.835884436260726,52.622206030397706,True
+25440050,Visvijverweg,Visvijverweg,Flevoland,5.634437267458214,52.595268531675835,True
+49008050,Winkelcentrum Botter,Winkelcentrum_Botter,Flevoland,5.462415849510306,52.501630679618884,True
+49430110,Manege,Manege,Flevoland,5.716453109070383,52.51279091156976,True
+49430880,Spiegelstraat,Spiegelstraat,Flevoland,5.720880962965987,52.52172094915358,True
+49430960,Burgemeester Dekker Sportpark,Burgemeester_Dekker_Sportpark,Flevoland,5.706451006638149,52.5250320618036,True
+49490090,Flevo-Nat/Wielseweg,Flevo-Nat/Wielseweg,Flevoland,5.4511109839326,52.27171816729185,True
+49790121,Gildenveld,Gildenveld,Flevoland,5.529285357055728,52.325845793645634,True
+49790240,Kastanjelaan,Kastanjelaan,Flevoland,5.533226045116118,52.31981026582436,True
+24920080,Espelerweg,Espelerweg,Flevoland,5.710948022484645,52.72408461077201,True
+25250330,Vlieter,Vlieter,Flevoland,5.622890625941916,52.654858467079166,True
+25250850,Lange Dam,Lange_Dam,Flevoland,5.613155731772374,52.66714464812789,True
+49000020,Atolplaza,Atolplaza,Flevoland,5.494138315734706,52.51393686904588,True
+49000710,Warande,Warande,Flevoland,5.451090795323734,52.49150861633545,True
+49001730,Veluwezoom,Veluwezoom,Flevoland,5.458001809748972,52.49500075606974,True
+49004110,Slotenlaan,Slotenlaan,Flevoland,5.4851385020038785,52.49446014939347,True
+49310010,Gooiseweg,Gooiseweg,Flevoland,5.592439798932781,52.406290862991376,True
+49431170,Winter,Winter,Flevoland,5.716422424254651,52.50275210542218,True
+49660010,Plein,Plein,Flevoland,5.6920868117881245,52.454995140504984,True
+25000070,Emmeloord - Oost,Emmeloord_-_Oost,Flevoland,5.775766655422727,52.710904457285416,True
+25060010,Brink,Brink,Flevoland,5.856407904630508,52.74231077459958,True
+25250210,Ransuil,Ransuil,Flevoland,5.62943784811937,52.660291436837674,True
+49001750,Baronie,Baronie,Flevoland,5.450682584312286,52.494321872261175,True
+49005400,Oostranddreef,Oostranddreef,Flevoland,5.50935463083546,52.51890111850127,True
+49005750,Boeierbrug,Boeierbrug,Flevoland,5.446093175221324,52.51984819898874,True
+49430740,Meerpaal,Meerpaal,Flevoland,5.720198998701112,52.52311590387175,True
+49431020,Biddingringweg,Biddingringweg,Flevoland,5.740694118452635,52.537786826439245,True
+49660030,Havenweg,Havenweg,Flevoland,5.695478396101449,52.45823982422578,True
+24620010,Busstation,Busstation,hubs,5.721318701932558,52.8476868045349,True
+16301010,Station,Station,hubs,6.118057372556778,52.79051963069029,True
+25005010,Busstation,Busstation,hubs,5.751492635162635,52.710136492287305,True
+25170211,Busstation,Busstation,hubs,5.867480328091104,52.71220519798756,True
+25250010,Singel,Singel,hubs,5.603280425513811,52.66101590406528,True
+25230030,Ens,Ens,hubs,5.823426517745924,52.63471762849783,True
+47335000,Station,Station,hubs,5.922036557013836,52.56005271698296,True
+49430390,Station,Station,hubs,5.7214914840747415,52.534238581030024,True
+49005010,Station Centrum,Station_Centrum,hubs,5.473619477254221,52.507276051991454,True
+47418005,Centrum,Centrum,hubs,5.836807965543552,52.44656236553774,True
+47561001,Station,Station,hubs,5.893026714804398,52.40936062143838,True
+49613001,Station,Station,hubs,5.620838170472398,52.33796842520916,True
+50637007,Station,Station,hubs,5.493157848126697,52.2221202402464,True
+59600100,Blaricum P+R,Blaricum_P+R,hubs,5.271154293176471,52.283030232087995,True
+58655000,Station Centrum,Station_Centrum,hubs,5.218003427725558,52.375143587588255,True
+58750370,Station Oostvaarders,Station_Oostvaarders,hubs,5.301302383964623,52.40270812960724,True
+49790210,Mast,Mast,hubs,5.523696649700141,52.340169701391,True

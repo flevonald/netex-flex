@@ -1,0 +1,30 @@
+publication_timestamp;2026-07-13T00:00:00.000
+participant_ref;POV
+description;Export flexRRReis Rijssen-Holten
+codespace;POV
+version;1
+frame_key;FlexRRReis_RH
+valid_from;2026-06-01T00:00:00.000
+valid_to;2027-05-30T00:00:00.000
+organisation_name;Provincie Overijssel
+operator_code;ARR
+operator_name;Arriva
+operator_url;https://www.rrreis.nl
+zone_name;Rijssen-Holten
+zone_short_name;RH
+zone_description;Gemeente Rijssen-Holten
+line_code;500
+line_name;FlexRRReis Rijssen-Holten
+maximumtraveldistance;99000
+safe_duration_factor;1.0
+safe_duration_offset;1800
+booking_phone;085 - 20 85 212
+booking_url;https://www.rrreis.nl/diensten/vervoer-op-reservering/flexrrreis/
+booking_further_details;app Arriva
+booking_methods;callOffice online
+booking_access;public
+book_when;advanceAndDayOfTravel
+latest_booking_time;23:59:00
+minimum_booking_period;PT60M
+booking_note;Een rit met FlexRRReis Rijssen-Holten kost €2,40.
+G1742

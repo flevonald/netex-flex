@@ -1,4 +1,4 @@
-stop_code,name,short_name,x,y,gebied
+code,name,short_name,x,y,gebied
 24620010,Busstation,Busstation,5.721318701932558,52.8476868045349,hubs
 16301010,Station,Station,6.118057372556778,52.79051963069029,hubs
 25005010,Busstation,Busstation,5.751492635162635,52.710136492287305,hubs

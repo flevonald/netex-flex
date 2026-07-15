@@ -27,7 +27,6 @@ def get_flex_area_coordinates(gdf):
     return d
 area_dict = {'flevoland': get_flex_area_coordinates(gdf_flex_wgs)}
 
-
 with open('flex_area.json', 'w') as f:
     json.dump(area_dict, f)
 
