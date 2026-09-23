@@ -5,8 +5,10 @@
 from __future__ import annotations
 
 import itertools
+import numpy as np
 import json
 import re
+import warnings
 import pandas as pd
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -39,7 +41,10 @@ class ExportConfig:
     zone_description: str
     line_code: str
     line_name: str
-    maximumtraveldistance: str
+    maximum_travel_distance: str
+    minimum_travel_distance: str
+    minimum_pt_travel_time_difference_factor: str
+    no_public_transport_window: str
     safe_duration_factor: str
     safe_duration_offset: str
     booking_phone: str
@@ -107,7 +112,6 @@ def read_config(config_path: Path) -> ExportConfig:
         "zone_description",
         "line_code",
         "line_name",
-        "maximumtraveldistance",
         "safe_duration_factor",
         "safe_duration_offset",
         "booking_phone",
@@ -120,16 +124,32 @@ def read_config(config_path: Path) -> ExportConfig:
         "minimum_booking_period",
         "booking_note",
     }
+    optional = {
+        "maximum_travel_distance",
+        "minimum_travel_distance",
+        "minimum_pt_travel_time_difference_factor",
+        "no_public_transport_window",
+    }
 
     series_config = pd.read_csv(config_path, encoding="utf-8-sig", sep=';',header=None, index_col=0)[1]
-    values = series_config.to_dict() 
-
+    values = series_config.where(pd.notna(series_config), None).to_dict()
+    
     # Quick check for missing columns
-    missing = required.difference(values.keys())
-    if missing:
+    missing_required = required.difference(values.keys())
+    if missing_required:
         raise ValueError(
-            "Config CSV is missing required columns: " + ", ".join(sorted(missing))
+            "Config CSV is missing required columns: " + ", ".join(sorted(missing_required))
             )
+
+    missing_optional = optional.difference(values.keys())
+    if missing_optional:
+        warnings.warn(
+            "Config CSV is missing optional columns: " + ", ".join(sorted(missing_optional)),
+            UserWarning,
+        )
+    # Fill in missing optional values with None
+    values.update({key: None for key in missing_optional})
+
     return ExportConfig(
         publication_timestamp=values["publication_timestamp"],
         participant_ref=values["participant_ref"],
@@ -157,9 +177,12 @@ def read_config(config_path: Path) -> ExportConfig:
         latest_booking_time=values["latest_booking_time"],
         minimum_booking_period=values["minimum_booking_period"],
         booking_note=values["booking_note"],
-        maximumtraveldistance=values["maximumtraveldistance"],
         safe_duration_factor=values["safe_duration_factor"],
         safe_duration_offset=values["safe_duration_offset"],
+        maximum_travel_distance=values["maximum_travel_distance"],
+        minimum_travel_distance=values["minimum_travel_distance"],
+        minimum_pt_travel_time_difference_factor=values["minimum_pt_travel_time_difference_factor"],
+        no_public_transport_window=values["no_public_transport_window"]
     )
 
 def read_bedieningstijden(csv_path: Path) -> pd.DataFrame:
@@ -205,7 +228,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
     ET.SubElement(
         composite,
         n("TypeOfFrameRef"),
-        {"version": "9.4.0", "ref": "NL:BISON:TypeOfFrame:NL_TT_BASELINE"},
+        {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_BASELINE"},
     )
 
     frame_defaults = ET.SubElement(composite, n("FrameDefaults"))
@@ -234,7 +257,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         n("ResourceFrame"),
         {"id": f"NL:{cfg.codespace}:ResourceFrame:{cfg.frame_key}", "version": cfg.version},
     )
-    ET.SubElement(resource, n("TypeOfFrameRef"), {"version": "9.4.0", "ref": "NL:BISON:TypeOfFrame:NL_TT_RESOURCE"})
+    ET.SubElement(resource, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_RESOURCE"})
 
     data_sources = ET.SubElement(resource, n("dataSources"))
     data_source = ET.SubElement(
@@ -303,7 +326,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         n("SiteFrame"),
         {"id": f"NL:{cfg.codespace}:SiteFrame:{cfg.frame_key}", "version": cfg.version},
     )
-    ET.SubElement(site, n("TypeOfFrameRef"), {"version": "9.4.0", "ref": "NL:BISON:TypeOfFrame:NL_TT_SITE"})
+    ET.SubElement(site, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_SITE"})
     flexible_stop_places = ET.SubElement(site, n("flexibleStopPlaces"))
     service = ET.SubElement(
         frames,
@@ -374,7 +397,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         add_text(area, "BoardingUse", "true")
         add_text(area, "AlightingUse", "true")
 
-    ET.SubElement(service, n("TypeOfFrameRef"), {"version": "9.4.0", "ref": "NL:BISON:TypeOfFrame:NL_TT_SERVICE"})
+    ET.SubElement(service, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_SERVICE"})
     lines = ET.SubElement(service, n("lines"))
     line = ET.SubElement(
         lines,
@@ -382,7 +405,14 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         {"id": f"NL:{cfg.codespace}:Line:{cfg.line_code}", "version": cfg.version},
     )
     line_ext = ET.SubElement(line, n("Extensions"))
-    add_text(line_ext, "MaximumTravelDistance", cfg.maximumtraveldistance)
+    if cfg.maximum_travel_distance != None:
+        add_text(line_ext, "MaximumTravelDistance", cfg.maximum_travel_distance)
+    if cfg.minimum_travel_distance != None:
+        add_text(line_ext, "MinimumTravelDistance", cfg.minimum_travel_distance)
+    if cfg.minimum_pt_travel_time_difference_factor != None:
+        add_text(line_ext, "MinimumPtTravelTimeDifferenceFactor", cfg.minimum_pt_travel_time_difference_factor)
+    if cfg.no_public_transport_window != None:
+        add_text(line_ext, "NoPublicTransportWindow", cfg.no_public_transport_window)
 
     add_text(line, "Name", cfg.line_name)
     add_text(line, "TransportMode", "bus")
@@ -446,7 +476,7 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
     journeyPatterns = ET.SubElement(service,n("journeyPatterns"))
 
     timetable = ET.SubElement(service, n("timetableFrame"), {"id": f"NL:{cfg.codespace}:TimetableFrame:{cfg.frame_key}", "version": cfg.version})
-    ET.SubElement(timetable, n("TypeOfFrameRef"), {"version": "9.4.0", "ref": "NL:BISON:TypeOfFrame:NL_TT_TIMETABLE"})
+    ET.SubElement(timetable, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_TIMETABLE"})
     add_text(timetable, "Monitored", f"false")
     vehicle_journeys = ET.SubElement(timetable, n("vehicleJourneys"))
 
@@ -545,7 +575,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    project = 'FlexRRReisFlevoland'
+    project = 'FlexRRReis_RH'
     config_path = Path(f'config_{project}.csv')
     flex_area_path = Path(f'flex_area_{project}.json')
     

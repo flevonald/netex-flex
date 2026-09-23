@@ -9,7 +9,7 @@
                 <FromDate>2026-06-01T00:00:00.000</FromDate>
                 <ToDate>2027-05-30T00:00:00.000</ToDate>
             </ValidBetween>
-            <TypeOfFrameRef version="9.4.0" ref="NL:BISON:TypeOfFrame:NL_TT_BASELINE" />
+            <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_BASELINE" />
             <FrameDefaults>
                 <DefaultCodespaceRef ref="NL:BISON:Codespace:POV" />
                 <DefaultDataSourceRef version="1" ref="NL:POV:DataSource:POV" />
@@ -24,7 +24,7 @@
             </FrameDefaults>
             <frames>
                 <ResourceFrame id="NL:POV:ResourceFrame:FlexRRReis_RH" version="1">
-                    <TypeOfFrameRef version="9.4.0" ref="NL:BISON:TypeOfFrame:NL_TT_RESOURCE" />
+                    <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_RESOURCE" />
                     <dataSources>
                         <DataSource id="NL:POV:DataSource:POV" version="1">
                             <Name>Provincie Overijssel</Name>
@@ -66,7 +66,7 @@
                     </zones>
                 </ResourceFrame>
                 <SiteFrame id="NL:POV:SiteFrame:FlexRRReis_RH" version="1">
-                    <TypeOfFrameRef version="9.4.0" ref="NL:BISON:TypeOfFrame:NL_TT_SITE" />
+                    <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_SITE" />
                     <flexibleStopPlaces>
                         <FlexibleStopPlace id="NL:POV:FlexibleStopPlace:Rijssen-Holten" version="1">
                             <Name>Rijssen-Holten</Name>
@@ -233,12 +233,10 @@
                             <FlexibleStopPlaceRef version="1" ref="NL:POV:FlexibleStopPlace:Rijssen-Holten" />
                         </FlexibleStopAssignment>
                     </stopAssignments>
-                    <TypeOfFrameRef version="9.4.0" ref="NL:BISON:TypeOfFrame:NL_TT_SERVICE" />
+                    <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_SERVICE" />
                     <lines>
                         <Line id="NL:POV:Line:500" version="1">
-                            <Extensions>
-                                <MaximumTravelDistance>99000</MaximumTravelDistance>
-                            </Extensions>
+                            <Extensions />
                             <Name>FlexRRReis Rijssen-Holten</Name>
                             <TransportMode>bus</TransportMode>
                             <OperatorRef version="any" ref="NL:POV:Operator:ARR" />
@@ -1850,7 +1848,7 @@
                         </ServiceJourneyPattern>
                     </journeyPatterns>
                     <timetableFrame id="NL:POV:TimetableFrame:FlexRRReis_RH" version="1">
-                        <TypeOfFrameRef version="9.4.0" ref="NL:BISON:TypeOfFrame:NL_TT_TIMETABLE" />
+                        <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_TIMETABLE" />
                         <Monitored>false</Monitored>
                         <vehicleJourneys>
                             <ServiceJourney id="NL:POV:ServiceJourney:Rijssen-Holten_Rijssen-Holten" version="1">
