@@ -232,7 +232,7 @@ def read_config(config_path: Path) -> ExportConfig:
         vehicle_access_facility_list=values["vehicle_access_facility_list"],
         safe_duration_factor=values["safe_duration_factor"],
         safe_duration_offset=values["safe_duration_offset"],
-        maximum_travel_distance=values["maximum_tavel_distance"],
+        maximum_travel_distance=values["maximum_travel_distance"],
         minimum_travel_distance=values["minimum_travel_distance"],
         minimum_pt_travel_time_difference_factor=values["minimum_pt_travel_time_difference_factor"],
         no_public_transport_window=values["no_public_transport_window"]
@@ -372,26 +372,30 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
         ns_tag("VehicleType"),
         {"id": f"NL:{cfg.codespace}:VehicleType:{cfg.vehicle_type_code}", "version": cfg.version},
     )
-    add_text(vehicle_type, "BrandingRef", f"NL:{cfg.codespace}:Branding:{cfg.branding}")
+    ET.SubElement(vehicle_type, "BrandingRef", {"ref": f"NL:{cfg.codespace}:Branding:{cfg.branding}",
+                                           "version": cfg.version})
     add_text(vehicle_type, "Name", cfg.vehicle_name)
     add_text(vehicle_type, "Description", cfg.vehicle_description)
     add_text(vehicle_type, "FuelType", cfg.vehicle_fuel_type)
     add_text(vehicle_type, "TransportMode", cfg.vehicle_transport_mode)
     
     capacities = ET.SubElement(vehicle_type, ns_tag("capacities"))
-    passenger_capacity = ET.SubElement(capacities, ns_tag("PassengerCapacity"))
+    passenger_capacity = ET.SubElement(capacities, ns_tag("PassengerCapacity"),
+                                       {"id": f"NL:{cfg.codespace}:PassengerCapacity:{cfg.frame_key}", "version": cfg.version}
+                                       )
     add_text(passenger_capacity, "FareClass", cfg.passenger_fare_class)
     add_text(passenger_capacity, "TotalCapacity", cfg.passenger_total_capacity)
     add_text(passenger_capacity, "SeatingCapacity", cfg.passenger_seating_capacity)
     add_text(passenger_capacity, "StandingCapacity", cfg.passenger_standing_capacity)
     add_text(passenger_capacity, "SpecialPlaceCapacity", cfg.passenger_special_place_capacity)
-    add_text(passenger_capacity, "PushChairCapacity", cfg.passenger_push_chair_capacity)
-    add_text(passenger_capacity, "WheeelchairPlaceCapacity", cfg.passenger_wheelchair_place_capacity)
+    add_text(passenger_capacity, "PushchairCapacity", cfg.passenger_push_chair_capacity)
+    add_text(passenger_capacity, "WheelchairPlaceCapacity", cfg.passenger_wheelchair_place_capacity)
 
     add_text(vehicle_type, "HasLiftOrRamp", cfg.vehicle_has_lift_or_ramp)
     add_text(vehicle_type, "Length", cfg.vehicle_length)
-    vehicle_facilities = ET.SubElement(vehicle_type, ns_tag("Facilities"))
-    service_facility_set = ET.SubElement(vehicle_facilities, ns_tag("ServiceFacilitySet"))
+    vehicle_facilities = ET.SubElement(vehicle_type, ns_tag("facilities"))
+    service_facility_set = ET.SubElement(vehicle_facilities, ns_tag("ServiceFacilitySet"),
+                                         {"id": f"NL:{cfg.codespace}:ServiceFacilitySet:{cfg.frame_key}", "version": cfg.version})
     add_text(service_facility_set, "VehicleAccessFacilityList", cfg.vehicle_access_facility_list)
     
     zones = ET.SubElement(resource, ns_tag("zones"))
@@ -450,7 +454,7 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
         add_text(fsp, "TransportMode", "bus")
      
         areas = ET.SubElement(fsp, ns_tag("areas"))
-        area = ET.SubElement(areas,ns_tag("FlexibleArea"))
+        area = ET.SubElement(areas,ns_tag("FlexibleArea"), {"id": f"NL:{cfg.codespace}:FlexibleArea:{gebied_code}", "version": cfg.version})
         add_text(area, "ShortName", gebied_code)
         
         if gebied_dict['type'] == 'haltegebied': # or gebied_dict['type'] == 'hub'
@@ -498,7 +502,8 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
         add_text(line_ext, "MinimumPtTravelTimeDifferenceFactor", cfg.minimum_pt_travel_time_difference_factor)
     if int(cfg.no_public_transport_window) > 0:
         add_text(line_ext, "NoPublicTransportWindow", cfg.no_public_transport_window)
-    add_text(line,"BrandingRef",f"NL:{cfg.codespace}:Branding:{cfg.branding}")
+    ET.SubElement(line, "BrandingRef", {"ref": f"NL:{cfg.codespace}:Branding:{cfg.branding}",
+                                           "version": cfg.version})
     add_text(line, "Name", cfg.line_name)
     add_text(line, "TransportMode", "bus")
     ET.SubElement(
@@ -614,12 +619,12 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
             if gebiedstype == 'oppervlak':
                 #print(f"Adding flexible point properties for oppervlakte at route point {route_point}")
                 FPP = ET.SubElement(SJIP, ns_tag("FlexiblePointProperties"))
-                add_text(FPP, "PointsStandingForAZone", 'true')
+                add_text(FPP, "PointStandingForAZone", 'true')
                 add_text(FPP, "ZoneContainingStops", 'false')
             if gebiedstype == 'haltegebied':
                 #print(f"Adding flexible point properties for haltegebied at route point {route_point}")
                 FPP = ET.SubElement(SJIP, ns_tag("FlexiblePointProperties"))
-                add_text(FPP, "PointsStandingForAZone", 'true')
+                add_text(FPP, "PointStandingForAZone", 'true')
                 add_text(FPP, "ZoneContainingStops", 'true')
             elif gebiedstype == 'hub':
                 pass
@@ -663,9 +668,11 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
           
         ET.SubElement(SJ, ns_tag("FlexibleServicePropertiesRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}"})
     
-    flexibleServiceProperties = ET.SubElement(timetable, ns_tag("flexibleServiceProperties"),{"id": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}", "version": cfg.version})
-    add_text(flexibleServiceProperties, "FlexibleServiceType", "dynamicPassingTimes")
-    FSP_Ext = ET.SubElement(flexibleServiceProperties, ns_tag("Extensions"))
+    flexibleServiceProperties = ET.SubElement(timetable, ns_tag("flexibleServiceProperties"))
+    FSP = ET.SubElement(flexibleServiceProperties, ns_tag("Extensions"),
+                        {"id": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}", "version": cfg.version})
+    add_text(FSP, "FlexibleServiceType", "dynamicPassingTimes")
+    FSP_Ext = ET.SubElement(FSP, ns_tag("Extensions"))
     add_text(FSP_Ext, "SafeDurationFactor", f"{cfg.safe_duration_factor}")
     add_text(FSP_Ext, "SafeDurationOffset", f"{cfg.safe_duration_offset}")  
     return ET.ElementTree(root)
@@ -675,7 +682,7 @@ def mains_tag() -> None:
     pass
 
 if __name__ == "__main__":
-    project = 'FlexRRReis_RH'
+    project = 'FlexRRReisFlevoland'
     config_path = Path(f'config_{project}.csv')
     flex_area_path = Path(f'flex_area_{project}.json')
     

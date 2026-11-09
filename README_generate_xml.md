@@ -75,6 +75,31 @@ One row only. Main fields include:
 Run python files.
 
 ```
+```
+
+## Validate NeTEx XML
+
+Install the XSD validator once:
+
+```powershell
+python -m pip install lxml
+```
+
+Validate an XML file:
+
+```powershell
+python validate_netex.py NeTEx_PFL_FlexRRReisFlevoland_20261023.xml
+```
+
+By default, the script downloads the current BISON schemas from the `master` branch on each run. It uses `netex-nl-geen-constraints.xsd`, the official entry point that includes `netex-nl.xsd` and declares `PublicationDelivery`. This checks XSD structure and types, but not the additional identity constraints or Schematron rules.
+
+For offline validation or a specific schema release, download the BISON XSD directory and specify its entry-point schema. Keep all referenced XSD files alongside it:
+
+```powershell
+python validate_netex.py my-export.xml --schema path/to/xsd/netex-nl-geen-constraints.xsd
+```
+
+To also check the XSD identity constraints, use `netex-nl-met-constraints.xsd` as the entry point instead. The exit code is `0` for valid XML, `1` for invalid XML and `2` when validation could not be completed.
 
 ## Notes
 - The script validates required columns and required values.

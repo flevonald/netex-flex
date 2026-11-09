@@ -64,29 +64,29 @@
                     </operationalContexts>
                     <vehicleTypes>
                         <VehicleType id="NL:POV:VehicleType:flexauto" version="1">
-                            <BrandingRef>NL:POV:Branding:FlexRRReis</BrandingRef>
+                            <BrandingRef ref="NL:POV:Branding:FlexRRReis" version="1" />
                             <Name>Voertuignaam</Name>
                             <Description>Voertuigomschrijving</Description>
                             <FuelType>other</FuelType>
                             <TransportMode>bus</TransportMode>
                             <capacities>
-                                <PassengerCapacity>
+                                <PassengerCapacity id="NL:POV:PassengerCapacity:FlexRRReis_RH" version="1">
                                     <FareClass>any</FareClass>
                                     <TotalCapacity>4</TotalCapacity>
                                     <SeatingCapacity>4</SeatingCapacity>
                                     <StandingCapacity>0</StandingCapacity>
                                     <SpecialPlaceCapacity>2</SpecialPlaceCapacity>
-                                    <PushChairCapacity>1</PushChairCapacity>
-                                    <WheeelchairPlaceCapacity>1</WheeelchairPlaceCapacity>
+                                    <PushchairCapacity>1</PushchairCapacity>
+                                    <WheelchairPlaceCapacity>1</WheelchairPlaceCapacity>
                                 </PassengerCapacity>
                             </capacities>
                             <HasLiftOrRamp>True</HasLiftOrRamp>
                             <Length>5</Length>
-                            <Facilities>
-                                <ServiceFacilitySet>
+                            <facilities>
+                                <ServiceFacilitySet id="NL:POV:ServiceFacilitySet:FlexRRReis_RH" version="1">
                                     <VehicleAccessFacilityList>wheelchairLift</VehicleAccessFacilityList>
                                 </ServiceFacilitySet>
-                            </Facilities>
+                            </facilities>
                         </VehicleType>
                     </vehicleTypes>
                     <zones>
@@ -105,7 +105,7 @@
                             <ShortName>rijssen-holten</ShortName>
                             <TransportMode>bus</TransportMode>
                             <areas>
-                                <FlexibleArea>
+                                <FlexibleArea id="NL:POV:FlexibleArea:rijssen-holten" version="1">
                                     <ShortName>rijssen-holten</ShortName>
                                     <members>
                                         <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43680090" version="1" />
@@ -263,7 +263,7 @@
                             <Extensions>
                                 <MaximumTravelDistance>0</MaximumTravelDistance>
                             </Extensions>
-                            <BrandingRef>NL:POV:Branding:FlexRRReis</BrandingRef>
+                            <BrandingRef ref="NL:POV:Branding:FlexRRReis" version="1" />
                             <Name>FlexRRReis Rijssen-Holten</Name>
                             <TransportMode>bus</TransportMode>
                             <OperatorRef version="1" ref="NL:POV:Operator:ARR" />
@@ -2428,7 +2428,7 @@
                                     <ForAlighting>false</ForAlighting>
                                     <ForBoarding>true</ForBoarding>
                                     <FlexiblePointProperties>
-                                        <PointsStandingForAZone>true</PointsStandingForAZone>
+                                        <PointStandingForAZone>true</PointStandingForAZone>
                                         <ZoneContainingStops>true</ZoneContainingStops>
                                     </FlexiblePointProperties>
                                 </StopPointInJourneyPattern>
@@ -2437,7 +2437,7 @@
                                     <ForAlighting>true</ForAlighting>
                                     <ForBoarding>false</ForBoarding>
                                     <FlexiblePointProperties>
-                                        <PointsStandingForAZone>true</PointsStandingForAZone>
+                                        <PointStandingForAZone>true</PointStandingForAZone>
                                         <ZoneContainingStops>true</ZoneContainingStops>
                                     </FlexiblePointProperties>
                                 </StopPointInJourneyPattern>
@@ -2486,11 +2486,13 @@
                             <FlexibleServicePropertiesRef version="1" ref="NL:POV:FlexibleServiceProperties:FlexRRReis_RH" />
                         </ServiceJourney>
                     </vehicleJourneys>
-                    <flexibleServiceProperties id="NL:POV:FlexibleServiceProperties:FlexRRReis_RH" version="1">
-                        <FlexibleServiceType>dynamicPassingTimes</FlexibleServiceType>
-                        <Extensions>
-                            <SafeDurationFactor>1.0</SafeDurationFactor>
-                            <SafeDurationOffset>1800</SafeDurationOffset>
+                    <flexibleServiceProperties>
+                        <Extensions id="NL:POV:FlexibleServiceProperties:FlexRRReis_RH" version="1">
+                            <FlexibleServiceType>dynamicPassingTimes</FlexibleServiceType>
+                            <Extensions>
+                                <SafeDurationFactor>1.0</SafeDurationFactor>
+                                <SafeDurationOffset>1800</SafeDurationOffset>
+                            </Extensions>
                         </Extensions>
                     </flexibleServiceProperties>
                 </TimetableFrame>
