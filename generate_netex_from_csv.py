@@ -14,13 +14,22 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
 
+from shapely import area
+
 
 NETEX_NS = "http://www.netex.org.uk/netex"
 GML_NS = "http://www.opengis.net/gml/3.2"
 
-ET.register_namespace("", NETEX_NS)
-ET.register_namespace("gml", GML_NS)
+ns_map = {
+    "": NETEX_NS,
+    "gml": GML_NS,
+}
 
+for prefix, uri in ns_map.items():
+    ET.register_namespace(prefix, uri)
+
+def ns_tag(tag: str, ns: str = NETEX_NS) -> str:
+    return f"{{{ns}}}{tag}"
 
 @dataclass
 class ExportConfig:
@@ -33,6 +42,7 @@ class ExportConfig:
     valid_from: str
     valid_to: str
     organisation_name: str
+    branding: str
     operator_code: str
     operator_name: str
     operator_url: str
@@ -56,14 +66,21 @@ class ExportConfig:
     latest_booking_time: str
     minimum_booking_period: str
     booking_note: str
-
-
-def n(tag: str) -> str:
-    return f"{{{NETEX_NS}}}{tag}"
-
-
-def g(tag: str) -> str:
-    return f"{{{GML_NS}}}{tag}"
+    vehicle_type_code: str
+    vehicle_name: str
+    vehicle_description: str
+    vehicle_fuel_type: str
+    vehicle_transport_mode: str
+    passenger_fare_class: str
+    passenger_total_capacity: str
+    passenger_seating_capacity: str
+    passenger_standing_capacity: str
+    passenger_special_place_capacity: str
+    passenger_push_chair_capacity: str
+    passenger_wheelchair_place_capacity: str
+    vehicle_has_lift_or_ramp: str
+    vehicle_length: str
+    vehicle_access_facility_list: str
 
 
 def slugify(value: str) -> str:
@@ -73,15 +90,15 @@ def slugify(value: str) -> str:
     return value.strip("_") or "unknown"
 
 
-def add_text(parent: ET.Element, tag: str, text: str) -> ET.Element:
-    elem = ET.SubElement(parent, n(tag))
+def add_text(parent: ET.Element, tag: str, text: str, ns: str = NETEX_NS) -> ET.Element:
+    elem = ET.SubElement(parent, ns_tag(tag, ns))
     elem.text = text
     return elem
 
 
 def read_stops(csv_path: Path) -> pd.DataFrame:
     try:
-        df = pd.read_csv(csv_path, encoding="utf-8-sig", sep=',', dtype=str)
+        df = pd.read_csv(csv_path, encoding="utf-8-sig", sep=';', dtype=str)
         required = {"code", "name", "short_name", "x", "y", "halte", "gebied"}
         missing = required.difference(df.columns)
         if missing:
@@ -104,6 +121,7 @@ def read_config(config_path: Path) -> ExportConfig:
         "valid_from",
         "valid_to",
         "organisation_name",
+        "branding",
         "operator_code",
         "operator_name",
         "operator_url",
@@ -129,6 +147,24 @@ def read_config(config_path: Path) -> ExportConfig:
         "minimum_travel_distance",
         "minimum_pt_travel_time_difference_factor",
         "no_public_transport_window",
+        "gemeentecodes"
+    }
+    vehicle_defaults = {
+        "vehicle_type_code": "flexauto",
+        "vehicle_name": "Voertuignaam",
+        "vehicle_description": "Voertuigomschrijving",
+        "vehicle_fuel_type": "other",
+        "vehicle_transport_mode": "bus",
+        "passenger_fare_class": "any",
+        "passenger_total_capacity": "4",
+        "passenger_seating_capacity": "4",
+        "passenger_standing_capacity": "0",
+        "passenger_special_place_capacity": "2",
+        "passenger_push_chair_capacity": "1",
+        "passenger_wheelchair_place_capacity": "1",
+        "vehicle_has_lift_or_ramp": "True",
+        "vehicle_length": "5",
+        "vehicle_access_facility_list": "wheelchairLift",
     }
 
     series_config = pd.read_csv(config_path, encoding="utf-8-sig", sep=';',header=None, index_col=0)[1]
@@ -149,6 +185,7 @@ def read_config(config_path: Path) -> ExportConfig:
         )
     # Fill in missing optional values with None
     values.update({key: None for key in missing_optional})
+    values.update({key: values.get(key) or default for key, default in vehicle_defaults.items()})
 
     return ExportConfig(
         publication_timestamp=values["publication_timestamp"],
@@ -160,6 +197,7 @@ def read_config(config_path: Path) -> ExportConfig:
         valid_from=values["valid_from"],
         valid_to=values["valid_to"],
         organisation_name=values["organisation_name"],
+        branding=values["branding"],
         operator_code=values["operator_code"],
         operator_name=values["operator_name"],
         operator_url=values["operator_url"],
@@ -177,9 +215,24 @@ def read_config(config_path: Path) -> ExportConfig:
         latest_booking_time=values["latest_booking_time"],
         minimum_booking_period=values["minimum_booking_period"],
         booking_note=values["booking_note"],
+        vehicle_type_code=values["vehicle_type_code"],
+        vehicle_name=values["vehicle_name"],
+        vehicle_description=values["vehicle_description"],
+        vehicle_fuel_type=values["vehicle_fuel_type"],
+        vehicle_transport_mode=values["vehicle_transport_mode"],
+        passenger_fare_class=values["passenger_fare_class"],
+        passenger_total_capacity=values["passenger_total_capacity"],
+        passenger_seating_capacity=values["passenger_seating_capacity"],
+        passenger_standing_capacity=values["passenger_standing_capacity"],
+        passenger_special_place_capacity=values["passenger_special_place_capacity"],
+        passenger_push_chair_capacity=values["passenger_push_chair_capacity"],
+        passenger_wheelchair_place_capacity=values["passenger_wheelchair_place_capacity"],
+        vehicle_has_lift_or_ramp=values["vehicle_has_lift_or_ramp"],
+        vehicle_length=values["vehicle_length"],
+        vehicle_access_facility_list=values["vehicle_access_facility_list"],
         safe_duration_factor=values["safe_duration_factor"],
         safe_duration_offset=values["safe_duration_offset"],
-        maximum_travel_distance=values["maximum_travel_distance"],
+        maximum_travel_distance=values["maximum_tavel_distance"],
         minimum_travel_distance=values["minimum_travel_distance"],
         minimum_pt_travel_time_difference_factor=values["minimum_pt_travel_time_difference_factor"],
         no_public_transport_window=values["no_public_transport_window"]
@@ -202,18 +255,20 @@ def read_flex_area(csv_path: Path) -> dict:
         return area_dict
     except FileNotFoundError:
         print(f"Flex area JSON file not found: {csv_path}")
+        return {}
 
-def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.ElementTree:
-    root = ET.Element(n("PublicationDelivery"), {"version": "ntx:1.1"})
+def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame,
+               flex_area: dict) -> ET.ElementTree:
+    root = ET.Element(ns_tag("PublicationDelivery"), {"version": "ntx:1.1"})
 
     add_text(root, "PublicationTimestamp", cfg.publication_timestamp)
     add_text(root, "ParticipantRef", cfg.participant_ref)
     add_text(root, "Description", cfg.description)
 
-    data_objects = ET.SubElement(root, n("dataObjects"))
+    data_objects = ET.SubElement(root, ns_tag("dataObjects"))
     composite = ET.SubElement(
         data_objects,
-        n("CompositeFrame"),
+        ns_tag("CompositeFrame"),
         {
             "id": f"NL:{cfg.codespace}:CompositeFrame:{cfg.frame_key}",
             "modification": "new",
@@ -221,97 +276,128 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
         },
     )
 
-    valid_between = ET.SubElement(composite, n("ValidBetween"))
+    valid_between = ET.SubElement(composite, ns_tag("ValidBetween"))
     add_text(valid_between, "FromDate", cfg.valid_from)
     add_text(valid_between, "ToDate", cfg.valid_to)
 
     ET.SubElement(
         composite,
-        n("TypeOfFrameRef"),
+        ns_tag("TypeOfFrameRef"),
         {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_BASELINE"},
     )
 
-    frame_defaults = ET.SubElement(composite, n("FrameDefaults"))
-    ET.SubElement(frame_defaults, n("DefaultCodespaceRef"), {"ref": f"NL:BISON:Codespace:{cfg.codespace}"})
+    frame_defaults = ET.SubElement(composite, ns_tag("FrameDefaults"))
+    ET.SubElement(frame_defaults, ns_tag("DefaultCodespaceRef"), {"ref": f"NL:BISON:Codespace:{cfg.codespace}"})
     ET.SubElement(
         frame_defaults,
-        n("DefaultDataSourceRef"),
+        ns_tag("DefaultDataSourceRef"),
         {"version": cfg.version, "ref": f"NL:{cfg.codespace}:DataSource:{cfg.codespace}"},
     )
     ET.SubElement(
         frame_defaults,
-        n("DefaultResponsibilitySetRef"),
+        ns_tag("DefaultResponsibilitySetRef"),
         {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ResponsibilitySet:{cfg.codespace}"},
     )
-    default_locale = ET.SubElement(frame_defaults, n("DefaultLocale"))
+    default_locale = ET.SubElement(frame_defaults, ns_tag("DefaultLocale"))
     add_text(default_locale, "TimeZone", "Europe/Amsterdam")
     add_text(default_locale, "DefaultLanguage", "nl")
     add_text(frame_defaults, "DefaultLocationSystem", "EPSG:4326")
     add_text(frame_defaults, "DefaultSystemOfUnits", "SiMetres")
     add_text(frame_defaults, "DefaultCurrency", "EUR")
 
-    frames = ET.SubElement(composite, n("frames"))
+    frames = ET.SubElement(composite, ns_tag("frames"))
 
     resource = ET.SubElement(
         frames,
-        n("ResourceFrame"),
+        ns_tag("ResourceFrame"),
         {"id": f"NL:{cfg.codespace}:ResourceFrame:{cfg.frame_key}", "version": cfg.version},
     )
-    ET.SubElement(resource, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_RESOURCE"})
+    ET.SubElement(resource, ns_tag("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_RESOURCE"})
 
-    data_sources = ET.SubElement(resource, n("dataSources"))
+    data_sources = ET.SubElement(resource, ns_tag("dataSources"))
     data_source = ET.SubElement(
         data_sources,
-        n("DataSource"),
+        ns_tag("DataSource"),
         {"id": f"NL:{cfg.codespace}:DataSource:{cfg.codespace}", "version": cfg.version},
     )
     add_text(data_source, "Name", cfg.organisation_name)
     add_text(data_source, "ShortName", cfg.codespace)
     add_text(data_source, "Description", cfg.organisation_name)
 
-    responsibility_sets = ET.SubElement(resource, n("responsibilitySets"))
+    responsibility_sets = ET.SubElement(resource, ns_tag("responsibilitySets"))
     resp = ET.SubElement(
         responsibility_sets,
-        n("ResponsibilitySet"),
+        ns_tag("ResponsibilitySet"),
         {"id": f"NL:{cfg.codespace}:ResponsibilitySet:{cfg.codespace}", "version": cfg.version},
     )
     add_text(resp, "Name", f"Financier {cfg.organisation_name}")
-    roles = ET.SubElement(resp, n("roles"))
+    roles = ET.SubElement(resp, ns_tag("roles"))
     role = ET.SubElement(
         roles,
-        n("ResponsibilityRoleAssignment"),
+        ns_tag("ResponsibilityRoleAssignment"),
         {"id": f"NL:{cfg.codespace}:ResponsibilityRoleAssignment:{cfg.codespace}", "version": cfg.version},
     )
     add_text(role, "StakeholderRoleType", "entityLegalOwnership")
     ET.SubElement(
         role,
-        n("TypeOfResponsibilityRoleRef"),
+        ns_tag("TypeOfResponsibilityRoleRef"),
         {"version": "any", "ref": "NL:BISON:TypeOfResponsibilityRole:financing"},
     )
-
-    organisations = ET.SubElement(resource, n("organisations"))
+    types_of_value = ET.SubElement(resource, ns_tag("typesOfValue"))
+    branding = ET.SubElement(types_of_value, ns_tag("Branding"),
+                             {"id": f"NL:{cfg.codespace}:Branding:{cfg.branding}", "version": cfg.version})
+    add_text(branding, "Name", cfg.branding)
+    organisations = ET.SubElement(resource, ns_tag("organisations"))
     operator = ET.SubElement(
         organisations,
-        n("Operator"),
+        ns_tag("Operator"),
         {"id": f"NL:{cfg.codespace}:Operator:{cfg.operator_code}", "version": cfg.version},
     )
     add_text(operator, "Name", cfg.operator_name)
     add_text(operator, "ShortName", cfg.operator_code)
-    contact = ET.SubElement(operator, n("CustomerServiceContactDetails"))
+    contact = ET.SubElement(operator, ns_tag("CustomerServiceContactDetails"))
     add_text(contact, "Url", cfg.operator_url)
 
-    operational_contexts = ET.SubElement(resource, n("operationalContexts"))
+    operational_contexts = ET.SubElement(resource, ns_tag("operationalContexts"))
     context = ET.SubElement(
         operational_contexts,
-        n("OperationalContext"),
+        ns_tag("OperationalContext"),
         {"id": f"NL:{cfg.codespace}:OperationalContext:BUS", "version": cfg.version},
     )
     add_text(context, "VehicleMode", "bus")
 
-    zones = ET.SubElement(resource, n("zones"))
+    vehicle_types = ET.SubElement(resource, ns_tag("vehicleTypes"))
+    vehicle_type = ET.SubElement(
+        vehicle_types,
+        ns_tag("VehicleType"),
+        {"id": f"NL:{cfg.codespace}:VehicleType:{cfg.vehicle_type_code}", "version": cfg.version},
+    )
+    add_text(vehicle_type, "BrandingRef", f"NL:{cfg.codespace}:Branding:{cfg.branding}")
+    add_text(vehicle_type, "Name", cfg.vehicle_name)
+    add_text(vehicle_type, "Description", cfg.vehicle_description)
+    add_text(vehicle_type, "FuelType", cfg.vehicle_fuel_type)
+    add_text(vehicle_type, "TransportMode", cfg.vehicle_transport_mode)
+    
+    capacities = ET.SubElement(vehicle_type, ns_tag("capacities"))
+    passenger_capacity = ET.SubElement(capacities, ns_tag("PassengerCapacity"))
+    add_text(passenger_capacity, "FareClass", cfg.passenger_fare_class)
+    add_text(passenger_capacity, "TotalCapacity", cfg.passenger_total_capacity)
+    add_text(passenger_capacity, "SeatingCapacity", cfg.passenger_seating_capacity)
+    add_text(passenger_capacity, "StandingCapacity", cfg.passenger_standing_capacity)
+    add_text(passenger_capacity, "SpecialPlaceCapacity", cfg.passenger_special_place_capacity)
+    add_text(passenger_capacity, "PushChairCapacity", cfg.passenger_push_chair_capacity)
+    add_text(passenger_capacity, "WheeelchairPlaceCapacity", cfg.passenger_wheelchair_place_capacity)
+
+    add_text(vehicle_type, "HasLiftOrRamp", cfg.vehicle_has_lift_or_ramp)
+    add_text(vehicle_type, "Length", cfg.vehicle_length)
+    vehicle_facilities = ET.SubElement(vehicle_type, ns_tag("Facilities"))
+    service_facility_set = ET.SubElement(vehicle_facilities, ns_tag("ServiceFacilitySet"))
+    add_text(service_facility_set, "VehicleAccessFacilityList", cfg.vehicle_access_facility_list)
+    
+    zones = ET.SubElement(resource, ns_tag("zones"))
     zone = ET.SubElement(
         zones,
-        n("TransportAdministrativeZone"),
+        ns_tag("TransportAdministrativeZone"),
         {
             "id": f"NL:{cfg.codespace}:TransportAdministrativeZone:{slugify(cfg.zone_name.lower())}",
             "version": cfg.version,
@@ -323,121 +409,121 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
 
     site = ET.SubElement(
         frames,
-        n("SiteFrame"),
+        ns_tag("SiteFrame"),
         {"id": f"NL:{cfg.codespace}:SiteFrame:{cfg.frame_key}", "version": cfg.version},
     )
-    ET.SubElement(site, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_SITE"})
-    flexible_stop_places = ET.SubElement(site, n("flexibleStopPlaces"))
-    service = ET.SubElement(
-        frames,
-        n("ServiceFrame"),
-        {"id": f"NL:{cfg.codespace}:ServiceFrame:{cfg.frame_key}", "version": cfg.version},
-    )
-    stop_assignments = ET.SubElement(service, n("stopAssignments"))
+    ET.SubElement(site, ns_tag("TypeOfFrameRef"), {"version": "9.4.1", "ref": "BISON:TypeOfFrame:NL_TT_SITE"})
 
-    gebieden = list(stops['gebied'].unique())
-    if 'hubs' in gebieden:
-        gebieden.remove('hubs')
-    
-    for gebied in gebieden:
-        gebied_code = slugify(gebied)
-        FSA = ET.SubElement(stop_assignments, n("FlexibleStopAssignment"), {"id": f"NL:{cfg.codespace}:FlexibleStopAssignment:{gebied_code}", "version": cfg.version})
-        ET.SubElement(FSA, n("ScheduledStopPointRef"), {"version": cfg.version
-        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{gebied_code}"})
-        ET.SubElement(FSA, n("FlexibleStopPlaceRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleStopPlace:{gebied_code}"})
+    # maak dictionary van gebieden met hun type
+    gebieden = {}
+    for gebied in list(stops['gebied'].unique()):
+        gebieden[gebied] = {'type': 'haltegebied'}
+        gebieden[gebied]['stops'] = stops.loc[stops['gebied'] == gebied]
+    for area, area_data in flex_area.items():
+        gebieden[area] = {'type': 'oppervlak'}
+        gebieden[area]['geometry'] = area_data
+    # for hub in hubs.itertuples():
+    #     gebieden[hub.code] = {'type': 'hub'}
 
+    #maak lijst van routes    
+    hubcodes = [hub.code for hub in hubs.itertuples()]
+    interne_gebieden = [gebied for gebied in gebieden.keys() if gebieden[gebied]['type'] != 'hub']
+    routes = list(itertools.product(interne_gebieden, repeat=2)) + [(g, h) for g in interne_gebieden for h in hubcodes] + [(h, g) for g in interne_gebieden for h in hubcodes]
+    print('Gebieden:', gebieden.keys())
+    print('Routes:', routes)
+    flexible_stop_places = ET.SubElement(site, ns_tag("flexibleStopPlaces"))
+
+    ## 'Haltegebieden'
+    for gebied, gebied_dict in gebieden.items():
+        gebied_code = slugify(gebied.lower())
+        
         fsp = ET.SubElement(
             flexible_stop_places,
-            n("FlexibleStopPlace"),
+            ns_tag("FlexibleStopPlace"),
             {"id": f"NL:{cfg.codespace}:FlexibleStopPlace:{gebied_code}", "version": cfg.version},
         )
-        add_text(fsp, "Name", gebied)
+        if gebied_dict['type'] == 'hub':
+            add_text(fsp, "Name", f"Hub {gebied}")
+        else:
+           add_text(fsp, "Name", gebied)
         add_text(fsp, "ShortName", gebied_code)
         add_text(fsp, "TransportMode", "bus")
-
-        areas = ET.SubElement(fsp, n("areas"))
-        area = ET.SubElement(areas,n("FlexibleArea")            
-        )
-        add_text(area, "Name", gebied)
+     
+        areas = ET.SubElement(fsp, ns_tag("areas"))
+        area = ET.SubElement(areas,ns_tag("FlexibleArea"))
         add_text(area, "ShortName", gebied_code)
+        
+        if gebied_dict['type'] == 'haltegebied': # or gebied_dict['type'] == 'hub'
+            members = ET.SubElement(area, ns_tag("members"))        
+            if gebied_dict['type'] == 'haltegebied':
+                for stop in gebieden[gebied]['stops'].itertuples():
+                    sspr = ET.SubElement(members, ns_tag("ScheduledStopPointRef"), {"ref": f"NL:{cfg.codespace}:ScheduledStopPointRef:{stop.code}", "version": cfg.version})
+            if gebied_dict['type'] == 'hub':
+                sspr = ET.SubElement(members, ns_tag("ScheduledStopPointRef"), {"ref": f"NL:{cfg.codespace}:ScheduledStopPointRef:{gebied}", "version": cfg.version})
+            
+        if gebied_dict['type'] == 'oppervlak':
+            print('Processing gebied:', gebied)
+            print('Gebied type:', gebied_dict['type'])
 
-        members = ET.SubElement(area, n("members"))
-        for adress in stops[stops['gebied'] == gebied].itertuples():
-            sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{adress.code}", "version": cfg.version})
-
+            polygon = ET.SubElement(area, ns_tag("Polygon", ns = ns_map["gml"]), {ns_tag("id", ns = ns_map["gml"]): f"NL_{cfg.codespace}_FlexibleArea_{slugify(gebied)}"})
+            exterior = ET.SubElement(polygon, ns_tag("exterior", ns = ns_map["gml"]))
+            linear_ring = ET.SubElement(exterior, ns_tag("LinearRing", ns = ns_map["gml"]))
+            pos_list = ET.SubElement(linear_ring, ns_tag("posList", ns = ns_map["gml"]))
+            pos_list.text = gebied_dict['geometry']
+        
         add_text(area, "BoardingUse", "true")
         add_text(area, "AlightingUse", "true")
+    
+    service = ET.SubElement(
+        frames,
+        ns_tag("ServiceFrame"),
+        {"id": f"NL:{cfg.codespace}:ServiceFrame:{cfg.frame_key}", "version": cfg.version},
+    )
 
-    haltes = stops.loc[stops['halte'] == True].copy()
-    for row in haltes.itertuples(name='halte'):
-        
-        PSA = ET.SubElement(stop_assignments, n("PassengerStopAssignment"), {"id": f"NL:{cfg.codespace}:PassengerStopAssignment:{row.code}", "version": cfg.version})
-        ET.SubElement(PSA, n("ScheduledStopPointRef"), {"version": cfg.version
-        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{row.code}"})
-        ET.SubElement(PSA, n("StopPlaceRef"), {"version": cfg.version, "ref": f"NL:CHB:StopPlace:{row.code}"})
- 
-    hubs = stops.loc[stops['gebied'] == 'hubs'].copy()
-    for row in haltes.itertuples(name='hub'):
-        
-        fsp = ET.SubElement(
-            flexible_stop_places,
-            n("FlexibleStopPlace"),
-            {"id": f"NL:{cfg.codespace}:FlexibleStopPlace:{row.code}", "version": cfg.version},
-        )
-        add_text(fsp, "Name", row.name)
-        add_text(fsp, "ShortName", slugify(row.name))
-        add_text(fsp, "TransportMode", "bus")
 
-        areas = ET.SubElement(fsp, n("areas"))
-        area = ET.SubElement(areas,n("FlexibleArea"))
-        add_text(area, "Name", row.name)
-        add_text(area, "ShortName", slugify(row.name))
-        members = ET.SubElement(area, n("members"))
-        sspr = ET.SubElement(members, n("member"), {"id": f"NL:{cfg.codespace}:ScheduledStopPointRef:{row.code}", "version": cfg.version})
-        add_text(area, "BoardingUse", "true")
-        add_text(area, "AlightingUse", "true")
-
-    ET.SubElement(service, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_SERVICE"})
-    lines = ET.SubElement(service, n("lines"))
+    lines = ET.SubElement(service, ns_tag("lines"))
     line = ET.SubElement(
         lines,
-        n("Line"),
+        ns_tag("Line"),
         {"id": f"NL:{cfg.codespace}:Line:{cfg.line_code}", "version": cfg.version},
     )
-    line_ext = ET.SubElement(line, n("Extensions"))
-    if cfg.maximum_travel_distance != None:
-        add_text(line_ext, "MaximumTravelDistance", cfg.maximum_travel_distance)
-    if cfg.minimum_travel_distance != None:
+    line_ext = ET.SubElement(line, ns_tag("Extensions"))
+    if int(cfg.maximum_travel_distance) > 0 :
+        print(cfg.maximum_travel_distance)
+    add_text(line_ext, "MaximumTravelDistance", cfg.maximum_travel_distance)
+    if int(cfg.minimum_travel_distance) > 0:
+        print(cfg.minimum_travel_distance)
         add_text(line_ext, "MinimumTravelDistance", cfg.minimum_travel_distance)
-    if cfg.minimum_pt_travel_time_difference_factor != None:
+    if float(cfg.minimum_pt_travel_time_difference_factor) > 0:
         add_text(line_ext, "MinimumPtTravelTimeDifferenceFactor", cfg.minimum_pt_travel_time_difference_factor)
-    if cfg.no_public_transport_window != None:
+    if int(cfg.no_public_transport_window) > 0:
         add_text(line_ext, "NoPublicTransportWindow", cfg.no_public_transport_window)
-
+    add_text(line,"BrandingRef",f"NL:{cfg.codespace}:Branding:{cfg.branding}")
     add_text(line, "Name", cfg.line_name)
     add_text(line, "TransportMode", "bus")
     ET.SubElement(
         line,
-        n("OperatorRef"),
-        {"version": "any", "ref": f"NL:{cfg.codespace}:Operator:{cfg.operator_code}"},
+        ns_tag("OperatorRef"),
+        {"version": cfg.version, "ref": f"NL:{cfg.codespace}:Operator:{cfg.operator_code}"},
     )
-    ET.SubElement(line, n("TypeOfServiceRef"), {"version": "any", "ref": "NL:BISON:TypeOfService:Flex"})
+
+    ET.SubElement(line, ns_tag("TypeOfServiceRef"), {"version": "any", "ref": "NL:BISON:TypeOfService:Flex"})
     add_text(line, "Monitored", "false")
 
     accessibility = ET.SubElement(
         line,
-        n("AccessibilityAssessment"),
+        ns_tag("AccessibilityAssessment"),
         {"id": f"NL:{cfg.codespace}:AccessibilityAssessment:{cfg.frame_key}", "version": cfg.version},
     )
     add_text(accessibility, "MobilityImpairedAccess", "true")
 
-    booking_arrangements = ET.SubElement(line, n("bookingArrangements"))
+    booking_arrangements = ET.SubElement(line, ns_tag("bookingArrangements"))
     booking = ET.SubElement(
         booking_arrangements,
-        n("BookingArrangement"),
+        ns_tag("BookingArrangement"),
         {"id": f"NL:{cfg.codespace}:BookingArrangement:{cfg.frame_key}", "version": cfg.version},
     )
-    booking_contact = ET.SubElement(booking, n("BookingContact"))
+    booking_contact = ET.SubElement(booking, ns_tag("BookingContact"))
     add_text(booking_contact, "Phone", cfg.booking_phone)
     add_text(booking_contact, "Url", cfg.booking_url)
     add_text(booking_contact, "FurtherDetails", cfg.booking_further_details)
@@ -449,130 +535,144 @@ def build_xml(stops: pd.DataFrame, cfg: ExportConfig, bdt: pd.DataFrame) -> ET.E
     add_text(booking, "BookingUrl", cfg.booking_url)
     add_text(booking, "BookingNote", cfg.booking_note)
 
-    scheduled_stop_points = ET.SubElement(service, n("scheduledStopPoints"))
-    for stop in stops.itertuples():
+    haltes = stops.loc[stops['halte'] == 'True'].copy()
+    haltes = pd.concat([haltes, hubs])
+
+    scheduled_stop_points = ET.SubElement(service, ns_tag("scheduledStopPoints"))
+    #Maak ScheduledStopPoints voor oppervlakte gebieden
+    for gebied, gebied_data in gebieden.items():
+        if gebied_data['type'] != 'oppervlak':
+            continue
+        gebied_code = slugify(gebied.lower())
         ssp = ET.SubElement(
             scheduled_stop_points,
-            n("ScheduledStopPoint"),
-            {"id": f"NL:{cfg.codespace}:ScheduledStopPoint:{stop.code}", "version": cfg.version},
+            ns_tag("ScheduledStopPoint"),
+            {"id": f"NL:{cfg.codespace}:ScheduledStopPoint:{gebied_code}", "version": cfg.version},
         )
-        pcs = ET.SubElement(ssp, n("privateCodes"))
-        if stop.gebied == 'hubs':
-            pc = ET.SubElement(pcs, n("PrivateCode"), {"type": "StopPlaceCode"})
-            pc.text = f"code:{stop.code}"
-        pc = ET.SubElement(pcs, n("PrivateCode"), {"type": "UserStopCode"})
-        pc.text = f"code:{stop.code}"
+        add_text(ssp, "Name", gebied)
+        add_text(ssp, "ForAlighting", "true")
+        add_text(ssp, "ForBoarding", "true")
 
-        add_text(ssp, "Name", stop.name)
+    # Maak ScheduledStopPoints voor haltes (stops uit haltegebieden en hubs)
+    for halte in haltes.itertuples():
+        ssp = ET.SubElement(
+            scheduled_stop_points,
+            ns_tag("ScheduledStopPoint"),
+            {"id": f"NL:{cfg.codespace}:ScheduledStopPoint:{halte.code}", "version": cfg.version},
+        )
+        pcs = ET.SubElement(ssp, ns_tag("privateCodes"))
+        pc = ET.SubElement(pcs, ns_tag("PrivateCode"), {"type": "UserStopcode"})
+        pc.text = f"{halte.code}"
 
-        location = ET.SubElement(ssp, n("Location"))
-        add_text(location, "gml:pos", f"{stop.x} {stop.y}")
+        add_text(ssp, "Name", halte.name)
+
+        location = ET.SubElement(ssp, ns_tag("Location"))
+        add_text(location, "pos", f"{halte.y} {halte.x}", ns=ns_map["gml"])
 
         add_text(ssp, "ForAlighting", "true")
         add_text(ssp, "ForBoarding", "true")
+
     
-    timingLinks = ET.SubElement(service,n("timingLinks"))
+    stop_assignments = ET.SubElement(service, ns_tag("stopAssignments"))
+    for gebied, gebied_data in gebieden.items():
+        gebied_code = slugify(gebied.lower())
+        FSA = ET.SubElement(stop_assignments, ns_tag("FlexibleStopAssignment"), {"id": f"NL:{cfg.codespace}:FlexibleStopAssignment:{gebied_code}", "version": cfg.version})
+        ET.SubElement(FSA, ns_tag("ScheduledStopPointRef"), {"version": cfg.version
+        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{gebied_code}"})
+        ET.SubElement(FSA, ns_tag("FlexibleStopPlaceRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleStopPlace:{gebied_code}"})
 
-    journeyPatterns = ET.SubElement(service,n("journeyPatterns"))
+    for row in haltes.itertuples():        
+        PSA = ET.SubElement(stop_assignments, ns_tag("PassengerStopAssignment"), {"id": f"NL:{cfg.codespace}:PassengerStopAssignment:{row.code}", "version": cfg.version})
+        ET.SubElement(PSA, ns_tag("ScheduledStopPointRef"), {"version": cfg.version
+        , "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{row.code}"})
+        ET.SubElement(PSA, ns_tag("StopPlaceRef"), {"version": cfg.version, "ref": f"NL:CHB:StopPlace:{row.code}"})
+    
+    
+    timingLinks = ET.SubElement(service,ns_tag("timingLinks"))
 
-    timetable = ET.SubElement(service, n("timetableFrame"), {"id": f"NL:{cfg.codespace}:TimetableFrame:{cfg.frame_key}", "version": cfg.version})
-    ET.SubElement(timetable, n("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_TIMETABLE"})
-    add_text(timetable, "Monitored", f"false")
-    vehicle_journeys = ET.SubElement(timetable, n("vehicleJourneys"))
-
-    gebiedscodes = [gebied for gebied in gebieden]
-    hubcodes = [hub.code for hub in hubs.itertuples()]
-    routes = list(itertools.product(gebiedscodes, repeat=2)) + [(g, h) for g in gebiedscodes for h in hubcodes] + [(h, g) for g in gebiedscodes for h in hubcodes]
+    journeyPatterns = ET.SubElement(service,ns_tag("journeyPatterns"))
+    
     for route in routes:
         print(f'Route van {route[0]} naar {route[1]} toevoegen.')
-        tl = ET.SubElement(timingLinks, n("TimingLink"), {"id": f"NL:{cfg.codespace}:TimingLink:{route[0]}_{route[1]}", "version": cfg.version})
-        ET.SubElement(tl, n("FromPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[0]}"})
-        ET.SubElement(tl, n("ToPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[1]}"})
+        tl = ET.SubElement(timingLinks, ns_tag("TimingLink"), {"id": f"NL:{cfg.codespace}:TimingLink:{route[0]}_{route[1]}", "version": cfg.version})
+        ET.SubElement(tl, ns_tag("FromPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[0]}"})
+        ET.SubElement(tl, ns_tag("ToPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[1]}"})
 
-        SJP = ET.SubElement(journeyPatterns, n("ServiceJourneyPattern"), {"id": f"NL:{cfg.codespace}:ServiceJourneyPattern:{route[0]}_{route[1]}", "version": cfg.version})
-        pointsInSequence = ET.SubElement(SJP, n("pointsInSequence"))
-        SPJIP_A = ET.SubElement(pointsInSequence, n("StopPointInJourneyPattern"), {"id": f"NL:{cfg.codespace}:StopPointInJourneyPattern:{route[0]}_{route[1]}_1", "version": cfg.version})
-        ET.SubElement(SPJIP_A, n("ScheduledStopPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[0]}"})
-        ET.SubElement(SPJIP_A, n("OnwardTimingLinkRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:TimingLink:{route[0]}_{route[1]}"})
+        SJP = ET.SubElement(journeyPatterns, ns_tag("ServiceJourneyPattern"), {"id": f"NL:{cfg.codespace}:ServiceJourneyPattern:{route[0]}_{route[1]}", "version": cfg.version})
+        pointsInSequence = ET.SubElement(SJP, ns_tag("pointsInSequence"))
+        SPJIP_A = ET.SubElement(pointsInSequence, ns_tag("StopPointInJourneyPattern"), {"id": f"NL:{cfg.codespace}:StopPointInJourneyPattern:{route[0]}_{route[1]}_1", "version": cfg.version})
+        ET.SubElement(SPJIP_A, ns_tag("ScheduledStopPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[0]}"})
+        ET.SubElement(SPJIP_A, ns_tag("OnwardTimingLinkRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:TimingLink:{route[0]}_{route[1]}"})
         add_text(SPJIP_A, "ForAlighting", "false")
         add_text(SPJIP_A, "ForBoarding", "true")
-        FPP_A = ET.SubElement(SPJIP_A, n("FlexiblePointProperties"))
-        if route[0] in gebiedscodes:
-            add_text(FPP_A, "PointsStandingForAZone", 'true')
-            add_text(FPP_A, "ZoneContainingStops", 'true')
-        else:  
-            add_text(FPP_A, "PointsStandingForAZone", 'false')
 
-        SPJIP_B = ET.SubElement(pointsInSequence, n("StopPointInJourneyPattern"), {"id": f"NL:{cfg.codespace}:StopPointInJourneyPattern:{route[0]}_{route[1]}_2", "version": cfg.version})
-        ET.SubElement(SPJIP_B, n("ScheduledStopPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[1]}"})
+        def add_flexible_point_properties(route_point, gebieden, SJIP):
+            try:
+                gebiedstype = gebieden[route_point]['type']
+            except KeyError:
+                gebiedstype = None
+            if gebiedstype == 'oppervlak':
+                #print(f"Adding flexible point properties for oppervlakte at route point {route_point}")
+                FPP = ET.SubElement(SJIP, ns_tag("FlexiblePointProperties"))
+                add_text(FPP, "PointsStandingForAZone", 'true')
+                add_text(FPP, "ZoneContainingStops", 'false')
+            if gebiedstype == 'haltegebied':
+                #print(f"Adding flexible point properties for haltegebied at route point {route_point}")
+                FPP = ET.SubElement(SJIP, ns_tag("FlexiblePointProperties"))
+                add_text(FPP, "PointsStandingForAZone", 'true')
+                add_text(FPP, "ZoneContainingStops", 'true')
+            elif gebiedstype == 'hub':
+                pass
+
+        add_flexible_point_properties(route[0], gebieden, SPJIP_A)
+
+        SPJIP_B = ET.SubElement(pointsInSequence, ns_tag("StopPointInJourneyPattern"), {"id": f"NL:{cfg.codespace}:StopPointInJourneyPattern:{route[0]}_{route[1]}_2", "version": cfg.version})
+        ET.SubElement(SPJIP_B, ns_tag("ScheduledStopPointRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ScheduledStopPoint:{route[1]}"})
         add_text(SPJIP_B, "ForAlighting", "true")
         add_text(SPJIP_B, "ForBoarding", "false")
-        FPP_B = ET.SubElement(SPJIP_B, n("FlexiblePointProperties"))
-        if route[1] in gebiedscodes:
-            add_text(FPP_B, "PointsStandingForAZone", 'true')
-            add_text(FPP_B, "ZoneContainingStops", 'true')
-        else:  
-            add_text(FPP_B, "PointsStandingForAZone", 'false')
 
-        SJ = ET.SubElement(vehicle_journeys, n("ServiceJourney"), {"id": f"NL:{cfg.codespace}:ServiceJourney:{route[0]}_{route[1]}", "version": cfg.version})
-        validityConditions = ET.SubElement(SJ, n("validityConditions"))
-        for _, row in bdt.iterrows():      
-            ET.SubElement(validityConditions, n("AvailabilityConditionRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:AvailabilityCondition:{row['code']}"})
-        ET.SubElement(SJ, n("ServiceJourneyPatternRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ServiceJourneyPattern:{route[0]}_{route[1]}"})
-        ET.SubElement(SJ, n("FlexibleServicePropertiesRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}"})
+        add_flexible_point_properties(route[1], gebieden, SPJIP_B)
+    
+    timetable = ET.SubElement(frames, ns_tag("TimetableFrame"), {"id": f"NL:{cfg.codespace}:TimetableFrame:{cfg.frame_key}", "version": cfg.version})
+    ET.SubElement(timetable, ns_tag("TypeOfFrameRef"), {"version": "9.4.1", "ref": "NL:BISON:TypeOfFrame:NL_TT_TIMETABLE"})
+    add_text(timetable, "Monitored", f"false")
+    CVC = ET.SubElement(timetable, ns_tag("contentValidityConditions"))
 
-    CVC = ET.SubElement(timetable, n("contentValidityConditions"))
     for _, row in bdt.iterrows():            
-        AC = ET.SubElement(CVC, n("AvailabilityCondition"), {"id": f"NL:{cfg.codespace}:AvailabilityCondition:{row['code']}", "version": cfg.version})
+        AC = ET.SubElement(CVC, ns_tag("AvailabilityCondition"), {"id": f"NL:{cfg.codespace}:AvailabilityCondition:{row['code']}", "version": cfg.version})
         add_text(AC, "FromDate", cfg.valid_from)
         add_text(AC, "ToDate", cfg.valid_to)
         add_text(AC, "ValidDayBits", row['dagen'] * 52)  # Every day of the year
-        timebands = ET.SubElement(AC, n("timebands"))
-        timeband = ET.SubElement(timebands, n("Timeband"), {"id": f"NL:{cfg.codespace}:Timeband:{row['code']}", "version": cfg.version})
+        timebands = ET.SubElement(AC, ns_tag("timebands"))
+        timeband = ET.SubElement(timebands, ns_tag("Timeband"), {"id": f"NL:{cfg.codespace}:Timeband:{row['code']}", "version": cfg.version})
         add_text(timeband, "StartTime", row["start_time"])
         add_text(timeband, "EndTime", row["end_time"])
         if row["day_offset"] != 0:
             add_text(timeband, "DayOffset", str(row["day_offset"]))
+
+    vehicle_journeys = ET.SubElement(timetable, ns_tag("vehicleJourneys"))
     
-    flexibleServiceProperties = ET.SubElement(timetable, n("flexibleServiceProperties"),{"id": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}", "version": cfg.version})
+    for route in routes:
+        SJ = ET.SubElement(vehicle_journeys, ns_tag("ServiceJourney"), {"id": f"NL:{cfg.codespace}:ServiceJourney:{route[0]}_{route[1]}", "version": cfg.version})
+        validityConditions = ET.SubElement(SJ, ns_tag("validityConditions"))
+        for _, row in bdt.iterrows():      
+            ET.SubElement(validityConditions, ns_tag("AvailabilityConditionRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:AvailabilityCondition:{row['code']}"})
+        ET.SubElement(SJ, ns_tag("ServiceJourneyPatternRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:ServiceJourneyPattern:{route[0]}_{route[1]}"})
+        ET.SubElement(SJ, ns_tag("VehicleTypeRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:VehicleType:{cfg.vehicle_type_code}"})
+        ET.SubElement(SJ, ns_tag("LineRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleLine:{cfg.line_code}"})
+          
+        ET.SubElement(SJ, ns_tag("FlexibleServicePropertiesRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}"})
+    
+    flexibleServiceProperties = ET.SubElement(timetable, ns_tag("flexibleServiceProperties"),{"id": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}", "version": cfg.version})
     add_text(flexibleServiceProperties, "FlexibleServiceType", "dynamicPassingTimes")
-    FSP_Ext = ET.SubElement(flexibleServiceProperties, n("Extensions"))
+    FSP_Ext = ET.SubElement(flexibleServiceProperties, ns_tag("Extensions"))
     add_text(FSP_Ext, "SafeDurationFactor", f"{cfg.safe_duration_factor}")
     add_text(FSP_Ext, "SafeDurationOffset", f"{cfg.safe_duration_offset}")  
     return ET.ElementTree(root)
 
-def add_flexible_areas(tree: ET.ElementTree, flex_area: dict, cfg: ExportConfig) -> ET.ElementTree:
-    resource_frame = tree.find(f".//{n('ResourceFrame')}")
-    if resource_frame is None:
-        return tree
 
-    def remove_existing_flexible_area(area_id: str) -> None:
-        for parent in tree.getroot().iter():
-            for child in list(parent):
-                if child.tag == n("FlexibleArea") and child.get("id") == area_id:
-                    parent.remove(child)
-
-    for area_name, coordinates in flex_area.items():
-        area_id = f"NL:{cfg.codespace}:FlexibleArea:{area_name}"
-        remove_existing_flexible_area(area_id)
-
-        area = ET.Element(n("FlexibleArea"), {"id": area_id, "version": cfg.version})
-        add_text(area, "Name", area_name)
-        add_text(area, "ShortName", slugify(area_name))
-        polygon = ET.SubElement(area, g("Polygon"), {g("id"): f"NL_{cfg.codespace}_FlexibleArea_{slugify(area_name)}"})
-        exterior = ET.SubElement(polygon, g("exterior"))
-        linear_ring = ET.SubElement(exterior, g("LinearRing"))
-        pos_list = ET.SubElement(linear_ring, g("posList"))
-        pos_list.text = coordinates
-        add_text(area, "BoardingUse", "true")
-        add_text(area, "AlightingUse", "true")
-        resource_frame.append(area)
-
-    return tree
-
-def main() -> None:
+def mains_tag() -> None:
     pass
-
 
 if __name__ == "__main__":
     project = 'FlexRRReis_RH'
@@ -580,28 +680,16 @@ if __name__ == "__main__":
     flex_area_path = Path(f'flex_area_{project}.json')
     
     stops = read_stops(Path(f'stops_{project}.csv'))
+    hubs = read_stops(Path(f'hubs_{project}.csv'))
     adresses = read_stops(Path(f'adresses_{project}.csv'))
     cfg = read_config(config_path)
     bdt = read_bedieningstijden(Path(f'bedieningstijden_{project}.csv'))
     flex_area = read_flex_area(flex_area_path)
     
     print('Read input data: {} stops, config with frame key {}, and {} bedieningstijden'.format(len(stops), cfg.frame_key, len(bdt)))
-    tree_stops = build_xml(stops, cfg, bdt)
-    ET.indent(tree_stops, space="    ")
-    output_stops = Path(f'NeTEx_PFL_{project}_stops_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
-    tree_stops.write(output_stops, encoding="utf-8", xml_declaration=True)
-    print(f"Wrote {len(stops)} stops records to {output_stops}")
-    
-    if not adresses.empty:
-        print(f"Adding adresses from {adresses}")
-        tree_adresses = build_xml(adresses, cfg, bdt)
-        output_adresses = Path(f'NeTEx_PFL_{project}_adresses_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
-        tree_adresses.write(output_adresses, encoding="utf-8", xml_declaration=True)
+    tree = build_xml(stops, hubs, cfg, bdt, flex_area)
+    ET.indent(tree, space="    ")
 
-    if flex_area:
-        print(f"Adding flexible areas from {flex_area_path}")
-        tree = add_flexible_areas(tree_stops, flex_area, cfg)
-        output_path = Path(f'NeTEx_PFL_{project}_area_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
-        tree.write(output_path, encoding="utf-8", xml_declaration=True)
-
-    
+    output_name= Path(f'NeTEx_PFL_{project}_{cfg.publication_timestamp.replace('-','')[0:8]}.xml')
+    tree.write(output_name, encoding="utf-8", xml_declaration=True)
+    print(f"Wrote {len(stops)} stops records to {output_name}")

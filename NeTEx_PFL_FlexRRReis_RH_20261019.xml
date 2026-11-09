@@ -1,0 +1,2500 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" version="ntx:1.1">
+    <PublicationTimestamp>2026-10-19T00:00:00.000</PublicationTimestamp>
+    <ParticipantRef>POV</ParticipantRef>
+    <Description>Export flexRRReis Rijssen-Holten</Description>
+    <dataObjects>
+        <CompositeFrame id="NL:POV:CompositeFrame:FlexRRReis_RH" modification="new" version="1">
+            <ValidBetween>
+                <FromDate>2026-06-01T00:00:00.000</FromDate>
+                <ToDate>2027-05-30T00:00:00.000</ToDate>
+            </ValidBetween>
+            <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_BASELINE" />
+            <FrameDefaults>
+                <DefaultCodespaceRef ref="NL:BISON:Codespace:POV" />
+                <DefaultDataSourceRef version="1" ref="NL:POV:DataSource:POV" />
+                <DefaultResponsibilitySetRef version="1" ref="NL:POV:ResponsibilitySet:POV" />
+                <DefaultLocale>
+                    <TimeZone>Europe/Amsterdam</TimeZone>
+                    <DefaultLanguage>nl</DefaultLanguage>
+                </DefaultLocale>
+                <DefaultLocationSystem>EPSG:4326</DefaultLocationSystem>
+                <DefaultSystemOfUnits>SiMetres</DefaultSystemOfUnits>
+                <DefaultCurrency>EUR</DefaultCurrency>
+            </FrameDefaults>
+            <frames>
+                <ResourceFrame id="NL:POV:ResourceFrame:FlexRRReis_RH" version="1">
+                    <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_RESOURCE" />
+                    <dataSources>
+                        <DataSource id="NL:POV:DataSource:POV" version="1">
+                            <Name>Provincie Overijssel</Name>
+                            <ShortName>POV</ShortName>
+                            <Description>Provincie Overijssel</Description>
+                        </DataSource>
+                    </dataSources>
+                    <responsibilitySets>
+                        <ResponsibilitySet id="NL:POV:ResponsibilitySet:POV" version="1">
+                            <Name>Financier Provincie Overijssel</Name>
+                            <roles>
+                                <ResponsibilityRoleAssignment id="NL:POV:ResponsibilityRoleAssignment:POV" version="1">
+                                    <StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
+                                    <TypeOfResponsibilityRoleRef version="any" ref="NL:BISON:TypeOfResponsibilityRole:financing" />
+                                </ResponsibilityRoleAssignment>
+                            </roles>
+                        </ResponsibilitySet>
+                    </responsibilitySets>
+                    <typesOfValue>
+                        <Branding id="NL:POV:Branding:FlexRRReis" version="1">
+                            <Name>FlexRRReis</Name>
+                        </Branding>
+                    </typesOfValue>
+                    <organisations>
+                        <Operator id="NL:POV:Operator:ARR" version="1">
+                            <Name>Arriva</Name>
+                            <ShortName>ARR</ShortName>
+                            <CustomerServiceContactDetails>
+                                <Url>https://www.rrreis.nl</Url>
+                            </CustomerServiceContactDetails>
+                        </Operator>
+                    </organisations>
+                    <operationalContexts>
+                        <OperationalContext id="NL:POV:OperationalContext:BUS" version="1">
+                            <VehicleMode>bus</VehicleMode>
+                        </OperationalContext>
+                    </operationalContexts>
+                    <vehicleTypes>
+                        <VehicleType id="NL:POV:VehicleType:flexauto" version="1">
+                            <BrandingRef>NL:POV:Branding:FlexRRReis</BrandingRef>
+                            <Name>Voertuignaam</Name>
+                            <Description>Voertuigomschrijving</Description>
+                            <FuelType>other</FuelType>
+                            <TransportMode>bus</TransportMode>
+                            <capacities>
+                                <PassengerCapacity>
+                                    <FareClass>any</FareClass>
+                                    <TotalCapacity>4</TotalCapacity>
+                                    <SeatingCapacity>4</SeatingCapacity>
+                                    <StandingCapacity>0</StandingCapacity>
+                                    <SpecialPlaceCapacity>2</SpecialPlaceCapacity>
+                                    <PushChairCapacity>1</PushChairCapacity>
+                                    <WheeelchairPlaceCapacity>1</WheeelchairPlaceCapacity>
+                                </PassengerCapacity>
+                            </capacities>
+                            <HasLiftOrRamp>True</HasLiftOrRamp>
+                            <Length>5</Length>
+                            <Facilities>
+                                <ServiceFacilitySet>
+                                    <VehicleAccessFacilityList>wheelchairLift</VehicleAccessFacilityList>
+                                </ServiceFacilitySet>
+                            </Facilities>
+                        </VehicleType>
+                    </vehicleTypes>
+                    <zones>
+                        <TransportAdministrativeZone id="NL:POV:TransportAdministrativeZone:rijssen-holten" version="1">
+                            <Name>Rijssen-Holten</Name>
+                            <ShortName>RH</ShortName>
+                            <Description>Gemeente Rijssen-Holten</Description>
+                        </TransportAdministrativeZone>
+                    </zones>
+                </ResourceFrame>
+                <SiteFrame id="NL:POV:SiteFrame:FlexRRReis_RH" version="1">
+                    <TypeOfFrameRef version="9.4.1" ref="BISON:TypeOfFrame:NL_TT_SITE" />
+                    <flexibleStopPlaces>
+                        <FlexibleStopPlace id="NL:POV:FlexibleStopPlace:rijssen-holten" version="1">
+                            <Name>Rijssen-Holten</Name>
+                            <ShortName>rijssen-holten</ShortName>
+                            <TransportMode>bus</TransportMode>
+                            <areas>
+                                <FlexibleArea>
+                                    <ShortName>rijssen-holten</ShortName>
+                                    <members>
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43680090" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780170" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780210" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880330" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43929030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300550" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300990" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301150" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43870130" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880530" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920110" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920150" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920170" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920430" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920470" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300170" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300270" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300290" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300750" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301110" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46920010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880570" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920370" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300210" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300230" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300370" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300910" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301170" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:41980030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43680120" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920230" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300490" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301090" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46950010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780250" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880190" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880210" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46910030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780290" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880230" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300250" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300790" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300810" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46910010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880110" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880170" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880310" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880630" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43910050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920090" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300090" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300410" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300630" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45320010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46920050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780230" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780310" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:41980050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780270" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880350" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300150" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300510" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880600" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920130" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920190" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300190" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300850" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43910010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920410" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300690" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880430" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920350" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880130" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920250" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300590" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300950" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43680030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780110" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43910030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300970" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880120" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300110" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301130" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920210" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920290" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:44290030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300130" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300670" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880150" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880650" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300390" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300430" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300610" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300870" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43680070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920450" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43929050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300450" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43860010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880510" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920070" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920330" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300470" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300770" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:41980010" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880450" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300310" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300890" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43780090" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920270" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300350" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300650" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301190" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45320030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45301050" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43880030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920390" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300530" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300570" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300710" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:46920030" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:43920310" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300330" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300830" version="1" />
+                                        <ScheduledStopPointRef ref="NL:POV:ScheduledStopPointRef:45300930" version="1" />
+                                    </members>
+                                    <BoardingUse>true</BoardingUse>
+                                    <AlightingUse>true</AlightingUse>
+                                </FlexibleArea>
+                            </areas>
+                        </FlexibleStopPlace>
+                    </flexibleStopPlaces>
+                </SiteFrame>
+                <ServiceFrame id="NL:POV:ServiceFrame:FlexRRReis_RH" version="1">
+                    <lines>
+                        <Line id="NL:POV:Line:500" version="1">
+                            <Extensions>
+                                <MaximumTravelDistance>0</MaximumTravelDistance>
+                            </Extensions>
+                            <BrandingRef>NL:POV:Branding:FlexRRReis</BrandingRef>
+                            <Name>FlexRRReis Rijssen-Holten</Name>
+                            <TransportMode>bus</TransportMode>
+                            <OperatorRef version="1" ref="NL:POV:Operator:ARR" />
+                            <TypeOfServiceRef version="any" ref="NL:BISON:TypeOfService:Flex" />
+                            <Monitored>false</Monitored>
+                            <AccessibilityAssessment id="NL:POV:AccessibilityAssessment:FlexRRReis_RH" version="1">
+                                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                            </AccessibilityAssessment>
+                            <bookingArrangements>
+                                <BookingArrangement id="NL:POV:BookingArrangement:FlexRRReis_RH" version="1">
+                                    <BookingContact>
+                                        <Phone>085 - 20 85 212</Phone>
+                                        <Url>https://www.rrreis.nl/diensten/vervoer-op-reservering/flexrrreis/</Url>
+                                        <FurtherDetails>app Arriva</FurtherDetails>
+                                    </BookingContact>
+                                    <BookingMethods>callOffice online</BookingMethods>
+                                    <BookingAccess>public</BookingAccess>
+                                    <BookWhen>advanceAndDayOfTravel</BookWhen>
+                                    <LatestBookingTime>23:59:00</LatestBookingTime>
+                                    <MinimumBookingPeriod>PT60M</MinimumBookingPeriod>
+                                    <BookingUrl>https://www.rrreis.nl/diensten/vervoer-op-reservering/flexrrreis/</BookingUrl>
+                                    <BookingNote>Een rit met FlexRRReis Rijssen-Holten kost €2,40.</BookingNote>
+                                </BookingArrangement>
+                            </bookingArrangements>
+                        </Line>
+                    </lines>
+                    <scheduledStopPoints>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43680090" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43680090</PrivateCode>
+                            </privateCodes>
+                            <Name>Vukking</Name>
+                            <Location>
+                                <gml:pos>52.279925376039415 6.390321233959474</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780170" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780170</PrivateCode>
+                            </privateCodes>
+                            <Name>De Driesprong</Name>
+                            <Location>
+                                <gml:pos>52.27856842272151 6.430765335194642</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780210" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780210</PrivateCode>
+                            </privateCodes>
+                            <Name>Diessenplas</Name>
+                            <Location>
+                                <gml:pos>52.27888683785017 6.414946204231568</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880330" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880330</PrivateCode>
+                            </privateCodes>
+                            <Name>Schapendijk</Name>
+                            <Location>
+                                <gml:pos>52.30386605251679 6.535948115299906</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43929030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43929030</PrivateCode>
+                            </privateCodes>
+                            <Name>Oude Deventerweg</Name>
+                            <Location>
+                                <gml:pos>52.28333594397563 6.414961139939074</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300070</PrivateCode>
+                            </privateCodes>
+                            <Name>De Krans</Name>
+                            <Location>
+                                <gml:pos>52.30828112824313 6.52087020626848</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300550" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300550</PrivateCode>
+                            </privateCodes>
+                            <Name>Het Lentfert</Name>
+                            <Location>
+                                <gml:pos>52.30089100588386 6.534082452360814</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300990" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300990</PrivateCode>
+                            </privateCodes>
+                            <Name>Ooievaarstraat</Name>
+                            <Location>
+                                <gml:pos>52.31236737427451 6.500428155888474</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301150" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301150</PrivateCode>
+                            </privateCodes>
+                            <Name>Nijlandstraat</Name>
+                            <Location>
+                                <gml:pos>52.297541744252136 6.4989131479649425</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780030</PrivateCode>
+                            </privateCodes>
+                            <Name>Centrum</Name>
+                            <Location>
+                                <gml:pos>52.28140945756085 6.420456219917556</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43870130" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43870130</PrivateCode>
+                            </privateCodes>
+                            <Name>Spoelerstraat</Name>
+                            <Location>
+                                <gml:pos>52.31781237880297 6.502544743999413</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880530" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880530</PrivateCode>
+                            </privateCodes>
+                            <Name>Hagslagen</Name>
+                            <Location>
+                                <gml:pos>52.30441684665927 6.499979637061966</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920110" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920110</PrivateCode>
+                            </privateCodes>
+                            <Name>Beusebergerweg</Name>
+                            <Location>
+                                <gml:pos>52.27440223350291 6.419003925499374</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920150" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920150</PrivateCode>
+                            </privateCodes>
+                            <Name>Schoolstraat</Name>
+                            <Location>
+                                <gml:pos>52.27929788309329 6.424481063071162</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920170" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920170</PrivateCode>
+                            </privateCodes>
+                            <Name>Oranjestraat</Name>
+                            <Location>
+                                <gml:pos>52.28050821044523 6.425857547173795</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920430" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920430</PrivateCode>
+                            </privateCodes>
+                            <Name>Het Look</Name>
+                            <Location>
+                                <gml:pos>52.29212323380971 6.438838066589143</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920470" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920470</PrivateCode>
+                            </privateCodes>
+                            <Name>Forthaarsweg</Name>
+                            <Location>
+                                <gml:pos>52.29276826388977 6.428929281008571</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300170" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300170</PrivateCode>
+                            </privateCodes>
+                            <Name>Braakmansdijk</Name>
+                            <Location>
+                                <gml:pos>52.30171054846139 6.495278672139928</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300270" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300270</PrivateCode>
+                            </privateCodes>
+                            <Name>Irenelaan</Name>
+                            <Location>
+                                <gml:pos>52.30472321273076 6.510354023599503</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300290" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300290</PrivateCode>
+                            </privateCodes>
+                            <Name>Eshof</Name>
+                            <Location>
+                                <gml:pos>52.3048415935233 6.515855647489126</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300750" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300750</PrivateCode>
+                            </privateCodes>
+                            <Name>Molendijk Noord</Name>
+                            <Location>
+                                <gml:pos>52.31826175934949 6.52518790374193</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301110" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301110</PrivateCode>
+                            </privateCodes>
+                            <Name>'t Witte Hoes</Name>
+                            <Location>
+                                <gml:pos>52.288519089398314 6.533543301987048</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46920010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46920010</PrivateCode>
+                            </privateCodes>
+                            <Name>Vletgaarsmaten</Name>
+                            <Location>
+                                <gml:pos>52.277877407654756 6.400693929525347</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880570" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880570</PrivateCode>
+                            </privateCodes>
+                            <Name>Scholekster</Name>
+                            <Location>
+                                <gml:pos>52.30861081888649 6.504176031259306</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920370" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920370</PrivateCode>
+                            </privateCodes>
+                            <Name>Camping De Holterberg</Name>
+                            <Location>
+                                <gml:pos>52.29188943173388 6.434801424106128</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300010</PrivateCode>
+                            </privateCodes>
+                            <Name>Holterstraatweg</Name>
+                            <Location>
+                                <gml:pos>52.30771271734679 6.5107375600368185</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300210" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300210</PrivateCode>
+                            </privateCodes>
+                            <Name>Ottenstraat</Name>
+                            <Location>
+                                <gml:pos>52.29858599553566 6.501607565278044</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300230" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300230</PrivateCode>
+                            </privateCodes>
+                            <Name>P&amp;R Station Rijssen</Name>
+                            <Location>
+                                <gml:pos>52.31205367582329 6.519265317356981</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300370" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300370</PrivateCode>
+                            </privateCodes>
+                            <Name>De Hoge Esch</Name>
+                            <Location>
+                                <gml:pos>52.298688159099775 6.518294320457584</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300910" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300910</PrivateCode>
+                            </privateCodes>
+                            <Name>Dannenberg</Name>
+                            <Location>
+                                <gml:pos>52.310836273330004 6.507414300640407</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301170" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301170</PrivateCode>
+                            </privateCodes>
+                            <Name>Gracht</Name>
+                            <Location>
+                                <gml:pos>52.304484924314515 6.540700253471306</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:41980030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">41980030</PrivateCode>
+                            </privateCodes>
+                            <Name>Het NÃ¶s</Name>
+                            <Location>
+                                <gml:pos>52.24572079010289 6.400254315113561</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43680120" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43680120</PrivateCode>
+                            </privateCodes>
+                            <Name>Aaltinksweg</Name>
+                            <Location>
+                                <gml:pos>52.28212649482954 6.406198612333297</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780050</PrivateCode>
+                            </privateCodes>
+                            <Name>Station</Name>
+                            <Location>
+                                <gml:pos>52.28369949775639 6.421711233405822</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880070</PrivateCode>
+                            </privateCodes>
+                            <Name>Station</Name>
+                            <Location>
+                                <gml:pos>52.311347974404576 6.519745945096624</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920230" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920230</PrivateCode>
+                            </privateCodes>
+                            <Name>Rijssenseweg</Name>
+                            <Location>
+                                <gml:pos>52.28210609450756 6.433222553499187</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300490" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300490</PrivateCode>
+                            </privateCodes>
+                            <Name>Het Punt</Name>
+                            <Location>
+                                <gml:pos>52.30243359644217 6.52139544124871</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301090" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301090</PrivateCode>
+                            </privateCodes>
+                            <Name>Rijsserberg</Name>
+                            <Location>
+                                <gml:pos>52.2900962874003 6.525668564980436</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46950010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46950010</PrivateCode>
+                            </privateCodes>
+                            <Name>Espelo</Name>
+                            <Location>
+                                <gml:pos>52.308311785861214 6.374142780448167</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780250" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780250</PrivateCode>
+                            </privateCodes>
+                            <Name>Nagelhoutstraat</Name>
+                            <Location>
+                                <gml:pos>52.27617328057979 6.41483951433136</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880190" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880190</PrivateCode>
+                            </privateCodes>
+                            <Name>Wellehof</Name>
+                            <Location>
+                                <gml:pos>52.30266165921686 6.511636169993215</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880210" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880210</PrivateCode>
+                            </privateCodes>
+                            <Name>Jacobus Fruytierschool</Name>
+                            <Location>
+                                <gml:pos>52.31242874485805 6.495810065788321</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46910030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46910030</PrivateCode>
+                            </privateCodes>
+                            <Name>De Hegeman</Name>
+                            <Location>
+                                <gml:pos>52.279755173850084 6.351380523790551</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780290" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780290</PrivateCode>
+                            </privateCodes>
+                            <Name>Ligtenberg</Name>
+                            <Location>
+                                <gml:pos>52.29825333586823 6.462806812533356</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880230" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880230</PrivateCode>
+                            </privateCodes>
+                            <Name>Stationsdwarsweg</Name>
+                            <Location>
+                                <gml:pos>52.313753194272884 6.527609585389271</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920050</PrivateCode>
+                            </privateCodes>
+                            <Name>Canadastraat</Name>
+                            <Location>
+                                <gml:pos>52.27777838420151 6.410099452845383</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300250" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300250</PrivateCode>
+                            </privateCodes>
+                            <Name>Willem de Zwijgerstraat</Name>
+                            <Location>
+                                <gml:pos>52.303291902904036 6.503939651874746</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300790" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300790</PrivateCode>
+                            </privateCodes>
+                            <Name>Fahrenheitstraat</Name>
+                            <Location>
+                                <gml:pos>52.31787071914549 6.5200443138074435</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300810" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300810</PrivateCode>
+                            </privateCodes>
+                            <Name>Oude Morsweg</Name>
+                            <Location>
+                                <gml:pos>52.31939248923159 6.511282444072839</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46910010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46910010</PrivateCode>
+                            </privateCodes>
+                            <Name>Dijkerhoek</Name>
+                            <Location>
+                                <gml:pos>52.279844219144955 6.348173133291505</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880110" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880110</PrivateCode>
+                            </privateCodes>
+                            <Name>Roelf Bosmastraat</Name>
+                            <Location>
+                                <gml:pos>52.303668756326594 6.499242430060973</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880170" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880170</PrivateCode>
+                            </privateCodes>
+                            <Name>Vermeerstraat</Name>
+                            <Location>
+                                <gml:pos>52.30124475582467 6.518828590803959</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880310" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880310</PrivateCode>
+                            </privateCodes>
+                            <Name>Kryptonstraat</Name>
+                            <Location>
+                                <gml:pos>52.316899334198894 6.4954523332795615</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880630" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880630</PrivateCode>
+                            </privateCodes>
+                            <Name>R.K. Kerkhof</Name>
+                            <Location>
+                                <gml:pos>52.30610988011798 6.528865030516691</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43910050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43910050</PrivateCode>
+                            </privateCodes>
+                            <Name>Canadese Begraafplaats</Name>
+                            <Location>
+                                <gml:pos>52.29950296214405 6.429673632923838</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920090" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920090</PrivateCode>
+                            </privateCodes>
+                            <Name>Liezenweg</Name>
+                            <Location>
+                                <gml:pos>52.274079976250015 6.413692181386888</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300090" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300090</PrivateCode>
+                            </privateCodes>
+                            <Name>Bouwstraat</Name>
+                            <Location>
+                                <gml:pos>52.30733069846173 6.518749017609981</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300410" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300410</PrivateCode>
+                            </privateCodes>
+                            <Name>Spoorzicht</Name>
+                            <Location>
+                                <gml:pos>52.31314289576241 6.523780809722655</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300630" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300630</PrivateCode>
+                            </privateCodes>
+                            <Name>Parkgebouw</Name>
+                            <Location>
+                                <gml:pos>52.30982607117331 6.529385829704423</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45320010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45320010</PrivateCode>
+                            </privateCodes>
+                            <Name>De Keizer</Name>
+                            <Location>
+                                <gml:pos>52.298897732308454 6.464097915546081</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46920050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46920050</PrivateCode>
+                            </privateCodes>
+                            <Name>Bedrijvenweg</Name>
+                            <Location>
+                                <gml:pos>52.273078748991146 6.399514927239551</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780070</PrivateCode>
+                            </privateCodes>
+                            <Name>Twenhaarsveld</Name>
+                            <Location>
+                                <gml:pos>52.28724019339224 6.443134295278821</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780230" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780230</PrivateCode>
+                            </privateCodes>
+                            <Name>Kon. Wilhelminastraat</Name>
+                            <Location>
+                                <gml:pos>52.27810371845753 6.417140852685168</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780310" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780310</PrivateCode>
+                            </privateCodes>
+                            <Name>Kerkhofsweg</Name>
+                            <Location>
+                                <gml:pos>52.28332021902785 6.426011190040996</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:41980050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">41980050</PrivateCode>
+                            </privateCodes>
+                            <Name>Museum Broer</Name>
+                            <Location>
+                                <gml:pos>52.255069030190015 6.409606532985471</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780270" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780270</PrivateCode>
+                            </privateCodes>
+                            <Name>Lageweg</Name>
+                            <Location>
+                                <gml:pos>52.28587308248582 6.4321093674322185</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880050</PrivateCode>
+                            </privateCodes>
+                            <Name>Eltheto</Name>
+                            <Location>
+                                <gml:pos>52.302643217495756 6.5257701623599615</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880350" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880350</PrivateCode>
+                            </privateCodes>
+                            <Name>Reggesteyn/Cattelaar</Name>
+                            <Location>
+                                <gml:pos>52.30031117584316 6.541017070219149</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300150" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300150</PrivateCode>
+                            </privateCodes>
+                            <Name>Sint Ignatius</Name>
+                            <Location>
+                                <gml:pos>52.30268221334826 6.499965510147522</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300510" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300510</PrivateCode>
+                            </privateCodes>
+                            <Name>Verlengde Oranjestraat</Name>
+                            <Location>
+                                <gml:pos>52.30450405092021 6.522943923363198</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301030</PrivateCode>
+                            </privateCodes>
+                            <Name>Tabernakel</Name>
+                            <Location>
+                                <gml:pos>52.30812850368407 6.49237399162549</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780010</PrivateCode>
+                            </privateCodes>
+                            <Name>De Liesen</Name>
+                            <Location>
+                                <gml:pos>52.27353585380028 6.40802376311496</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880600" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880600</PrivateCode>
+                            </privateCodes>
+                            <Name>Parkstede</Name>
+                            <Location>
+                                <gml:pos>52.30804220245489 6.528885369466459</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920130" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920130</PrivateCode>
+                            </privateCodes>
+                            <Name>Erve Wiegmannink</Name>
+                            <Location>
+                                <gml:pos>52.2770923312283 6.420766184444999</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920190" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920190</PrivateCode>
+                            </privateCodes>
+                            <Name>Pannenbakkersstraat</Name>
+                            <Location>
+                                <gml:pos>52.28424531223075 6.429154547322635</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300190" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300190</PrivateCode>
+                            </privateCodes>
+                            <Name>Keizersdijk</Name>
+                            <Location>
+                                <gml:pos>52.29806821645266 6.493575149919815</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300850" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300850</PrivateCode>
+                            </privateCodes>
+                            <Name>Energiestraat</Name>
+                            <Location>
+                                <gml:pos>52.318626345527 6.5086668906191925</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301070</PrivateCode>
+                            </privateCodes>
+                            <Name>Industrieweg</Name>
+                            <Location>
+                                <gml:pos>52.311554215281284 6.513210508018671</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43910010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43910010</PrivateCode>
+                            </privateCodes>
+                            <Name>De Holterberg</Name>
+                            <Location>
+                                <gml:pos>52.297906129894244 6.420106814613808</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920410" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920410</PrivateCode>
+                            </privateCodes>
+                            <Name>Schreursweg</Name>
+                            <Location>
+                                <gml:pos>52.278847931252955 6.447829484434464</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300690" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300690</PrivateCode>
+                            </privateCodes>
+                            <Name>Walstraat</Name>
+                            <Location>
+                                <gml:pos>52.30626498453331 6.520217545959897</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301010</PrivateCode>
+                            </privateCodes>
+                            <Name>Arkeheem</Name>
+                            <Location>
+                                <gml:pos>52.311362480568334 6.4925717871683775</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880430" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880430</PrivateCode>
+                            </privateCodes>
+                            <Name>Overweg</Name>
+                            <Location>
+                                <gml:pos>52.30493957504825 6.496004391878904</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920350" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920350</PrivateCode>
+                            </privateCodes>
+                            <Name>McDonald's</Name>
+                            <Location>
+                                <gml:pos>52.25390881615119 6.436338179389683</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300030</PrivateCode>
+                            </privateCodes>
+                            <Name>Weijerdstraat</Name>
+                            <Location>
+                                <gml:pos>52.30814679070182 6.514238597060758</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300050</PrivateCode>
+                            </privateCodes>
+                            <Name>Pelmolen</Name>
+                            <Location>
+                                <gml:pos>52.313577833740915 6.534586069260807</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880130" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880130</PrivateCode>
+                            </privateCodes>
+                            <Name>Huize Maranatha</Name>
+                            <Location>
+                                <gml:pos>52.30131299542543 6.502189134926213</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920250" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920250</PrivateCode>
+                            </privateCodes>
+                            <Name>Sparrenweg</Name>
+                            <Location>
+                                <gml:pos>52.2871311688546 6.412645160376266</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300590" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300590</PrivateCode>
+                            </privateCodes>
+                            <Name>De Kaempe</Name>
+                            <Location>
+                                <gml:pos>52.30380158157694 6.531474319207391</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300950" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300950</PrivateCode>
+                            </privateCodes>
+                            <Name>Noordermors</Name>
+                            <Location>
+                                <gml:pos>52.3209513540169 6.501376789341392</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43680030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43680030</PrivateCode>
+                            </privateCodes>
+                            <Name>De Smid</Name>
+                            <Location>
+                                <gml:pos>52.27433525503395 6.352479152893043</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780110" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780110</PrivateCode>
+                            </privateCodes>
+                            <Name>Borkeld</Name>
+                            <Location>
+                                <gml:pos>52.273565380812684 6.4425164631027565</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43910030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43910030</PrivateCode>
+                            </privateCodes>
+                            <Name>Dondertman</Name>
+                            <Location>
+                                <gml:pos>52.302795088436326 6.389913897905692</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920010</PrivateCode>
+                            </privateCodes>
+                            <Name>Keizersweg</Name>
+                            <Location>
+                                <gml:pos>52.28203066032561 6.416220625118984</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300970" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300970</PrivateCode>
+                            </privateCodes>
+                            <Name>De Sterkerij</Name>
+                            <Location>
+                                <gml:pos>52.316290515063415 6.500937174692626</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880120" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880120</PrivateCode>
+                            </privateCodes>
+                            <Name>Waterhoen</Name>
+                            <Location>
+                                <gml:pos>52.30965614790803 6.501034770376618</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920030</PrivateCode>
+                            </privateCodes>
+                            <Name>Mossinkserf</Name>
+                            <Location>
+                                <gml:pos>52.280762810845644 6.410065542987862</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300110" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300110</PrivateCode>
+                            </privateCodes>
+                            <Name>Heliumstraat</Name>
+                            <Location>
+                                <gml:pos>52.3195117093609 6.49867111888302</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301130" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301130</PrivateCode>
+                            </privateCodes>
+                            <Name>Ronde Maat</Name>
+                            <Location>
+                                <gml:pos>52.30030704826863 6.4992462515440605</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920210" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920210</PrivateCode>
+                            </privateCodes>
+                            <Name>Kolweg</Name>
+                            <Location>
+                                <gml:pos>52.28211518900098 6.430159800090169</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920290" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920290</PrivateCode>
+                            </privateCodes>
+                            <Name>Smidsbelt</Name>
+                            <Location>
+                                <gml:pos>52.28181027389943 6.421901748811424</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:44290030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">44290030</PrivateCode>
+                            </privateCodes>
+                            <Name>Kapbergerweg</Name>
+                            <Location>
+                                <gml:pos>52.282457722163876 6.490431330367938</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300130" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300130</PrivateCode>
+                            </privateCodes>
+                            <Name>De Biesterij</Name>
+                            <Location>
+                                <gml:pos>52.29202579387965 6.549069530837369</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300670" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300670</PrivateCode>
+                            </privateCodes>
+                            <Name>De Hagen</Name>
+                            <Location>
+                                <gml:pos>52.30757830145272 6.523858375340103</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880150" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880150</PrivateCode>
+                            </privateCodes>
+                            <Name>Koninginneweg</Name>
+                            <Location>
+                                <gml:pos>52.30225126834275 6.508473419423013</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880650" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880650</PrivateCode>
+                            </privateCodes>
+                            <Name>Opbroek SV</Name>
+                            <Location>
+                                <gml:pos>52.29984084890996 6.548658124803545</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300390" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300390</PrivateCode>
+                            </privateCodes>
+                            <Name>Frans Halsstraat</Name>
+                            <Location>
+                                <gml:pos>52.2991835080875 6.521942900014576</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300430" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300430</PrivateCode>
+                            </privateCodes>
+                            <Name>De Koerbelt</Name>
+                            <Location>
+                                <gml:pos>52.29594228080223 6.521566920834759</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300610" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300610</PrivateCode>
+                            </privateCodes>
+                            <Name>De Oosterhof</Name>
+                            <Location>
+                                <gml:pos>52.30810295662565 6.53467926367665</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300870" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300870</PrivateCode>
+                            </privateCodes>
+                            <Name>Jutestraat</Name>
+                            <Location>
+                                <gml:pos>52.31556467216538 6.508310904828289</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43680070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43680070</PrivateCode>
+                            </privateCodes>
+                            <Name>Wegstapel</Name>
+                            <Location>
+                                <gml:pos>52.27774070492016 6.3743725583054225</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920450" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920450</PrivateCode>
+                            </privateCodes>
+                            <Name>Het Vletgoor</Name>
+                            <Location>
+                                <gml:pos>52.27342636619747 6.407171408147794</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43929050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43929050</PrivateCode>
+                            </privateCodes>
+                            <Name>Oude Deventerweg</Name>
+                            <Location>
+                                <gml:pos>52.283924594415396 6.41548770787737</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300450" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300450</PrivateCode>
+                            </privateCodes>
+                            <Name>Leemspoor</Name>
+                            <Location>
+                                <gml:pos>52.29545573719605 6.528224774088309</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43860010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43860010</PrivateCode>
+                            </privateCodes>
+                            <Name>Kapoene</Name>
+                            <Location>
+                                <gml:pos>52.29736326285343 6.546496888531987</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880510" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880510</PrivateCode>
+                            </privateCodes>
+                            <Name>Molenstalweg</Name>
+                            <Location>
+                                <gml:pos>52.310336223285915 6.514631446651949</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920070" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920070</PrivateCode>
+                            </privateCodes>
+                            <Name>Koolwitje</Name>
+                            <Location>
+                                <gml:pos>52.2730505609543 6.410093249690745</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920330" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920330</PrivateCode>
+                            </privateCodes>
+                            <Name>Twenhaarsveld</Name>
+                            <Location>
+                                <gml:pos>52.28579502279275 6.443920729811228</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300470" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300470</PrivateCode>
+                            </privateCodes>
+                            <Name>Lijsterbeslaan</Name>
+                            <Location>
+                                <gml:pos>52.29888950681279 6.525410065606411</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300770" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300770</PrivateCode>
+                            </privateCodes>
+                            <Name>Galvanistraat</Name>
+                            <Location>
+                                <gml:pos>52.314813715635715 6.519203680038025</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:41980010" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">41980010</PrivateCode>
+                            </privateCodes>
+                            <Name>NoaLies</Name>
+                            <Location>
+                                <gml:pos>52.25010531561852 6.384625710405952</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880450" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880450</PrivateCode>
+                            </privateCodes>
+                            <Name>Holterweg/Banisweg</Name>
+                            <Location>
+                                <gml:pos>52.30545821254869 6.5067801217359404</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300310" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300310</PrivateCode>
+                            </privateCodes>
+                            <Name>Kattenhaarsweg</Name>
+                            <Location>
+                                <gml:pos>52.302213057846274 6.514381299036172</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300890" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300890</PrivateCode>
+                            </privateCodes>
+                            <Name>Nijverheidsstraat</Name>
+                            <Location>
+                                <gml:pos>52.31458300308016 6.513243306309458</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43780090" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43780090</PrivateCode>
+                            </privateCodes>
+                            <Name>De Waerdenborch</Name>
+                            <Location>
+                                <gml:pos>52.28139395789672 6.4150188247540365</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920270" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920270</PrivateCode>
+                            </privateCodes>
+                            <Name>Langstraat</Name>
+                            <Location>
+                                <gml:pos>52.265427400489976 6.451919017551467</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300350" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300350</PrivateCode>
+                            </privateCodes>
+                            <Name>Esstraat</Name>
+                            <Location>
+                                <gml:pos>52.29889180934544 6.514854156150502</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300650" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300650</PrivateCode>
+                            </privateCodes>
+                            <Name>Manege Achter 'n Bos</Name>
+                            <Location>
+                                <gml:pos>52.314900756648754 6.544564066050197</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301190" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301190</PrivateCode>
+                            </privateCodes>
+                            <Name>Mauritshof</Name>
+                            <Location>
+                                <gml:pos>52.29976027473169 6.526458669832715</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45320030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45320030</PrivateCode>
+                            </privateCodes>
+                            <Name>Het Overveen</Name>
+                            <Location>
+                                <gml:pos>52.28944595900211 6.484184654753036</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45301050" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45301050</PrivateCode>
+                            </privateCodes>
+                            <Name>Fuut</Name>
+                            <Location>
+                                <gml:pos>52.30827876943376 6.496483681086536</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43880030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43880030</PrivateCode>
+                            </privateCodes>
+                            <Name>Oude Veemarkt</Name>
+                            <Location>
+                                <gml:pos>52.309966667142135 6.5241248047235505</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920390" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920390</PrivateCode>
+                            </privateCodes>
+                            <Name>De Lindenberg</Name>
+                            <Location>
+                                <gml:pos>52.2740229802671 6.44762646648476</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300530" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300530</PrivateCode>
+                            </privateCodes>
+                            <Name>Berkenlaan</Name>
+                            <Location>
+                                <gml:pos>52.30050295886993 6.529600639215446</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300570" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300570</PrivateCode>
+                            </privateCodes>
+                            <Name>Molenpoort</Name>
+                            <Location>
+                                <gml:pos>52.30993978691122 6.521308490527364</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300710" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300710</PrivateCode>
+                            </privateCodes>
+                            <Name>Hoge Wal</Name>
+                            <Location>
+                                <gml:pos>52.30770557346066 6.517145530894732</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:46920030" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">46920030</PrivateCode>
+                            </privateCodes>
+                            <Name>Handelsweg</Name>
+                            <Location>
+                                <gml:pos>52.27674754094678 6.394074093224441</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:43920310" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">43920310</PrivateCode>
+                            </privateCodes>
+                            <Name>Abraham Berg Hof</Name>
+                            <Location>
+                                <gml:pos>52.28226481947977 6.4192597069507435</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300330" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300330</PrivateCode>
+                            </privateCodes>
+                            <Name>Steenakkersweg</Name>
+                            <Location>
+                                <gml:pos>52.299287480085056 6.512005268163856</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300830" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300830</PrivateCode>
+                            </privateCodes>
+                            <Name>Kalanderstraat</Name>
+                            <Location>
+                                <gml:pos>52.32211966286169 6.505205301009535</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="NL:POV:ScheduledStopPoint:45300930" version="1">
+                            <privateCodes>
+                                <PrivateCode type="UserStopcode">45300930</PrivateCode>
+                            </privateCodes>
+                            <Name>Nijverdalseweg</Name>
+                            <Location>
+                                <gml:pos>52.313245940259584 6.50448326469609</gml:pos>
+                            </Location>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>true</ForBoarding>
+                        </ScheduledStopPoint>
+                    </scheduledStopPoints>
+                    <stopAssignments>
+                        <FlexibleStopAssignment id="NL:POV:FlexibleStopAssignment:rijssen-holten" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:rijssen-holten" />
+                            <FlexibleStopPlaceRef version="1" ref="NL:POV:FlexibleStopPlace:rijssen-holten" />
+                        </FlexibleStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43680090" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43680090" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43680090" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780170" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780170" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780170" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780210" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780210" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780210" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880330" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880330" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880330" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43929030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43929030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43929030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300550" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300550" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300550" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300990" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300990" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300990" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301150" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301150" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301150" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43870130" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43870130" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43870130" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880530" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880530" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880530" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920110" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920110" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920110" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920150" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920150" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920150" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920170" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920170" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920170" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920430" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920430" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920430" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920470" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920470" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920470" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300170" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300170" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300170" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300270" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300270" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300270" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300290" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300290" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300290" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300750" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300750" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300750" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301110" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301110" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301110" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46920010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46920010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46920010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880570" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880570" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880570" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920370" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920370" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920370" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300210" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300210" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300210" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300230" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300230" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300230" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300370" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300370" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300370" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300910" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300910" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300910" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301170" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301170" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301170" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:41980030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:41980030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:41980030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43680120" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43680120" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43680120" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920230" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920230" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920230" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300490" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300490" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300490" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301090" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301090" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301090" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46950010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46950010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46950010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780250" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780250" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780250" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880190" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880190" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880190" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880210" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880210" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880210" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46910030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46910030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46910030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780290" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780290" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780290" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880230" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880230" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880230" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300250" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300250" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300250" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300790" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300790" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300790" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300810" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300810" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300810" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46910010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46910010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46910010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880110" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880110" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880110" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880170" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880170" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880170" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880310" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880310" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880310" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880630" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880630" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880630" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43910050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43910050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43910050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920090" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920090" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920090" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300090" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300090" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300090" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300410" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300410" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300410" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300630" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300630" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300630" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45320010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45320010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45320010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46920050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46920050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46920050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780230" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780230" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780230" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780310" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780310" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780310" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:41980050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:41980050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:41980050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780270" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780270" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780270" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880350" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880350" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880350" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300150" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300150" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300150" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300510" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300510" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300510" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880600" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880600" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880600" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920130" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920130" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920130" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920190" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920190" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920190" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300190" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300190" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300190" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300850" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300850" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300850" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43910010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43910010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43910010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920410" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920410" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920410" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300690" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300690" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300690" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880430" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880430" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880430" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920350" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920350" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920350" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880130" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880130" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880130" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920250" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920250" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920250" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300590" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300590" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300590" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300950" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300950" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300950" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43680030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43680030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43680030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780110" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780110" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780110" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43910030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43910030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43910030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300970" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300970" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300970" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880120" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880120" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880120" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300110" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300110" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300110" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301130" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301130" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301130" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920210" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920210" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920210" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920290" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920290" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920290" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:44290030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:44290030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:44290030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300130" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300130" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300130" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300670" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300670" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300670" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880150" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880150" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880150" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880650" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880650" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880650" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300390" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300390" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300390" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300430" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300430" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300430" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300610" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300610" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300610" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300870" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300870" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300870" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43680070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43680070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43680070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920450" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920450" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920450" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43929050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43929050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43929050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300450" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300450" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300450" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43860010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43860010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43860010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880510" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880510" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880510" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920070" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920070" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920070" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920330" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920330" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920330" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300470" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300470" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300470" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300770" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300770" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300770" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:41980010" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:41980010" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:41980010" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880450" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880450" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880450" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300310" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300310" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300310" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300890" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300890" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300890" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43780090" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43780090" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43780090" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920270" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920270" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920270" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300350" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300350" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300350" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300650" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300650" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300650" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301190" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301190" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301190" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45320030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45320030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45320030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45301050" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45301050" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45301050" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43880030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43880030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43880030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920390" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920390" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920390" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300530" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300530" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300530" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300570" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300570" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300570" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300710" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300710" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300710" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:46920030" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:46920030" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:46920030" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:43920310" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:43920310" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:43920310" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300330" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300330" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300330" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300830" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300830" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300830" />
+                        </PassengerStopAssignment>
+                        <PassengerStopAssignment id="NL:POV:PassengerStopAssignment:45300930" version="1">
+                            <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:45300930" />
+                            <StopPlaceRef version="1" ref="NL:CHB:StopPlace:45300930" />
+                        </PassengerStopAssignment>
+                    </stopAssignments>
+                    <timingLinks>
+                        <TimingLink id="NL:POV:TimingLink:Rijssen-Holten_Rijssen-Holten" version="1">
+                            <FromPointRef version="1" ref="NL:POV:ScheduledStopPoint:Rijssen-Holten" />
+                            <ToPointRef version="1" ref="NL:POV:ScheduledStopPoint:Rijssen-Holten" />
+                        </TimingLink>
+                    </timingLinks>
+                    <journeyPatterns>
+                        <ServiceJourneyPattern id="NL:POV:ServiceJourneyPattern:Rijssen-Holten_Rijssen-Holten" version="1">
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern id="NL:POV:StopPointInJourneyPattern:Rijssen-Holten_Rijssen-Holten_1" version="1">
+                                    <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:Rijssen-Holten" />
+                                    <OnwardTimingLinkRef version="1" ref="NL:POV:TimingLink:Rijssen-Holten_Rijssen-Holten" />
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
+                                    <FlexiblePointProperties>
+                                        <PointsStandingForAZone>true</PointsStandingForAZone>
+                                        <ZoneContainingStops>true</ZoneContainingStops>
+                                    </FlexiblePointProperties>
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern id="NL:POV:StopPointInJourneyPattern:Rijssen-Holten_Rijssen-Holten_2" version="1">
+                                    <ScheduledStopPointRef version="1" ref="NL:POV:ScheduledStopPoint:Rijssen-Holten" />
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                    <FlexiblePointProperties>
+                                        <PointsStandingForAZone>true</PointsStandingForAZone>
+                                        <ZoneContainingStops>true</ZoneContainingStops>
+                                    </FlexiblePointProperties>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </ServiceJourneyPattern>
+                    </journeyPatterns>
+                </ServiceFrame>
+                <TimetableFrame id="NL:POV:TimetableFrame:FlexRRReis_RH" version="1">
+                    <TypeOfFrameRef version="9.4.1" ref="NL:BISON:TypeOfFrame:NL_TT_TIMETABLE" />
+                    <Monitored>false</Monitored>
+                    <contentValidityConditions>
+                        <AvailabilityCondition id="NL:POV:AvailabilityCondition:MAVR" version="1">
+                            <FromDate>2026-06-01T00:00:00.000</FromDate>
+                            <ToDate>2027-05-30T00:00:00.000</ToDate>
+                            <ValidDayBits>1111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100111110011111001111100</ValidDayBits>
+                            <timebands>
+                                <Timeband id="NL:POV:Timeband:MAVR" version="1">
+                                    <StartTime>07:00:00</StartTime>
+                                    <EndTime>22:00:00</EndTime>
+                                    <DayOffset>0</DayOffset>
+                                </Timeband>
+                            </timebands>
+                        </AvailabilityCondition>
+                        <AvailabilityCondition id="NL:POV:AvailabilityCondition:ZA" version="1">
+                            <FromDate>2026-06-01T00:00:00.000</FromDate>
+                            <ToDate>2027-05-30T00:00:00.000</ToDate>
+                            <ValidDayBits>0000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010</ValidDayBits>
+                            <timebands>
+                                <Timeband id="NL:POV:Timeband:ZA" version="1">
+                                    <StartTime>08:00:00</StartTime>
+                                    <EndTime>19:00:00</EndTime>
+                                    <DayOffset>0</DayOffset>
+                                </Timeband>
+                            </timebands>
+                        </AvailabilityCondition>
+                    </contentValidityConditions>
+                    <vehicleJourneys>
+                        <ServiceJourney id="NL:POV:ServiceJourney:Rijssen-Holten_Rijssen-Holten" version="1">
+                            <validityConditions>
+                                <AvailabilityConditionRef version="1" ref="NL:POV:AvailabilityCondition:MAVR" />
+                                <AvailabilityConditionRef version="1" ref="NL:POV:AvailabilityCondition:ZA" />
+                            </validityConditions>
+                            <ServiceJourneyPatternRef version="1" ref="NL:POV:ServiceJourneyPattern:Rijssen-Holten_Rijssen-Holten" />
+                            <VehicleTypeRef version="1" ref="NL:POV:VehicleType:flexauto" />
+                            <LineRef version="1" ref="NL:POV:FlexibleLine:500" />
+                            <FlexibleServicePropertiesRef version="1" ref="NL:POV:FlexibleServiceProperties:FlexRRReis_RH" />
+                        </ServiceJourney>
+                    </vehicleJourneys>
+                    <flexibleServiceProperties id="NL:POV:FlexibleServiceProperties:FlexRRReis_RH" version="1">
+                        <FlexibleServiceType>dynamicPassingTimes</FlexibleServiceType>
+                        <Extensions>
+                            <SafeDurationFactor>1.0</SafeDurationFactor>
+                            <SafeDurationOffset>1800</SafeDurationOffset>
+                        </Extensions>
+                    </flexibleServiceProperties>
+                </TimetableFrame>
+            </frames>
+        </CompositeFrame>
+    </dataObjects>
+</PublicationDelivery>

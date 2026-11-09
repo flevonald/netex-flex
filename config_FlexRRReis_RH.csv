@@ -1,4 +1,4 @@
-publication_timestamp;2026-07-13T00:00:00.000
+publication_timestamp;2026-10-19T00:00:00.000
 participant_ref;POV
 description;Export flexRRReis Rijssen-Holten
 codespace;POV
@@ -7,6 +7,7 @@ frame_key;FlexRRReis_RH
 valid_from;2026-06-01T00:00:00.000
 valid_to;2027-05-30T00:00:00.000
 organisation_name;Provincie Overijssel
+branding;FlexRRReis
 operator_code;ARR
 operator_name;Arriva
 operator_url;https://www.rrreis.nl
@@ -15,7 +16,10 @@ zone_short_name;RH
 zone_description;Gemeente Rijssen-Holten
 line_code;500
 line_name;FlexRRReis Rijssen-Holten
-maximumtraveldistance;99000
+maximum_travel_distance;0
+minimum_travel_distance;0
+minimum_pt_travel_time_difference_factor;0
+no_public_transport_window;0
 safe_duration_factor;1.0
 safe_duration_offset;1800
 booking_phone;085 - 20 85 212
@@ -27,4 +31,19 @@ book_when;advanceAndDayOfTravel
 latest_booking_time;23:59:00
 minimum_booking_period;PT60M
 booking_note;Een rit met FlexRRReis Rijssen-Holten kost €2,40.
-G1742
+gemeentecodes;"G1742"
+vehicle_type_code;flexauto
+vehicle_name;Voertuignaam
+vehicle_description;Voertuigomschrijving
+vehicle_fuel_type;other
+vehicle_transport_mode;bus
+passenger_fare_class;any
+passenger_total_capacity;4
+passenger_seating_capacity;4
+passenger_standing_capacity;0
+passenger_special_place_capacity;2
+passenger_push_chair_capacity;1
+passenger_wheelchair_place_capacity;1
+vehicle_has_lift_or_ramp;True
+vehicle_length;5
+vehicle_access_facility_list;wheelchairLift

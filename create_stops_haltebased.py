@@ -4,21 +4,19 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
-
+from generate_netex_from_csv import read_config
 import paths
 
 
 #%% alle haltes
 
-project = 'FlexRRReisFlevoland'
-thuisgebied = 'Flevoland'
-gemeentecodes = ['G0303', 'G0184', 'G0171', 'G0050','G0995','G0995'] #
+project = 'FlexRRReis_RH'
+config = read_config(f'config_{project}.csv')
+gemeentecodes = config['gemeentecodes'].split(', ')
 
 #%%
 df_chb_quays = pd.read_csv(Path(paths.CHB) / 'CHB_quays.csv', sep=';', encoding='latin-1', dtype=str)
 df_chb_quays = df_chb_quays.loc[df_chb_quays['quaymunicipality'].isin(gemeentecodes)]
-
-
 
 #%%
 
@@ -29,7 +27,7 @@ df_haltes = df_chb_stopplaces.loc[df_chb_stopplaces['stopplacecode'].isin(df_chb
 df_haltes['code'] = df_haltes['stopplacecode'].str.strip('NL:S:')
 df_haltes = df_haltes.rename(columns={'stopplacename':'name'})
 df_haltes['short_name'] = df_haltes['name'].str.replace(' ', '_')
-df_haltes['gebied'] = thuisgebied
+df_haltes['gebied'] = config['zone_name']
 df_haltes['halte'] = True
 
 #%%
@@ -58,5 +56,5 @@ gdf_stops['y'] = gdf_stops['geometry'].y
 
 stop_columns = ['code','name','short_name','gebied','x','y', 'halte']
 df_stops = gdf_stops[stop_columns]
-df_stops.to_csv(f"stops_{project}.csv", index=False)
+df_stops.to_csv(f"stops_{project}.csv", index=False, sep=';', encoding='utf-8-sig')
 # %%
