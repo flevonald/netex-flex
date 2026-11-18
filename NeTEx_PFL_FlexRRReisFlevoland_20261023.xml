@@ -80,6 +80,7 @@
                                     <WheelchairPlaceCapacity>1</WheelchairPlaceCapacity>
                                 </PassengerCapacity>
                             </capacities>
+                            <LowFloor>false</LowFloor>
                             <HasLiftOrRamp>true</HasLiftOrRamp>
                             <Length>5</Length>
                             <facilities>
@@ -123,7 +124,7 @@
                 </SiteFrame>
                 <ServiceFrame id="NL:PFL:ServiceFrame:FlexRRReis_FL" version="1">
                     <lines>
-                        <Line id="NL:PFL:Line:FlexRRReis_FL" version="1">
+                        <Line id="NL:PFL:Flexibleline:FlexRRReis_FL" version="1">
                             <Extensions>
                                 <MaximumTravelDistance>35000</MaximumTravelDistance>
                                 <MinimumPtTravelTimeDifferenceFactor>1.75</MinimumPtTravelTimeDifferenceFactor>

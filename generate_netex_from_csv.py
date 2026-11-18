@@ -78,6 +78,7 @@ class ExportConfig:
     passenger_special_place_capacity: str
     passenger_push_chair_capacity: str
     passenger_wheelchair_place_capacity: str
+    vehicle_low_floor: str
     vehicle_has_lift_or_ramp: str
     vehicle_length: str
     vehicle_access_facility_list: str
@@ -162,6 +163,7 @@ def read_config(config_path: Path) -> ExportConfig:
         "passenger_special_place_capacity": "2",
         "passenger_push_chair_capacity": "1",
         "passenger_wheelchair_place_capacity": "1",
+        "vehicle_low_floor": "False",
         "vehicle_has_lift_or_ramp": "True",
         "vehicle_length": "5",
         "vehicle_access_facility_list": "wheelchairLift",
@@ -227,6 +229,7 @@ def read_config(config_path: Path) -> ExportConfig:
         passenger_special_place_capacity=values["passenger_special_place_capacity"],
         passenger_push_chair_capacity=values["passenger_push_chair_capacity"],
         passenger_wheelchair_place_capacity=values["passenger_wheelchair_place_capacity"],
+        vehicle_low_floor=values["vehicle_low_floor"],
         vehicle_has_lift_or_ramp=values["vehicle_has_lift_or_ramp"],
         vehicle_length=values["vehicle_length"],
         vehicle_access_facility_list=values["vehicle_access_facility_list"],
@@ -390,7 +393,7 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
     add_text(passenger_capacity, "SpecialPlaceCapacity", cfg.passenger_special_place_capacity)
     add_text(passenger_capacity, "PushchairCapacity", cfg.passenger_push_chair_capacity)
     add_text(passenger_capacity, "WheelchairPlaceCapacity", cfg.passenger_wheelchair_place_capacity)
-
+    add_text(vehicle_type, "LowFloor", cfg.vehicle_low_floor)
     add_text(vehicle_type, "HasLiftOrRamp", cfg.vehicle_has_lift_or_ramp)
     add_text(vehicle_type, "Length", cfg.vehicle_length)
     vehicle_facilities = ET.SubElement(vehicle_type, ns_tag("facilities"))
@@ -489,7 +492,7 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
     line = ET.SubElement(
         lines,
         ns_tag("Line"),
-        {"id": f"NL:{cfg.codespace}:Line:{cfg.line_code}", "version": cfg.version},
+        {"id": f"NL:{cfg.codespace}:Flexibleline:{cfg.line_code}", "version": cfg.version},
     )
     line_ext = ET.SubElement(line, ns_tag("Extensions"))
     if int(cfg.maximum_travel_distance) > 0 :
@@ -682,7 +685,7 @@ def mains_tag() -> None:
     pass
 
 if __name__ == "__main__":
-    project = 'FlexRRReisFlevoland'
+    project = 'FlexRRReis_RH'
     config_path = Path(f'config_{project}.csv')
     flex_area_path = Path(f'flex_area_{project}.json')
     

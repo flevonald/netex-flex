@@ -80,7 +80,8 @@
                                     <WheelchairPlaceCapacity>1</WheelchairPlaceCapacity>
                                 </PassengerCapacity>
                             </capacities>
-                            <HasLiftOrRamp>True</HasLiftOrRamp>
+                            <LowFloor>true</LowFloor>
+                            <HasLiftOrRamp>true</HasLiftOrRamp>
                             <Length>5</Length>
                             <facilities>
                                 <ServiceFacilitySet id="NL:POV:ServiceFacilitySet:FlexRRReis_RH" version="1">
@@ -259,7 +260,7 @@
                 </SiteFrame>
                 <ServiceFrame id="NL:POV:ServiceFrame:FlexRRReis_RH" version="1">
                     <lines>
-                        <Line id="NL:POV:Line:500" version="1">
+                        <Line id="NL:POV:Flexibleline:500" version="1">
                             <Extensions>
                                 <MaximumTravelDistance>0</MaximumTravelDistance>
                             </Extensions>
