@@ -123,6 +123,7 @@
                     </flexibleStopPlaces>
                 </SiteFrame>
                 <ServiceFrame id="NL:PFL:ServiceFrame:FlexRRReis_FL" version="1">
+                    <TypeOfFrameRef ref="NL:BISON:TypeOfFrame:NL_TT_SERVICE" version="9.4.1" />
                     <lines>
                         <Line id="NL:PFL:Flexibleline:FlexRRReis_FL" version="1">
                             <Extensions>
@@ -1714,13 +1715,13 @@
                         </ServiceJourney>
                     </vehicleJourneys>
                     <flexibleServiceProperties>
-                        <Extensions id="NL:PFL:FlexibleServiceProperties:FlexRRReis_FL" version="1">
+                        <FlexibleServiceProperties id="NL:PFL:FlexibleServiceProperties:FlexRRReis_FL" version="1">
                             <FlexibleServiceType>dynamicPassingTimes</FlexibleServiceType>
                             <Extensions>
                                 <SafeDurationFactor>1.3</SafeDurationFactor>
                                 <SafeDurationOffset>1800</SafeDurationOffset>
                             </Extensions>
-                        </Extensions>
+                        </FlexibleServiceProperties>
                     </flexibleServiceProperties>
                 </TimetableFrame>
             </frames>

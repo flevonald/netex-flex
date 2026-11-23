@@ -486,7 +486,11 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
         ns_tag("ServiceFrame"),
         {"id": f"NL:{cfg.codespace}:ServiceFrame:{cfg.frame_key}", "version": cfg.version},
     )
-
+    ET.SubElement(
+        service,
+        ns_tag("TypeOfFrameRef"),
+        {"ref": "NL:BISON:TypeOfFrame:NL_TT_SERVICE", "version": "9.4.1",},
+    )
 
     lines = ET.SubElement(service, ns_tag("lines"))
     line = ET.SubElement(
@@ -672,7 +676,7 @@ def build_xml(stops: pd.DataFrame, hubs: pd.DataFrame, cfg: ExportConfig, bdt: p
         ET.SubElement(SJ, ns_tag("FlexibleServicePropertiesRef"), {"version": cfg.version, "ref": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}"})
     
     flexibleServiceProperties = ET.SubElement(timetable, ns_tag("flexibleServiceProperties"))
-    FSP = ET.SubElement(flexibleServiceProperties, ns_tag("Extensions"),
+    FSP = ET.SubElement(flexibleServiceProperties, ns_tag("FlexibleServiceProperties"),
                         {"id": f"NL:{cfg.codespace}:FlexibleServiceProperties:{cfg.frame_key}", "version": cfg.version})
     add_text(FSP, "FlexibleServiceType", "dynamicPassingTimes")
     FSP_Ext = ET.SubElement(FSP, ns_tag("Extensions"))
@@ -685,7 +689,7 @@ def mains_tag() -> None:
     pass
 
 if __name__ == "__main__":
-    project = 'FlexRRReis_RH'
+    project = 'FlexRRReisFlevoland'
     config_path = Path(f'config_{project}.csv')
     flex_area_path = Path(f'flex_area_{project}.json')
     
